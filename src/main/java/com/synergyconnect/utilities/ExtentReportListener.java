@@ -14,111 +14,104 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.model.Media;
-import com.aventstack.extentreports.model.ScreenCapture;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.synergyconnect.common.BaseClass;
 
 public class ExtentReportListener implements ITestListener {
 
-	public static ExtentReports extentReport;
+    private static final String REPORTS_DIR = System.getProperty("user.dir") + "\\extentReports\\";
+    private static final String SCREENSHOT_DIR = System.getProperty("user.dir") + "\\screenshots\\";
 
-	public static File file = new File(
-			System.getProperty("user.dir") + "\\extentReports\\" + getCurrentTimeDate() + "_extentReport.html");
+    private static ExtentReports extentReport;
+    private static ExtentSparkReporter sparkReporter;
+    private static ThreadLocal<ExtentTest> localExtent = new ThreadLocal<>();
 
-	public static ExtentSparkReporter sparkReporter;
-	public static ExtentTest extentTest;
+    public static ExtentTest getExtent() {
+        return localExtent.get();
+    }
 
-	public static ThreadLocal<ExtentTest> localExtent = new ThreadLocal<>();
+    private static String getCurrentTimeDate() {
+        LocalDateTime now = LocalDateTime.now();
 
-	public static ExtentTest getExtent() {
-		return localExtent.get();
-	}
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy_MM_dd");
+        String formattedDate = now.format(dateFormatter);
 
-	public static String getCurrentTimeDate() {
-		LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH_mm_ss_SSS");
+        String formattedTime = now.format(timeFormatter);
 
-		// Format date
-		DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy_MM_dd");
-		String formattedDate = now.format(dateFormatter);
+        return formattedDate + "_" + formattedTime;
+    }
 
-		// Format time with milliseconds
-		DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH_mm_ss_SSS");
-		String formattedTime = now.format(timeFormatter);
+    @Override
+    public void onStart(ITestContext context) {
+        System.out.println("On start called....");
+        extentReport = new ExtentReports();
+        File reportFile = new File(REPORTS_DIR + getCurrentTimeDate() + "_extentReport.html");
+        sparkReporter = new ExtentSparkReporter(reportFile);
 
-		// Concatenate formatted date and time
-		String result = formattedDate + "_" + formattedTime;
-		System.out.println(result);
-		return result;
+        extentReport.attachReporter(sparkReporter);
+    }
 
-	}
+    @Override
+    public void onFinish(ITestContext context) {
+        System.out.println("On finish called....");
+        if (extentReport != null) {
+            extentReport.flush();
+            try {
+                Desktop.getDesktop().browse(new File(REPORTS_DIR + getCurrentTimeDate() + "_extentReport.html").toURI());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        localExtent.remove();
+    }
 
-	@Override
-	public void onStart(ITestContext context) {
-		System.out.println("On start called....");
-		extentReport = new ExtentReports();
-		sparkReporter = new ExtentSparkReporter(file);
-//		extentReport.setSystemInfo("machine:", "testlp1");
-//		extentReport.setSystemInfo("os","windows 10");
-//		extentReport.setSystemInfo("browser:", "chrome");
+    @Override
+    public void onTestStart(ITestResult result) {
+        System.out.println("On test start called...." + result.getMethod().getMethodName());
+        ExtentTest extentTest = extentReport.createTest(result.getMethod().getMethodName());
+        localExtent.set(extentTest);
+    }
 
-		// configuration to change look and feel of report
-//		sparkReporter.config().setDocumentTitle("Extent Listner Report");
-//		sparkReporter.config().setReportName("This is my first report");
-		extentReport.attachReporter(sparkReporter);
+    @Override
+    public void onTestSuccess(ITestResult result) {
+        System.out.println("Test pass called...." + result.getMethod().getMethodName());
+        ExtentTest extentTest = localExtent.get();
+        if (extentTest != null) {
+            extentTest.log(Status.PASS, "Test passed: " + result.getMethod().getMethodName());
+        } else {
+            System.err.println("ExtentTest is null in onTestSuccess for method: " + result.getMethod().getMethodName());
+        }
+    }
 
-	}
+    @Override
+    public void onTestFailure(ITestResult result) {
+        String methodName = result.getMethod().getMethodName();
+        System.out.println("On test failure called...." + methodName);
+        ExtentTest extentTest = localExtent.get();
+        if (extentTest != null) {
+            String screenshotPath = null;
+            try {
+                screenshotPath = UtilMethods.captureScreenShot(BaseClass.getDriver(), methodName);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            extentTest.log(Status.FAIL, "Test failed: " + methodName);
+            extentTest.log(Status.FAIL, result.getThrowable(),
+                    MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+        } else {
+            System.err.println("ExtentTest is null in onTestFailure for method: " + methodName);
+        }
+    }
 
-	@Override
-	public void onFinish(ITestContext context) {
-		System.out.println("On Finished Called....");
-		extentReport.flush();
-		try {
-			Desktop.getDesktop().browse(file.toURI());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	@Override
-	public void onTestStart(ITestResult result) {
-		System.out.println("on test start called...." + result.getMethod().getMethodName());
-		extentTest = extentReport.createTest(result.getMethod().getMethodName());
-		localExtent.set(extentTest);
-
-	}
-
-	@Override
-	public void onTestSuccess(ITestResult result) {
-		System.out.println("Test pass called...." + result.getMethod().getMethodName());
-		localExtent.get().log(Status.PASS, "Test is passed");
-
-	}
-
-	@Override
-	public void onTestFailure(ITestResult result) {
-		String methodName = result.getMethod().getMethodName();
-		System.out.println("on test FAILED called...." + methodName);
-		String screenshot = null;
-		try {
-			screenshot = UtilMethods.captureScreenShot(BaseClass.getDriver(), methodName);
-		} catch (IOException e) {
-			// TODO Auto-generated` catch block
-			e.printStackTrace();
-		}
-
-		localExtent.get().log(Status.FAIL, "Test is Failed : ");
-//		localExtent.get().log(Status.FAIL,MediaEntityBuilder.createScreenCaptureFromPath(screenshot),"methodName");
-
-		localExtent.get().log(Status.FAIL, "Test Failed ", result.getThrowable(),
-				MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build());
-	}
-
-	@Override
-	public void onTestSkipped(ITestResult result) {
-		// TODO Auto-generated method stub
-		ITestListener.super.onTestSkipped(result);
-	}
-
+    @Override
+    public void onTestSkipped(ITestResult result) {
+        System.out.println("Test skipped called...." + result.getMethod().getMethodName());
+        ExtentTest extentTest = localExtent.get();
+        if (extentTest != null) {
+            extentTest.log(Status.SKIP, "Test skipped: " + result.getMethod().getMethodName());
+        } else {
+            System.err.println("ExtentTest is null in onTestSkipped for method: " + result.getMethod().getMethodName());
+        }
+    }
 }

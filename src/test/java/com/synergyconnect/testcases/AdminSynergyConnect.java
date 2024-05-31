@@ -2,6 +2,7 @@ package com.synergyconnect.testcases;
 
 import static org.testng.Assert.assertEquals;
 
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -19,7 +20,7 @@ public class AdminSynergyConnect extends BaseClass{
 	public void verifyLoginisworking() throws InterruptedException {
 		
 		getDriver().get(url);
-		Logger.info("url opeed");
+		logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(1000);
@@ -44,7 +45,7 @@ public class AdminSynergyConnect extends BaseClass{
 	public void verifyAddOrganization() throws InterruptedException {
 		
 		getDriver().get(url);
-		Logger.info("url opeed");
+		logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);
@@ -67,10 +68,7 @@ public class AdminSynergyConnect extends BaseClass{
 		Thread.sleep(500);
 		
 		adminHomePage.clickOnAddOrganizationInfo();
-		Thread.sleep(500);
-		
-	
-		
+		Thread.sleep(500);		
 		
 		Organization organizationPage=new Organization(getDriver());
 		organizationPage.clickOnEdit();
@@ -137,6 +135,7 @@ public class AdminSynergyConnect extends BaseClass{
 		Thread.sleep(15000);
 		
 		String csrText = organizationPage.getCSRText();
+				
 		System.out.println("Actua CSR : "+csrText);
 		Assert.assertEquals(csrText, "ABD00081234");
 		XYZ xy = new XYZ(getDriver());
@@ -155,7 +154,7 @@ public class AdminSynergyConnect extends BaseClass{
 	@Test(dependsOnMethods = "verifyLoginisworking",priority=1)
 		public void	verifyAddLocation() throws InterruptedException {
 		getDriver().get(url);
-		Logger.info("url opeed");
+		logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);
