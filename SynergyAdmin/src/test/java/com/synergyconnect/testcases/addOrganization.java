@@ -1,7 +1,5 @@
 package com.synergyconnect.testcases;
 
-import static org.testng.Assert.assertEquals;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,12 +8,11 @@ import com.synergyconnect.pageobject.AddLocation;
 import com.synergyconnect.pageobject.AdminHomePage;
 import com.synergyconnect.pageobject.LoginPage;
 import com.synergyconnect.pageobject.Organization;
-import com.synergyconnect.pageobject.ViewProgram;
 import com.synergyconnect.pageobject.XYZ;
 
-public class AdminSynergyConnect extends BaseClass{
+public class addOrganization extends BaseClass{
 	
-	@Test
+	@Test(retryAnalyzer = com.synergyconnect.utilities.RetryAnalyzer.class)
 	public void verifyLoginisworking() throws InterruptedException {
 		
 		getDriver().get(url);
@@ -39,7 +36,7 @@ public class AdminSynergyConnect extends BaseClass{
 		Assert.assertEquals(actualUrl, expectedUrl);
 		
 	}
-	@Test()
+	@Test(retryAnalyzer = com.synergyconnect.utilities.RetryAnalyzer.class)
 	public void verifyAddOrganization() throws InterruptedException {
 		
 		getDriver().get(url);
@@ -67,9 +64,6 @@ public class AdminSynergyConnect extends BaseClass{
 		
 		adminHomePage.clickOnAddOrganizationInfo();
 		Thread.sleep(500);
-		
-	
-		
 		
 		Organization organizationPage=new Organization(getDriver());
 		organizationPage.clickOnEdit();

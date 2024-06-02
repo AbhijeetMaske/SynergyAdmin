@@ -9,11 +9,10 @@ public class AdminHomePage {
 	
 //WebDriver ldriver;
 	
-	public AdminHomePage(WebDriver driver) {
-		
+	public AdminHomePage(WebDriver driver) {		
 		PageFactory.initElements(driver, this);
-
-	}	
+	}
+	
 	@FindBy(xpath="//span[text()='Organization Details']")
 	WebElement OrganizationDetails;
 	
