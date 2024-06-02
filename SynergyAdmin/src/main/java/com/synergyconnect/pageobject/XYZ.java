@@ -15,11 +15,8 @@ public class XYZ {
 
 	@FindBy(id="cinNumber")
 	static WebElement cinElement;
-
 	public static String getCINText() {
-
 		return cinElement.getText();
-
 	}
 
 }

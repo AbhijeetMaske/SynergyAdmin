@@ -19,11 +19,11 @@ public class ExtentReportListener implements ITestListener {
 
     private static final String REPORTS_DIR = System.getProperty("user.dir") + "\\extentReports\\";
     private static final String SCREENSHOT_DIR = System.getProperty("user.dir") + "\\screenshots\\";
-
     private static ExtentReports extentReport;
     private static ExtentSparkReporter sparkReporter;
     private static ThreadLocal<ExtentTest> localExtent = new ThreadLocal<>();
-
+    private static File reportFile;  // Class-level variable to store the report file
+    
     public static ExtentTest getExtent() {
         return localExtent.get();
     }
@@ -41,7 +41,7 @@ public class ExtentReportListener implements ITestListener {
     public void onStart(ITestContext context) {
         System.out.println("On start called....");
         extentReport = new ExtentReports();
-        File reportFile = new File(REPORTS_DIR + getCurrentTimeDate() + "_extentReport.html");
+        reportFile = new File(REPORTS_DIR + getCurrentTimeDate() + "_extentReport.html");      
         sparkReporter = new ExtentSparkReporter(reportFile);
         extentReport.attachReporter(sparkReporter);
     }
@@ -52,7 +52,7 @@ public class ExtentReportListener implements ITestListener {
         if (extentReport != null) {
             extentReport.flush();
             try {
-                Desktop.getDesktop().browse(new File(REPORTS_DIR + getCurrentTimeDate() + "_extentReport.html").toURI());
+            	Desktop.getDesktop().browse(reportFile.toURI());
             } catch (IOException e) {
                 e.printStackTrace();
             }

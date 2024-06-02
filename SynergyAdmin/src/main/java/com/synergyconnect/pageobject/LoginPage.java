@@ -11,13 +11,11 @@ import com.synergyconnect.utilities.ExtentReportListener;
 
 public class LoginPage {
 	//create object of WebDriver
-//	WebDriver driver;
+	//	WebDriver driver;
 	
 	//constructor
-	public LoginPage(WebDriver driver) {
-	
+	public LoginPage(WebDriver driver) {	
 		PageFactory.initElements(driver, this);
-
 	}
 	
 	//identify WebElements
@@ -47,9 +45,9 @@ public class LoginPage {
 	}
 	
 	public String getHompageUrl() {
-		String urFetched =BaseClass.getDriver().getCurrentUrl();
-		ExtentReportListener.getExtent().log(Status.PASS, "URL fetched "+urFetched);
-		return urFetched;
+		String currentURL =BaseClass.getDriver().getCurrentUrl();
+		ExtentReportListener.getExtent().log(Status.PASS, "URL fetched "+currentURL);
+		return currentURL;
 	}
 
 	

@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
-
+import com.synergyconnect.utilities.BrowserUtils;
 import com.synergyconnect.utilities.ReadConfig;
 
 public class BaseClass {
@@ -17,7 +17,8 @@ public class BaseClass {
 	
 	protected String url = readConfig.getBaseUrl();
 	String browser = readConfig.getBrowser();
-
+	String browserVersion = BrowserUtils.getChromeBrowserVersion();
+	
 	public static WebDriver driver;
 	public static Logger Logger;
 	public static ThreadLocal<WebDriver> driverObjcet = new ThreadLocal<WebDriver>();
@@ -28,11 +29,11 @@ public class BaseClass {
 
 	@BeforeMethod
 	public void setup(Method method) {
-System.out.println("@Before Method : "+method.getName());
+		System.out.println("@Before Method : "+method.getName());
 		switch (browser.toLowerCase()) {
 		case "chrome":
 			ChromeOptions option = new ChromeOptions();
-			option.setBrowserVersion("123");
+			option.setBrowserVersion(browserVersion);
 			driver = new ChromeDriver(option);
 			break;
 		default:
@@ -42,7 +43,8 @@ System.out.println("@Before Method : "+method.getName());
 		driverObjcet.set(driver);
 		// implicit wait of 10 second
 		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
+		// Page load timeout
+        getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 		// for logging
 		Logger = LogManager.getLogger("SynergyConnect");
 	}
@@ -50,9 +52,13 @@ System.out.println("@Before Method : "+method.getName());
 	@AfterMethod
 	public void tearDown(Method method) {
 		System.out.println("@After Method : "+method.getName());
-		getDriver().close();
-		getDriver().quit();
-	}
-
-
+		if (getDriver() != null) {
+            try {
+                getDriver().close();
+                getDriver().quit();
+            } catch (Exception e) {
+            	Logger.error("Error while closing WebDriver: " + e.getMessage(), e);
+            }
+        }
+    }
 }

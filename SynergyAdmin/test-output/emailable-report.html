@@ -9,21 +9,34 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">123,165</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num attn">3</td><td class="num">0</td><td class="num">0</td><td class="num">503</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.synergyconnect.testcases.AdminSynergyConnect</td><td><a href="#m0">verifyAddLocation</a></td><td rowspan="1">1717171118449</td><td rowspan="1">36251</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.synergyconnect.testcases.AdminSynergyConnect</td><td><a href="#m1">verifyAddOrganization</a></td><td rowspan="1">1717171041437</td><td rowspan="1">52087</td></tr><tr class="passedeven"><td><a href="#m2">verifyLoginisworking</a></td><td rowspan="1">1717171096034</td><td rowspan="1">20053</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.synergyconnect.testcases.addOrganization</td><td><a href="#m0">setup</a></td><td rowspan="1">1717230420359</td><td rowspan="1">16</td></tr><tr><th colspan="4">Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="3">com.synergyconnect.testcases.addOrganization</td><td><a href="#m1">setup</a></td><td rowspan="1">1717230420468</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">tearDown</a></td><td rowspan="2">1717230420438</td><td rowspan="2">0</td></tr><tr class="skippedeven"><td><a href="#m3">tearDown</a></td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="3">com.synergyconnect.testcases.addOrganization</td><td><a href="#m4">verifyAddLocation</a></td><td rowspan="1">1717230420501</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m5">verifyAddOrganization</a></td><td rowspan="1">1717230420397</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td><a href="#m6">verifyLoginisworking</a></td><td rowspan="1">1717230420472</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.synergyconnect.testcases.AdminSynergyConnect#verifyAddLocation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Cannot locate option with text: India
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:153)
-	at com.synergyconnect.pageobject.AddLocation.clickOncountry(AddLocation.java:59)
-	at com.synergyconnect.testcases.AdminSynergyConnect.verifyAddLocation(AdminSynergyConnect.java:187)
+<h2>Test</h2><h3 id="m0">com.synergyconnect.testcases.addOrganization#setup</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void com.synergyconnect.testcases.addOrganization.verifyAddOrganization() throws java.lang.InterruptedException</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Browser version must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.remote.AbstractDriverOptions.setBrowserVersion(AbstractDriverOptions.java:46)
+	at com.synergyconnect.common.BaseClass.setup(BaseClass.java:36)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.synergyconnect.testcases.AdminSynergyConnect#verifyAddOrganization</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.synergyconnect.testcases.AdminSynergyConnect#verifyLoginisworking</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.synergyconnect.testcases.addOrganization#setup</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.synergyconnect.testcases.addOrganization#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.synergyconnect.testcases.addOrganization#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.synergyconnect.testcases.addOrganization#verifyAddLocation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method com.synergyconnect.testcases.addOrganization.verifyAddLocation() on instance com.synergyconnect.testcases.addOrganization@4983159f depends on not successfully finished methods 
+[com.synergyconnect.testcases.addOrganization.verifyLoginisworking() on instance com.synergyconnect.testcases.addOrganization@4983159f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.synergyconnect.testcases.addOrganization#verifyAddOrganization</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Browser version must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.remote.AbstractDriverOptions.setBrowserVersion(AbstractDriverOptions.java:46)
+	at com.synergyconnect.common.BaseClass.setup(BaseClass.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.synergyconnect.testcases.addOrganization#verifyLoginisworking</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Browser version must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.remote.AbstractDriverOptions.setBrowserVersion(AbstractDriverOptions.java:46)
+	at com.synergyconnect.common.BaseClass.setup(BaseClass.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
