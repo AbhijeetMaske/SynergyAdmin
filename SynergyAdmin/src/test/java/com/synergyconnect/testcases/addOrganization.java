@@ -6,8 +6,9 @@ import org.testng.annotations.Test;
 import com.synergyconnect.common.BaseClass;
 import com.synergyconnect.pageobject.AddLocation;
 import com.synergyconnect.pageobject.AdminHomePage;
+import com.synergyconnect.pageobject.AppDriver;
 import com.synergyconnect.pageobject.LoginPage;
-import com.synergyconnect.pageobject.Organization;
+import com.synergyconnect.pageobject.OrganizationInfo;
 import com.synergyconnect.pageobject.XYZ;
 
 public class addOrganization extends BaseClass{
@@ -16,7 +17,7 @@ public class addOrganization extends BaseClass{
 	public void verifyLoginisworking() throws InterruptedException {
 		
 		getDriver().get(url);
-		Logger.info("url opeed");
+		logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);
@@ -40,7 +41,7 @@ public class addOrganization extends BaseClass{
 	public void verifyAddOrganization() throws InterruptedException {
 		
 		getDriver().get(url);
-		Logger.info("url opeed");
+		logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);
@@ -57,6 +58,9 @@ public class addOrganization extends BaseClass{
 //		vp.clickOnToggleButton();
 //		Thread.sleep(500);
 //		vp.clickOnAdmin();
+		AppDriver appdriver = new AppDriver(getDriver());
+		appdriver.appDriverMenu();
+		appdriver.adminModule();
 		
 		AdminHomePage adminHomePage=new AdminHomePage(getDriver());
 		adminHomePage.clickOnOrganizationDetails();
@@ -65,7 +69,7 @@ public class addOrganization extends BaseClass{
 		adminHomePage.clickOnAddOrganizationInfo();
 		Thread.sleep(500);
 		
-		Organization organizationPage=new Organization(getDriver());
+		OrganizationInfo organizationPage=new OrganizationInfo(getDriver());
 		organizationPage.clickOnEdit();
 		Thread.sleep(500);
 		
@@ -148,7 +152,7 @@ public class addOrganization extends BaseClass{
 	@Test(dependsOnMethods = "verifyLoginisworking",priority=1)
 		public void	verifyAddLocation() throws InterruptedException {
 		getDriver().get(url);
-		Logger.info("url opeed");
+		logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);

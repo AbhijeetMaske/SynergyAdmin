@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class Organization {
+public class OrganizationInfo {
 	
-public Organization(WebDriver driver) {
+public OrganizationInfo(WebDriver driver) {
 		
 		PageFactory.initElements(driver, this);
 
