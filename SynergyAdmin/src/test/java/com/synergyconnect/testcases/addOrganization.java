@@ -6,17 +6,17 @@ import org.testng.annotations.Test;
 import com.synergyconnect.common.BaseClass;
 import com.synergyconnect.pageobject.AddLocation;
 import com.synergyconnect.pageobject.AdminHomePage;
+import com.synergyconnect.pageobject.AppDriver;
 import com.synergyconnect.pageobject.LoginPage;
-import com.synergyconnect.pageobject.Organization;
-import com.synergyconnect.pageobject.XYZ;
+import com.synergyconnect.pageobject.OrganizationInfo;
 
 public class addOrganization extends BaseClass{
-	
-	@Test(retryAnalyzer = com.synergyconnect.utilities.RetryAnalyzer.class)
+	@Test
+	//@Test(retryAnalyzer = com.synergyconnect.utilities.RetryAnalyzer.class)
 	public void verifyLoginisworking() throws InterruptedException {
 		
 		getDriver().get(url);
-		Logger.info("url opeed");
+		logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);
@@ -36,11 +36,12 @@ public class addOrganization extends BaseClass{
 		Assert.assertEquals(actualUrl, expectedUrl);
 		
 	}
-	@Test(retryAnalyzer = com.synergyconnect.utilities.RetryAnalyzer.class)
+	@Test
+	//@Test(retryAnalyzer = com.synergyconnect.utilities.RetryAnalyzer.class)
 	public void verifyAddOrganization() throws InterruptedException {
 		
 		getDriver().get(url);
-		Logger.info("url opeed");
+		logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);
@@ -57,6 +58,9 @@ public class addOrganization extends BaseClass{
 //		vp.clickOnToggleButton();
 //		Thread.sleep(500);
 //		vp.clickOnAdmin();
+		AppDriver appdriver = new AppDriver(getDriver());
+		appdriver.appDriverMenu();
+		appdriver.adminModule();
 		
 		AdminHomePage adminHomePage=new AdminHomePage(getDriver());
 		adminHomePage.clickOnOrganizationDetails();
@@ -65,90 +69,84 @@ public class addOrganization extends BaseClass{
 		adminHomePage.clickOnAddOrganizationInfo();
 		Thread.sleep(500);
 		
-		Organization organizationPage=new Organization(getDriver());
-		organizationPage.clickOnEdit();
+		OrganizationInfo organizationPage=new OrganizationInfo(getDriver());
+		organizationPage.organizationInfoEdit();
 		Thread.sleep(500);
 		
-		organizationPage.enterOrganizationName();
+		organizationPage.organizationName();
 		Thread.sleep(500);
 		
-		organizationPage.clickOnIncorporationDate();
+		organizationPage.incorporationDate();
 		Thread.sleep(500);
 		
 		organizationPage.DatePicker();
 		Thread.sleep(500);
 				
-		organizationPage.enterShortName();
+		organizationPage.shortName();
 		Thread.sleep(500);
 		
-		organizationPage.clickOnEntityType();
+		organizationPage.entityType();
 		Thread.sleep(500);
 		
-		organizationPage.enterCinNo();
+		organizationPage.cinNo();
 		Thread.sleep(500);
 		
-		organizationPage.enterCsrRegNo();
+		organizationPage.mcaCsrRegNo();
 		Thread.sleep(500);
 		
-		organizationPage.enterEntityPanNo();
+		organizationPage.entityPanNo();
 		Thread.sleep(500);
 		
-		organizationPage.enterContactPerson();
+		organizationPage.contactPerson();
 		Thread.sleep(500);
 		
-		organizationPage.enterMobileNo();
+		organizationPage.mobileNo();
 		Thread.sleep(500);
 		
-		organizationPage.enterEmailId();
+		organizationPage.emailId();
 		Thread.sleep(500);
 		
-		organizationPage.enterAddress1();
+		organizationPage.address_I();
 		Thread.sleep(500);
 		
-		organizationPage.enterAddress2();
+		organizationPage.address_II();
 		Thread.sleep(500);
 		
-		organizationPage.enterCity();
+		organizationPage.city();
 		Thread.sleep(500);
 		
-		organizationPage.enterPincode();
+		organizationPage.pincode();
 		Thread.sleep(500);
 		
-		organizationPage.clickOnCountry();
+		organizationPage.country();
 		Thread.sleep(500);
 		
-		organizationPage.clickOnState();
+		organizationPage.state();
 		Thread.sleep(500);
 		
-		organizationPage.clickOnUploadLogo();
+		organizationPage.uploadLogo();
 		Thread.sleep(500);
 				
-		organizationPage.enterBriefDiscription();
+		organizationPage.briefDiscription();
 		Thread.sleep(500);
 		
-		organizationPage.clickOnSubmit();
+		organizationPage.submit();
 		Thread.sleep(15000);
 		
-		String csrText = organizationPage.getCSRText();
-		System.out.println("Actua CSR : "+csrText);
+		String csrText = organizationPage.mcaCsrRegNoText();
 		Assert.assertEquals(csrText, "ABD00081234");
-		XYZ xy = new XYZ(getDriver());
 		
-		String CinNoText=xy.getCINText();
-		System.out.println("Actual CinNo : "+ CinNoText);
+		String CinNoText = organizationPage.cinNoText();
 		Assert.assertEquals(CinNoText,"L12345AA1234PLC044444" );
 		
-//		String PanNoText=organizationPage.getPanNo();
-//		System.out.println("Actual PanNo: "+ PanNoText);
-//		Assert.assertEquals(PanNoText, PanNoText);
-		
-		
-		
+		String emailIDText = organizationPage.emailIdText();
+		Assert.assertEquals(emailIDText,"tanaya@synergyconnect.in");
 		}
+	
 	@Test(dependsOnMethods = "verifyLoginisworking",priority=1)
 		public void	verifyAddLocation() throws InterruptedException {
 		getDriver().get(url);
-		Logger.info("url opeed");
+		logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);

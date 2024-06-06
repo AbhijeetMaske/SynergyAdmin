@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="0" failed="0" skipped="3">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-01T13:57:00 IST" name="Suite" finished-at="2024-06-01T13:57:00 IST" duration-ms="503">
+  <suite started-at="2024-06-03T22:09:51 IST" name="Suite" finished-at="2024-06-03T22:12:00 IST" duration-ms="129094">
     <groups>
     </groups>
-    <test started-at="2024-06-01T13:57:00 IST" name="Test" finished-at="2024-06-01T13:57:00 IST" duration-ms="503">
+    <test started-at="2024-06-03T22:09:51 IST" name="Test" finished-at="2024-06-03T22:12:00 IST" duration-ms="129094">
       <class name="com.synergyconnect.testcases.addOrganization">
-        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:com.synergyconnect.testcases.addOrganization@4983159f]" started-at="2024-06-01T13:57:00 IST" name="setup" finished-at="2024-06-01T13:57:00 IST" duration-ms="16" status="FAIL">
+        <test-method is-config="true" signature="setupSuite(java.lang.String,java.lang.String)[pri:0, instance:com.synergyconnect.testcases.addOrganization@2d1ef81a]" started-at="2024-06-03T22:09:48 IST" name="setupSuite" finished-at="2024-06-03T22:09:51 IST" duration-ms="3137" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://test30.synergyapps.in]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSuite -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:com.synergyconnect.testcases.addOrganization@2d1ef81a]" started-at="2024-06-03T22:09:52 IST" name="setup" finished-at="2024-06-03T22:09:53 IST" duration-ms="1499" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -15,189 +31,76 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Browser version must be set]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Browser version must be set
-at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
-at org.openqa.selenium.remote.AbstractDriverOptions.setBrowserVersion(AbstractDriverOptions.java:46)
-at com.synergyconnect.common.BaseClass.setup(BaseClass.java:36)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyAddOrganization()[pri:0, instance:com.synergyconnect.testcases.addOrganization@4983159f]" started-at="2024-06-01T13:57:00 IST" name="verifyAddOrganization" finished-at="2024-06-01T13:57:00 IST" duration-ms="1" status="SKIP">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Browser version must be set]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Browser version must be set
-at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
-at org.openqa.selenium.remote.AbstractDriverOptions.setBrowserVersion(AbstractDriverOptions.java:46)
-at com.synergyconnect.common.BaseClass.setup(BaseClass.java:36)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        <test-method signature="verifyAddOrganization()[pri:0, instance:com.synergyconnect.testcases.addOrganization@2d1ef81a]" started-at="2024-06-03T22:09:53 IST" name="verifyAddOrganization" finished-at="2024-06-03T22:10:44 IST" duration-ms="50909" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddOrganization -->
-        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:com.synergyconnect.testcases.addOrganization@4983159f]" started-at="2024-06-01T13:57:00 IST" name="tearDown" finished-at="2024-06-01T13:57:00 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:com.synergyconnect.testcases.addOrganization@2d1ef81a]" started-at="2024-06-03T22:10:44 IST" name="tearDown" finished-at="2024-06-03T22:10:44 IST" duration-ms="211" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.synergyconnect.testcases.addOrganization.verifyAddOrganization() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:com.synergyconnect.testcases.addOrganization@4983159f]" started-at="2024-06-01T13:57:00 IST" name="setup" finished-at="2024-06-01T13:57:00 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:com.synergyconnect.testcases.addOrganization@2d1ef81a]" started-at="2024-06-03T22:10:44 IST" name="setup" finished-at="2024-06-03T22:10:45 IST" duration-ms="1037" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.synergyconnect.testcases.addOrganization.verifyLoginisworking() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyLoginisworking()[pri:0, instance:com.synergyconnect.testcases.addOrganization@4983159f]" started-at="2024-06-01T13:57:00 IST" name="verifyLoginisworking" finished-at="2024-06-01T13:57:00 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Browser version must be set]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Browser version must be set
-at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
-at org.openqa.selenium.remote.AbstractDriverOptions.setBrowserVersion(AbstractDriverOptions.java:46)
-at com.synergyconnect.common.BaseClass.setup(BaseClass.java:36)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        <test-method signature="verifyLoginisworking()[pri:0, instance:com.synergyconnect.testcases.addOrganization@2d1ef81a]" started-at="2024-06-03T22:10:45 IST" name="verifyLoginisworking" finished-at="2024-06-03T22:11:05 IST" duration-ms="20088" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginisworking -->
-        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:com.synergyconnect.testcases.addOrganization@4983159f]" started-at="2024-06-01T13:57:00 IST" name="tearDown" finished-at="2024-06-01T13:57:00 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:com.synergyconnect.testcases.addOrganization@2d1ef81a]" started-at="2024-06-03T22:11:05 IST" name="tearDown" finished-at="2024-06-03T22:11:06 IST" duration-ms="246" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.synergyconnect.testcases.addOrganization.verifyLoginisworking() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method signature="verifyAddLocation()[pri:1, instance:com.synergyconnect.testcases.addOrganization@4983159f]" started-at="2024-06-01T13:57:00 IST" name="verifyAddLocation" finished-at="2024-06-01T13:57:00 IST" depends-on-methods="com.synergyconnect.testcases.addOrganization.verifyLoginisworking" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method com.synergyconnect.testcases.addOrganization.verifyAddLocation() on instance com.synergyconnect.testcases.addOrganization@4983159f depends on not successfully finished methods 
-[com.synergyconnect.testcases.addOrganization.verifyLoginisworking() on instance com.synergyconnect.testcases.addOrganization@4983159f]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method com.synergyconnect.testcases.addOrganization.verifyAddLocation() on instance com.synergyconnect.testcases.addOrganization@4983159f depends on not successfully finished methods 
-[com.synergyconnect.testcases.addOrganization.verifyLoginisworking() on instance com.synergyconnect.testcases.addOrganization@4983159f]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:com.synergyconnect.testcases.addOrganization@2d1ef81a]" started-at="2024-06-03T22:11:06 IST" name="setup" finished-at="2024-06-03T22:11:07 IST" duration-ms="999" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.synergyconnect.testcases.addOrganization.verifyAddLocation() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAddLocation()[pri:1, instance:com.synergyconnect.testcases.addOrganization@2d1ef81a]" started-at="2024-06-03T22:11:07 IST" name="verifyAddLocation" finished-at="2024-06-03T22:12:00 IST" depends-on-methods="com.synergyconnect.testcases.addOrganization.verifyLoginisworking" duration-ms="53659" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddLocation -->
+        <test-method is-config="true" signature="tearDown(java.lang.reflect.Method)[pri:0, instance:com.synergyconnect.testcases.addOrganization@2d1ef81a]" started-at="2024-06-03T22:12:00 IST" name="tearDown" finished-at="2024-06-03T22:12:00 IST" duration-ms="222" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.synergyconnect.testcases.addOrganization.verifyAddLocation() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.synergyconnect.testcases.addOrganization -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
