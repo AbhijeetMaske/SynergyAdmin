@@ -14,36 +14,31 @@ public OrganizationInfo(WebDriver driver) {
 
 	}	
 	@FindBy(xpath="//i[@class='fa fa-edit']")
-	WebElement Edit;
+	WebElement organizationInfoEdit;
 	
 	@FindBy(id="organizationName")
-	WebElement OrganizationName;
+	WebElement organizationName;
 	
 	@FindBy(id="establishedOn")
-	WebElement IncorporationDate;
+	WebElement incorporationDate;
+	
 	@FindBy(xpath="//td[text()='15']")
 	WebElement DatePicker;
 	
 	@FindBy(xpath="//input[@placeholder='Enter Short Name']")
-	WebElement ShortName;
+	WebElement shortName;
 	
 	@FindBy(id="registeredWith")
-	WebElement EntityType;
+	WebElement entityType;
 	
 	@FindBy(id="cinRegistrationNo")
-	WebElement CinNo;
+	WebElement cinNo;
 	
 	@FindBy(id="mcaNO")
-	WebElement CsrRegNo;
-	
-	@FindBy(id="mcaNumber")
-	WebElement ExCsrRegNo;
+	WebElement mcaCsrRegNo;	
 	
 	@FindBy(id="entitypanNo")
-	WebElement EntityPanNo;
-	
-	@FindBy(xpath="//label[text()='Email ID']")
-	WebElement ExPanNo;
+	WebElement EntityPanNo;	
 	
 	@FindBy(id="organizationContactPerson")
 	WebElement ContactPerson;
@@ -81,120 +76,130 @@ public OrganizationInfo(WebDriver driver) {
 	@FindBy(id="orgFormSubmitButton")
 	WebElement Submit;
 	
+	//Profile
+	@FindBy(id="mcaNumber")
+	WebElement mcaCsrRegNoText;
 	
-	public void clickOnEdit() {
-		Edit.click();
+	@FindBy(id="cinNumber")
+	WebElement cinRegistrationNoText;
+	
+	@FindBy(xpath="//label[text()='Email ID']")
+	WebElement emailIdText;
+	
+	
+	public void organizationInfoEdit() {
+		organizationInfoEdit.click();
 	}
 	
-	public void enterOrganizationName() {
-		OrganizationName.clear();
-		OrganizationName.sendKeys("SynergyConnect Foundation");
+	public void organizationName() {
+		organizationName.clear();
+		organizationName.sendKeys("SynergyConnect Foundation");
 	}
 	
-	public void clickOnIncorporationDate() {
-		IncorporationDate.click();
+	public void incorporationDate() {
+		incorporationDate.click();
 	}
 	public void DatePicker() {
 		DatePicker.click();
 	}
 	
-	public void enterShortName() {
-		ShortName.clear();
-		ShortName.sendKeys("etyfhds");
+	public void shortName() {
+		shortName.clear();
+		shortName.sendKeys("etyfhds");
 	}
 	
-	public void clickOnEntityType() {
-		Select et=new Select(EntityType);
-		et.selectByVisibleText("Entity Established under and Act of Parliament of State Legislature");
+	public void entityType() {
+		Select ET=new Select(entityType);
+		ET.selectByVisibleText("Entity Established under and Act of Parliament of State Legislature");
 	}
 	
-	public void enterCinNo() {
-		CinNo.clear();
-		CinNo.sendKeys("L12345AA1234PLC044444");
+	public void cinNo() {
+		cinNo.clear();
+		cinNo.sendKeys("L12345AA1234PLC044444");
 	}
 	
-	public void enterCsrRegNo() {
-		CsrRegNo.clear();
-		CsrRegNo.sendKeys("ABD00081234");
+	public void mcaCsrRegNo() {
+		mcaCsrRegNo.clear();
+		mcaCsrRegNo.sendKeys("ABD00081234");
 	}
-	public String getCSRText() {
-		return ExCsrRegNo.getText();
-
-	}
-	public String getCINNotext() {
-		return CinNo.getText();
-
-	}
-	public void enterEntityPanNo() {
+	
+	public void entityPanNo() {
 		EntityPanNo.clear();
 		EntityPanNo.sendKeys("AFDHA1789A");
 	}
-	public String getPanNo() {
-		return ExPanNo.getText();
-	}
 	
-	public void enterContactPerson() {
+	public void contactPerson() {
 		ContactPerson.clear();
 		ContactPerson.sendKeys("Kuldeep Hirde");
 	}
 	
-	public void enterMobileNo() {
+	public void mobileNo() {
 		MobileNo.clear();
 		MobileNo.sendKeys("9175437343");
 	}
 	
-	public void enterEmailId() {
+	public void emailId() {
 		EmailId.clear();
 		EmailId.sendKeys("tanaya@synergyconnect.in");
 	}
 	
-	public void enterAddress1() {
+	public void address_I() {
 		Address1.clear();
 		Address1.sendKeys("Near RBL Bank, Gokhle Road");
 	}
 	
-	public void enterAddress2() {
+	public void address_II() {
 		Address2.clear();
 		Address2.sendKeys("Dadar West");
 	}
 	
-	public void enterCity() {
+	public void city() {
 		City.clear();
 		City.sendKeys("Mumbai");
 	}
 	
-	public void enterPincode() {
+	public void pincode() {
 		Pincode.clear();
 		Pincode.sendKeys("400002");
 	}
 	
-	public void clickOnCountry() {
+	public void country() {
 		Select c=new Select(Country);
 		c.selectByVisibleText("India");
 	}
 	
-	public void clickOnState() {
+	public void state() {
 		Select s=new Select(State);
 		s.selectByVisibleText("Maharashtra");
 	}
 	
-	public void clickOnUploadLogo() {
-		UploadLogo.click();
+	public void uploadLogo() {
+		//UploadLogo.click();
 	}
 	
-	public void enterBriefDiscription() {
+	public void briefDiscription() {
 		BriefDiscription.clear();
 		BriefDiscription.sendKeys("Driving Excellence for NGOs, Corporate CSR, and Foundations.\r\n"
 				+ "Embracing the evolving role of technology, we enable NGOs and corporate CSR and foundations to harness its power in driving operational excellence to maximize their social impact and create a sustainable future");
 	}
 	
-	public void clickOnSubmit() {
+	public void submit() {
 		Submit.click();
 	}
 
+	//Validation
+	public String mcaCsrRegNoText() {
+		return mcaCsrRegNoText.getText();
 
+	}
+	public String cinNoText() {
+		return cinRegistrationNoText.getText();
+	}
 
-
+	public String emailIdText() {
+		return emailIdText.getText();
+	}
+	
 
 
 

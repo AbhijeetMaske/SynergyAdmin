@@ -54,7 +54,6 @@ public class BrowserUtils {
         } finally {
             driver.quit();
         }
-        System.out.println(version);
         return version;
     }
 

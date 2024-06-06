@@ -17,6 +17,7 @@ public class AppDriver {
 	
 	@FindBy (xpath = "//*[@id=\"adminproduct\"]/a/span")
 	WebElement adminModule;
+	
 	//Method
 	public void appDriverMenu() {
 		appdriver.click();

@@ -39,7 +39,6 @@ public class ExtentReportListener implements ITestListener {
 
     @Override
     public void onStart(ITestContext context) {
-        System.out.println("On start called....");
         extentReport = new ExtentReports();
         reportFile = new File(REPORTS_DIR + getCurrentTimeDate() + "_extentReport.html");      
         sparkReporter = new ExtentSparkReporter(reportFile);
@@ -48,7 +47,6 @@ public class ExtentReportListener implements ITestListener {
 
     @Override
     public void onFinish(ITestContext context) {
-        System.out.println("On finish called....");
         if (extentReport != null) {
             extentReport.flush();
             try {
