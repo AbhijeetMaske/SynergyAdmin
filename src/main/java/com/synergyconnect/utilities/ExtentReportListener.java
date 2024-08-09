@@ -5,9 +5,11 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -18,7 +20,8 @@ import com.synergyconnect.common.BaseClass;
 public class ExtentReportListener implements ITestListener {
 
     private static final String REPORTS_DIR = System.getProperty("user.dir") + "\\extentReports\\";
-    private static final String SCREENSHOT_DIR = System.getProperty("user.dir") + "\\screenshots\\";
+    @SuppressWarnings("unused")
+	private static final String SCREENSHOT_DIR = System.getProperty("user.dir") + "\\screenshots\\";
     private static ExtentReports extentReport;
     private static ExtentSparkReporter sparkReporter;
     private static ThreadLocal<ExtentTest> localExtent = new ThreadLocal<>();

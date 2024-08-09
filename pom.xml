@@ -5,7 +5,10 @@
 	<groupId>SynergyConnect</groupId>
 	<artifactId>SynergyAdmin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
 	<dependencies>
 		<!-- Selenium Java -->
 		<dependency>
