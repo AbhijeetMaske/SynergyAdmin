@@ -6,13 +6,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import com.aventstack.extentreports.Status;
+import com.synergyconnect.utilities.ExtentReportListener;
+
 public class AddLocation {
 //WebDriver ldriver;
 	
 	public AddLocation(WebDriver driver) {
 		
 		PageFactory.initElements(driver, this);
-	}	
+	}
+	@FindBy(xpath="//a[@id='addLocationBtn']")
+	WebElement Location;
+	
 	@FindBy(id="LocationType")
 	WebElement LocationType;
 	
@@ -48,59 +54,89 @@ public class AddLocation {
 	
 	@FindBy(id="btnAddOfficeLoc")
 	WebElement submit;
-	
-	public void clickOnLocationType() {
-		Select lt=new Select(LocationType);
-		lt.selectByVisibleText("Office");
-		}
-	
-	public void clickOncountry() {
-		Select lt=new Select(country);
-		lt.selectByVisibleText("India");
-		}
-	
-	public void clickOnstate() {
-		Select lt=new Select(state);
-		lt.selectByVisibleText("Maharashtra");
-		}
-	
-	public void clickOndistrict() {
-		Select lt=new Select(district);
-		lt.selectByVisibleText("Amravati");
-		}
-	
-	public void clickOnblock() {
-		Select lt=new Select(block);
-		lt.selectByVisibleText("Chandurbazar");
-		}
-	
-	public void clickOnpinCode() {
-		Select lt=new Select(pinCode);
-		lt.selectByVisibleText("444704");
-		}
-	
-	public void clickOnvillage() {
-		Select lt=new Select(village);
-		lt.selectByVisibleText("Chandur bazar");
-		}
-	
-	public void enterLocation() {
-		location.sendKeys("Amravati");
-		}
-	
-	public void entershorCode() {
-		shortCode.sendKeys("AMI");
+	public void clickOnLocation() {
+		Location.click();
+		ExtentReportListener.getExtent().log(Status.PASS, "Click on Location :");
+
 	}
 	
-	public void enterlocationLatitude() {
-		locationLatitude.sendKeys("19.00000");
+	public void clickOnLocationType(String locationType) {
+		Select lt=new Select(LocationType);
+		lt.selectByVisibleText(locationType);
+		ExtentReportListener.getExtent().log(Status.PASS, "Location type selected :"+locationType);
+
 		}
 	
-	public void enterlocationLongitude() {
-		locationLongitude.sendKeys("27.00000");
+	public void clickOncountry(String Country) {
+		Select lt=new Select(country);
+		lt.selectByVisibleText(Country);
+		ExtentReportListener.getExtent().log(Status.PASS, "Country selected :"+Country);
+
+		}
+	
+	public void clickOnstate(String State) {
+		Select lt=new Select(state);
+		lt.selectByVisibleText(State);
+		ExtentReportListener.getExtent().log(Status.PASS, "State selected :"+State);
+
+		}
+	
+	public void clickOndistrict(String District) {
+		Select lt=new Select(district);
+		lt.selectByVisibleText(District);
+		ExtentReportListener.getExtent().log(Status.PASS, "District selected :"+District);
+
+		}
+	
+	public void clickOnblock(String Block) {
+		Select lt=new Select(block);
+		lt.selectByVisibleText(Block);
+		ExtentReportListener.getExtent().log(Status.PASS, "Block selected :"+Block);
+
+		}
+	
+	public void clickOnpinCode(String Pincode) {
+		Select lt=new Select(pinCode);
+		lt.selectByVisibleText(Pincode);
+		ExtentReportListener.getExtent().log(Status.PASS, "Pincode selected :"+Pincode);
+
+		}
+	
+	public void clickOnvillage(String Village) {
+		Select lt=new Select(village);
+		lt.selectByVisibleText(Village);
+		ExtentReportListener.getExtent().log(Status.PASS, "Village selected :"+Village);
+
+		}
+	
+	public void enterLocation(String Elocation) {
+		location.sendKeys(Elocation);
+		ExtentReportListener.getExtent().log(Status.PASS, "Location entered :"+Elocation);
+
+		
+		}
+	
+	public void entershorCode(String Shortcode) {
+		shortCode.sendKeys(Shortcode);
+		ExtentReportListener.getExtent().log(Status.PASS, "Shortcode entered :"+Shortcode);
+		
+	}
+	
+	public void enterlocationLatitude(String latitude) {
+		locationLatitude.sendKeys(latitude);
+		ExtentReportListener.getExtent().log(Status.PASS, "Latitude entered :"+latitude);
+
+		}
+	
+	public void enterlocationLongitude(String longitude) {
+		locationLongitude.sendKeys(longitude);
+		ExtentReportListener.getExtent().log(Status.PASS, "Longitude entered :"+longitude);
+
 		}
 	public void clickOnsubmit() {
 		submit.click();
+		ExtentReportListener.getExtent().log(Status.PASS, "Submit Successfully :");
+
 	}
 	
 	

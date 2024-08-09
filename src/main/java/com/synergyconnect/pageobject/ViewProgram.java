@@ -13,12 +13,15 @@ public class ViewProgram {
 		PageFactory.initElements(driver, this);
 
 	}
-	
-	@FindBy(xpath="//em[@class='ion-grid text-white font-weight-bold']")
+					
+	@FindBy(xpath="//img[@id='socialIntegratedPlatform']")
 	WebElement ToggleButton;
 	
-	@FindBy(xpath="(//span[text()='Admin'])[2]")
+	@FindBy(xpath="//span[text()='Admin']")
 	WebElement Admin;
+	
+	@FindBy(xpath="(//div[text()='Projects'])[1]")
+	WebElement Project;
 	
 	public void clickOnToggleButton() {
 		ToggleButton.click();
@@ -26,6 +29,10 @@ public class ViewProgram {
 	
 	public void clickOnAdmin() {
 		Admin.click();
+	}
+	
+	public void clickOnProject() {
+		Project.click();
 	}
 	
 }
