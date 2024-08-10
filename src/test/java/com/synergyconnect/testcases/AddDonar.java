@@ -4,21 +4,21 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.synergyconnect.common.BaseClass;
-import com.synergyconnect.pageobject.AddDonarInfo;
-import com.synergyconnect.pageobject.AdminHomePage;
-import com.synergyconnect.pageobject.Contact;
-import com.synergyconnect.pageobject.Corporate;
-import com.synergyconnect.pageobject.Goals;
+import com.synergyconnect.pageobject.AdminHome;
 import com.synergyconnect.pageobject.LoginPage;
-import com.synergyconnect.pageobject.NpbtDetails;
-import com.synergyconnect.pageobject.PreferedLocation;
+import com.synergyconnect.pageobject.stakeholder.AddDonarInfo;
+import com.synergyconnect.pageobject.stakeholder.Contact;
+import com.synergyconnect.pageobject.stakeholder.Corporate;
+import com.synergyconnect.pageobject.stakeholder.Goals;
+import com.synergyconnect.pageobject.stakeholder.NpbtDetails;
+import com.synergyconnect.pageobject.stakeholder.PreferedLocation;
 
 public class AddDonar extends BaseClass {
 	@Test(priority=11)
 	public void verifyLoginisworking() throws InterruptedException {
 		
 		getDriver().get(url);
-		Logger.info("url opeed");
+		//Logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);
@@ -42,7 +42,7 @@ public class AddDonar extends BaseClass {
 	public void verifyAddDonarInfo() throws InterruptedException {
 		
 		getDriver().get(url);
-		Logger.info("url opeed");
+		//Logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);
@@ -60,7 +60,7 @@ public class AddDonar extends BaseClass {
 		System.out.println("actualUrl :"+actualUrl);
 		Assert.assertEquals(actualUrl, expectedUrl);
 		
-		AdminHomePage adminHomePage=new AdminHomePage(getDriver());
+		AdminHome adminHomePage=new AdminHome(getDriver());
 		adminHomePage.clickOnStakeholderAndUserCreation();
 		Thread.sleep(1000);
 		
@@ -134,7 +134,7 @@ public class AddDonar extends BaseClass {
 		public void verifyDonarContents() throws InterruptedException {
 			
 			getDriver().get(url);
-			Logger.info("url opeed");
+			//Logger.info("url opeed");
 			Thread.sleep(500);
 			getDriver().manage().window().maximize();
 			Thread.sleep(500);
@@ -152,7 +152,7 @@ public class AddDonar extends BaseClass {
 			System.out.println("actualUrl :"+actualUrl);
 			Assert.assertEquals(actualUrl, expectedUrl);
 			
-			AdminHomePage adminHomePage=new AdminHomePage(getDriver());
+			AdminHome adminHomePage=new AdminHome(getDriver());
 			adminHomePage.clickOnStakeholderAndUserCreation();
 			Thread.sleep(1000);
 			

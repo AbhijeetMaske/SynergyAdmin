@@ -3,110 +3,122 @@ package com.synergyconnect.utilities;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
+import com.synergyconnect.common.BaseClass;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.synergyconnect.common.BaseClass;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentReportListener implements ITestListener {
 
-    private static final String REPORTS_DIR = System.getProperty("user.dir") + "\\extentReports\\";
-    @SuppressWarnings("unused")
-	private static final String SCREENSHOT_DIR = System.getProperty("user.dir") + "\\screenshots\\";
-    private static ExtentReports extentReport;
-    private static ExtentSparkReporter sparkReporter;
-    private static ThreadLocal<ExtentTest> localExtent = new ThreadLocal<>();
-    private static File reportFile;  // Class-level variable to store the report file
-    
-    public static ExtentTest getExtent() {
-        return localExtent.get();
-    }
+	private static ExtentReports extentReport;
+	private static ThreadLocal<ExtentTest> testThreadLocal = new ThreadLocal<>();
+	private static final Logger logger = LogManager.getLogger(ExtentReportListener.class);
 
-    private static String getCurrentTimeDate() {
-        LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy_MM_dd");
-        String formattedDate = now.format(dateFormatter);
-        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH_mm_ss_SSS");
-        String formattedTime = now.format(timeFormatter);
-        return formattedDate + "_" + formattedTime;
-    }
+	private static final String REPORT_PATH = System.getProperty("user.dir") + "/extentReports/";
+	private static final String REPORT_NAME = "ExtentReport_" + DateTimeUtils.getCurrentDateTime() + ".html";
 
-    @Override
-    public void onStart(ITestContext context) {
-        extentReport = new ExtentReports();
-        reportFile = new File(REPORTS_DIR + getCurrentTimeDate() + "_extentReport.html");      
-        sparkReporter = new ExtentSparkReporter(reportFile);
-        extentReport.attachReporter(sparkReporter);
-    }
+	@Override
+	public void onStart(ITestContext context) {
+		logger.info("Starting Test Suite: {}", context.getName());
+		extentReport = new ExtentReports();
+		ExtentSparkReporter sparkReporter = new ExtentSparkReporter(REPORT_PATH + REPORT_NAME);
 
-    @Override
-    public void onFinish(ITestContext context) {
-        if (extentReport != null) {
-            extentReport.flush();
-            try {
-            	Desktop.getDesktop().browse(reportFile.toURI());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        localExtent.remove();
-    }
+		sparkReporter.config().setTheme(Theme.STANDARD);
+		sparkReporter.config().setDocumentTitle("Automation Test Report");
+		sparkReporter.config().setReportName("Test Execution Report");
+		extentReport.attachReporter(sparkReporter);
 
-    @Override
-    public void onTestStart(ITestResult result) {
-        System.out.println("On test start called...." + result.getMethod().getMethodName());
-        ExtentTest extentTest = extentReport.createTest(result.getMethod().getMethodName());
-        localExtent.set(extentTest);
-    }
+		logger.info("ExtentReport initialized with SparkReporter");
+	}
 
-    @Override
-    public void onTestSuccess(ITestResult result) {
-        System.out.println("Test pass called...." + result.getMethod().getMethodName());
-        ExtentTest extentTest = localExtent.get();
-        if (extentTest != null) {
-            extentTest.log(Status.PASS, "Test passed: " + result.getMethod().getMethodName());
-        } else {
-            System.err.println("ExtentTest is null in onTestSuccess for method: " + result.getMethod().getMethodName());
-        }
-    }
+	@Override
+	public void onFinish(ITestContext context) {
+		logger.info("Finishing Test Suite: {}", context.getName());
+		extentReport.flush();
+		try {
+			Desktop.getDesktop().browse(new File(REPORT_PATH + REPORT_NAME).toURI());
+			logger.info("Test report opened in browser: {}", REPORT_PATH + REPORT_NAME);
+		} catch (IOException e) {
+			logger.error("Error opening test report in browser: {}", e.getMessage(), e);
+		}
+	}
 
-    @Override
-    public void onTestFailure(ITestResult result) {
-        String methodName = result.getMethod().getMethodName();
-        System.out.println("On test failure called...." + methodName);
-        ExtentTest extentTest = localExtent.get();
-        if (extentTest != null) {
-            String screenshotPath = null;
-            try {
-                screenshotPath = UtilMethods.captureScreenShot(BaseClass.getDriver(), methodName);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            extentTest.log(Status.FAIL, "Test failed: " + methodName);
-            extentTest.log(Status.FAIL, result.getThrowable(),
-                    MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
-        } else {
-            System.err.println("ExtentTest is null in onTestFailure for method: " + methodName);
-        }
-    }
+	@Override
+	public void onTestStart(ITestResult result) {
+		logger.info("Starting Test: {}", result.getMethod().getMethodName());
+	}
 
-    @Override
-    public void onTestSkipped(ITestResult result) {
-        System.out.println("Test skipped called...." + result.getMethod().getMethodName());
-        ExtentTest extentTest = localExtent.get();
-        if (extentTest != null) {
-            extentTest.log(Status.SKIP, "Test skipped: " + result.getMethod().getMethodName());
-        } else {
-            System.err.println("ExtentTest is null in onTestSkipped for method: " + result.getMethod().getMethodName());
-        }
-    }
+	@Override
+	public void onTestSuccess(ITestResult result) {
+		logger.info("Test Passed: {}", result.getMethod().getMethodName());
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+		String methodName = result.getMethod().getMethodName();
+		logger.error("Test Failed: {}", methodName);
+		String screenshotPath = null;
+
+		try {
+			screenshotPath = UtilMethods.captureScreenShot(BaseClass.getDriver(), methodName);
+			logger.info("Screenshot captured for failed test: {}", methodName);
+		} catch (IOException e) {
+			logger.error("Error capturing screenshot for failed test: {}", methodName, e);
+		}
+
+		testThreadLocal.get().log(Status.FAIL, "Test failed: " + result.getThrowable());
+		try {
+			testThreadLocal.get().log(Status.FAIL, "Test Failed: ",
+					MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+		} catch (Exception e) {
+			logger.error("Error attaching screenshot to Extent report: {}", e.getMessage(), e);
+		}
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		logger.warn("Test Skipped: {}", result.getMethod().getMethodName());
+		testThreadLocal.get().log(Status.SKIP, "Test skipped: " + result.getThrowable());
+	}
+
+	public static ExtentTest getCurrentTest() {
+		return testThreadLocal.get();
+	}
+
+	public static ExtentTest createParentTest(String name, String description) {
+		ExtentTest parentTest = extentReport.createTest(name, description);
+		testThreadLocal.set(parentTest);
+		return parentTest;
+	}
+
+	public static ExtentTest createChildTest(String name) {
+		ExtentTest childTest = getCurrentTest().createNode(name);
+		testThreadLocal.set(childTest);
+		return childTest;
+	}
+
+	public static void tags(String... tags) {
+		ExtentTest currentTest = testThreadLocal.get();
+		if (currentTest != null) {
+			for (String tag : tags) {
+				currentTest.assignCategory(tag.toLowerCase());
+			}
+		}
+	}
+
+	public static void author(String... authors) {
+		ExtentTest currentTest = testThreadLocal.get();
+		if (currentTest != null) {
+			currentTest.assignAuthor(authors);
+		}
+	}
 }

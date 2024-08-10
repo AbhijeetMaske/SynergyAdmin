@@ -6,14 +6,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.synergyconnect.common.BaseClass;
-import com.synergyconnect.pageobject.AddLocation;
-import com.synergyconnect.pageobject.AdminHomePage;
-import com.synergyconnect.pageobject.BulkLocation;
-import com.synergyconnect.pageobject.CsrCompanyDetails;
+import com.synergyconnect.pageobject.AdminHome;
 import com.synergyconnect.pageobject.LoginPage;
-import com.synergyconnect.pageobject.Organization;
-import com.synergyconnect.pageobject.SubOrganizationList;
 import com.synergyconnect.pageobject.ViewProgram;
+import com.synergyconnect.pageobject.organization.AddLocation;
+import com.synergyconnect.pageobject.organization.BulkLocation;
+import com.synergyconnect.pageobject.organization.CsrCompanyDetails;
+import com.synergyconnect.pageobject.organization.Organization;
+import com.synergyconnect.pageobject.organization.SubOrganizationList;
 import com.synergyconnect.pageobject.Validation;
 
 public class OrganizationDetails extends BaseClass{
@@ -22,7 +22,7 @@ public class OrganizationDetails extends BaseClass{
 	public void verifyLoginisworking() throws InterruptedException {
 		
 		getDriver().get(url);
-		Logger.info("url opeed");
+		//Logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);
@@ -46,7 +46,7 @@ public class OrganizationDetails extends BaseClass{
 	public void verifyAddOrganization() throws InterruptedException {
 		
 		getDriver().get(url);
-		Logger.info("url opeed");
+		//Logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);
@@ -69,7 +69,7 @@ public class OrganizationDetails extends BaseClass{
 		System.out.println("actualUrl :"+actualUrl);
 		Assert.assertEquals(actualUrl, expectedUrl);
 //		
-		AdminHomePage adminHomePage=new AdminHomePage(getDriver());
+		AdminHome adminHomePage=new AdminHome(getDriver());
 		adminHomePage.clickOnOrganizationDetails();
 		Thread.sleep(500);
 		
@@ -172,7 +172,7 @@ public class OrganizationDetails extends BaseClass{
 	@Test(dependsOnMethods = "verifyLoginisworking",priority=5)
 		public void	verifyAddLocation() throws InterruptedException {
 		getDriver().get(url);
-		Logger.info("url opened");
+		//Logger.info("url opened");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);
@@ -195,7 +195,7 @@ public class OrganizationDetails extends BaseClass{
 		System.out.println("actualUrl :"+actualUrl);
 		Assert.assertEquals(actualUrl, expectedUrl);
 		
-		AdminHomePage adminHomePage=new AdminHomePage(getDriver());
+		AdminHome adminHomePage=new AdminHome(getDriver());
 		adminHomePage.clickOnOrganizationDetails();
 		Thread.sleep(500);
 			
@@ -247,7 +247,7 @@ public class OrganizationDetails extends BaseClass{
 	@Test(priority=3)
 	public void verifyCsrCompanyDetails() throws InterruptedException {
 		getDriver().get(url);
-		Logger.info("url opeed");
+		//Logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);
@@ -270,7 +270,7 @@ public class OrganizationDetails extends BaseClass{
 		System.out.println("actualUrl :"+actualUrl);
 		Assert.assertEquals(actualUrl, expectedUrl);
 		
-		AdminHomePage adminHomePage=new AdminHomePage(getDriver());
+		AdminHome adminHomePage=new AdminHome(getDriver());
 		adminHomePage.clickOnOrganizationDetails();
 		Thread.sleep(500);
 		
@@ -333,7 +333,7 @@ public class OrganizationDetails extends BaseClass{
 	@Test(priority=4)
 	public void verifySubOrganizationList() throws InterruptedException {
 		getDriver().get(url);
-		Logger.info("url opeed");
+		//Logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);
@@ -356,7 +356,7 @@ public class OrganizationDetails extends BaseClass{
 		System.out.println("actualUrl :"+actualUrl);
 		Assert.assertEquals(actualUrl, expectedUrl);
 		
-		AdminHomePage adminHomePage=new AdminHomePage(getDriver());
+		AdminHome adminHomePage=new AdminHome(getDriver());
 		adminHomePage.clickOnOrganizationDetails();
 		Thread.sleep(500);
 		
@@ -435,7 +435,7 @@ public class OrganizationDetails extends BaseClass{
 	@Test(priority=6)
 	public void	verifyBulkLocation() throws InterruptedException {
 		getDriver().get(url);
-		Logger.info("url opeed");
+		//Logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);
@@ -458,7 +458,7 @@ public class OrganizationDetails extends BaseClass{
 		System.out.println("actualUrl :"+actualUrl);
 		Assert.assertEquals(actualUrl, expectedUrl);
 		
-		AdminHomePage adminHomePage=new AdminHomePage(getDriver());
+		AdminHome adminHomePage=new AdminHome(getDriver());
 		adminHomePage.clickOnOrganizationDetails();
 		Thread.sleep(500);
 			

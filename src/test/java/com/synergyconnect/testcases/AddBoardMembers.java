@@ -4,16 +4,19 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.synergyconnect.common.BaseClass;
-import com.synergyconnect.pageobject.AdminHomePage;
-import com.synergyconnect.pageobject.BoardMember;
+import com.synergyconnect.pageobject.AdminHome;
 import com.synergyconnect.pageobject.LoginPage;
+import com.synergyconnect.pageobject.stakeholder.BoardMember;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class AddBoardMembers extends BaseClass {
 	@Test(priority=14)
 	public void verifyAddBoardMembersInfo() throws InterruptedException {
 		
 		getDriver().get(url);
-		Logger.info("url opeed");
+		//Logger.info("url opeed");
 		Thread.sleep(500);
 		getDriver().manage().window().maximize();
 		Thread.sleep(500);
@@ -32,7 +35,7 @@ public class AddBoardMembers extends BaseClass {
 		Assert.assertEquals(actualUrl, expectedUrl);
 		
 		
-		AdminHomePage adminHomePage=new AdminHomePage(getDriver());
+		AdminHome adminHomePage=new AdminHome(getDriver());
 		adminHomePage.clickOnStakeholderAndUserCreation();
 		Thread.sleep(1000);
 		
