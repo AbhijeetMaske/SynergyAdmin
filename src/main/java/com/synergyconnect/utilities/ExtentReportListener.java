@@ -34,7 +34,7 @@ public class ExtentReportListener implements ITestListener {
 
 		sparkReporter.config().setTheme(Theme.STANDARD);
 		sparkReporter.config().setDocumentTitle("Automation Test Report");
-		sparkReporter.config().setReportName("Test Execution Report");
+		sparkReporter.config().setReportName("SynergyAdmin_Test Execution Report");
 		extentReport.attachReporter(sparkReporter);
 
 		logger.info("ExtentReport initialized with SparkReporter");

@@ -5,53 +5,69 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.synergyconnect.common.BaseClass;
+import com.synergyconnect.utilities.ElementInteractionUtils;
 import com.synergyconnect.utilities.ExtentReportListener;
+import com.synergyconnect.utilities.ReadConfig;
 
 public class LoginPage {
-	//create object of WebDriver
-//	WebDriver driver;
-	
-	//constructor
+	ElementInteractionUtils EI;
+
+	// constructor
 	public LoginPage(WebDriver driver) {
-	
 		PageFactory.initElements(driver, this);
-
+		EI = new ElementInteractionUtils(driver);
 	}
-	
-	//identify WebElements
-	@FindBy(id="username")
+
+	ReadConfig config = new ReadConfig();
+	String UserName = config.getUserId();
+	String UserPassword = config.getPassword();
+	public static ExtentTest test;
+	public static ExtentTest parentTest;
+	public static ExtentTest childTest;
+
+	// identify WebElements
+	@FindBy(id = "username")
 	WebElement Userid;
-	
-	@FindBy(id="password")
+
+	@FindBy(id = "password")
 	WebElement Password;
-	
-	@FindBy(xpath="//button[text()='Login']")
+
+	@FindBy(xpath = "//button[text()='Login']")
 	WebElement Login;
-	
-	//identify Action on WebElement
-	public void enterUserid(String UserId) {
-		Userid.sendKeys(UserId);
-		ExtentReportListener.getExtent().log(Status.PASS, "User id entered :"+UserId);
+
+	@FindBy(xpath = "//*[@id=\"socialIntegratedPlatform\"]")
+	WebElement NavBar;
+
+	@FindBy(xpath = "//*[@id=\"productworks\"]")
+	WebElement synergyWorks;
+
+	// identify Action on WebElement
+	public void enterUserid() {
+		ElementInteractionUtils.sendKeys(Userid, UserName);
+		// ExtentReportListener.getExtent().log(Status.PASS, "User ID successfully
+		// entered: " +config.getUserId());
 	}
-	
-	public void enterPassword(String password) {
-		Password.sendKeys(password);
-		ExtentReportListener.getExtent().log(Status.PASS, "Pasword entered :"+password);
+
+	public void enterPassword() {
+		ElementInteractionUtils.sendKeys(Password, UserPassword);
 	}
-	
+
 	public void clickOnLogin() {
-		Login.click();
-		ExtentReportListener.getExtent().log(Status.PASS, "Login Clicked Successfully");
+		ElementInteractionUtils.click(Login);
+		// ExtentReportListener.getExtent().log(Status.PASS, "Login button clicked
+		// successfully.");
 	}
-	
+
 	public String getHompageUrl() {
-		String urlFetched =BaseClass.getDriver().getCurrentUrl();
-		ExtentReportListener.getExtent().log(Status.PASS, "URL fetched "+urlFetched);
-		return urlFetched;
+		String currentURL = BaseClass.getDriver().getCurrentUrl();
+		boolean loginStatus = currentURL.contains("https://test30.synergyapps.in/");
+		return currentURL;
 	}
 
-	
-
+	public void synergyWorks() {
+		ElementInteractionUtils.click(NavBar);
+	}
 }

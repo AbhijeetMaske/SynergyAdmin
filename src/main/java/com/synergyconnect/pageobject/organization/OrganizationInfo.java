@@ -12,78 +12,162 @@ public class OrganizationInfo {
 		PageFactory.initElements(driver, this);
 	}
 
+	// identify WebElements
+
+	// Organization Info
 	@FindBy(xpath = "//i[@class='fa fa-edit']")
-	WebElement organizationInfoEdit;
+	private WebElement btnOrganizationInfoEdit;
 
-	@FindBy(id = "organizationName")
-	WebElement organizationName;
+	@FindBy(xpath = "//*[@id='organizationName']")
+	private WebElement txtOrganizationName;
 
-	@FindBy(id = "establishedOn")
-	WebElement incorporationDate;
+	@FindBy(xpath = "//*[@id=\"establishedOn\"]")
+	private WebElement dtpIncorporationDate;
 
-	@FindBy(xpath = "//td[text()='15']")
-	WebElement DatePicker;
+	@FindBy(xpath = "//*[@id=\"organisationAbbreviation\"]")
+	private WebElement txtShortName;
 
-	@FindBy(xpath = "//input[@placeholder='Enter Short Name']")
-	WebElement shortName;
+	@FindBy(xpath = "//*[@id=\"registeredWith\"]")
+	private WebElement ddlEntityType;
 
-	@FindBy(id = "registeredWith")
-	WebElement entityType;
+	@FindBy(xpath = "//*[@id=\"cinRegistrationNo\"]")
+	private WebElement txtCinNo;
 
-	@FindBy(id = "cinRegistrationNo")
-	WebElement cinNo;
+	@FindBy(xpath = "//*[@id=\"crn\"]")
+	private WebElement txtCrnNo;
 
-	@FindBy(id = "mcaNO")
-	WebElement mcaCsrRegNo;
+	@FindBy(xpath = "//*[@id=\"mcaNO\"]")
+	private WebElement txtMcaCsrRegNo;
 
-	@FindBy(id = "entitypanNo")
-	WebElement EntityPanNo;
+	@FindBy(xpath = "//*[@id=\"entitypanNo\"]")
+	private WebElement txtEntityPanNo;
 
-	@FindBy(id = "organizationContactPerson")
-	WebElement ContactPerson;
+	@FindBy(xpath = "//*[@id=\"organizationContactPerson\"]")
+	private WebElement txtContactPerson;
 
-	@FindBy(id = "organizationContactPersonContact")
-	WebElement MobileNo;
+	@FindBy(xpath = "//*[@id=\"organizationContactPersonContact\"]")
+	private WebElement txtMobileNo;
 
-	@FindBy(id = "contactEmailId")
-	WebElement EmailId;
+	@FindBy(xpath = "//*[@id=\"contactEmailId\"]")
+	private WebElement txtEmailId;
 
-	@FindBy(id = "address.location")
-	WebElement Address1;
+	@FindBy(xpath = "//*[@id=\"address.location\"]")
+	private WebElement txtAddressLineI;
 
-	@FindBy(id = "address.locationII")
-	WebElement Address2;
+	@FindBy(xpath = "//*[@id=\"address.locationII\"]")
+	private WebElement txtAddressLineII;
 
-	@FindBy(id = "address.village")
-	WebElement City;
+	@FindBy(xpath = "//*[@id=\"address.village\"]")
+	private WebElement txtCity;
 
-	@FindBy(id = "address.pinCode")
-	WebElement Pincode;
+	@FindBy(xpath = "//*[@id=\"address.pinCode\"]")
+	private WebElement txtPincode;
 
-	@FindBy(id = "country")
-	WebElement Country;
+	@FindBy(xpath = "//*[@id=\"country\"]")
+	private WebElement ddlCountry;
 
-	@FindBy(id = "state")
-	WebElement State;
+	@FindBy(xpath = "//*[@id=\"state\"]")
+	private WebElement ddlState;
 
 	@FindBy(xpath = "//label[@for='organizationLogo']")
-	WebElement UploadLogo;
+	private WebElement btnUploadLogo;
 
-	@FindBy(id = "aboutOrganization")
-	WebElement BriefDiscription;
+	@FindBy(xpath = "//*[@id=\"aboutOrganization\"]")
+	private WebElement txaBriefDiscription;
 
-	@FindBy(id = "orgFormSubmitButton")
-	WebElement Submit;
+	// Media Sources
 
+	@FindBy(xpath = "//*[@id=\"socialNetwork.website\"]")
+	private WebElement txtwebsite;
+
+	@FindBy(xpath = "//*[@id=\"socialNetwork.csrPageLink\"]")
+	private WebElement txtcsrLink;
+
+	@FindBy(xpath = "//*[@id=\"socialNetwork.linkedIn\"]")
+	private WebElement txtlinkedIn;
+
+	@FindBy(xpath = "//*[@id=\"socialNetwork.facebook\"]")
+	private WebElement txtFacebook;
+
+	@FindBy(xpath = "//*[@id=\"socialNetwork.instagram\"]")
+	private WebElement txtInstagram;
+
+	@FindBy(xpath = "//*[@id=\"socialNetwork.twitter\"]")
+	private WebElement txtTwitter;
+
+	@FindBy(xpath = "//*[@id=\"socialNetwork.youtube\"]")
+	private WebElement txtYouTube;
+
+	//
+	@FindBy(xpath = "//*[@id=\"grpYes\"]")
+	private WebElement establishedByCompanyOrGroupOfCompaniesYes;
+
+	@FindBy(xpath = "//*[@id=\"grpNo\"]")
+	private WebElement establishedByCompanyOrGroupOfCompaniesNO;
+
+	@FindBy(xpath = "//*[@id=\"subOrgYes\"]")
+	private WebElement subOrganizationYes;
+
+	@FindBy(xpath = "//*[@id=\"subOrgNo\"]")
+	private WebElement subOrganizationNO;
+
+	@FindBy(xpath = "//*[@id=\"orgFormSubmitButton\"]")
+	private WebElement btnOrgnizationInfoSubmit;
+
+	// CSR Company
+	@FindBy(xpath = "//*[@id=\"addBtnCSR\"]")
+	private WebElement btnAddCsrCompanydetails;
+
+	@FindBy(xpath = "//*[@id=\"csrCompanyName\"]")
+	private WebElement txtCsrCompanyName;
+
+	@FindBy(xpath = "//*[@id=\"csrCinNo\"]")
+	private WebElement txtCsrCinNo;
+
+	@FindBy(xpath = "//body/div[@id='app']/div[1]/div[2]/section[1]/div[1]/div[1]/form[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/input[1]")
+	private WebElement txtCsrShortName;
+	
+	@FindBy(xpath = "//*[@id=\"csrHeadManagerName\"]")
+	private WebElement txtCsrHeadManager;
+	
+	@FindBy(xpath = "//*[@id=\"csrMobileNo\"]")
+	private WebElement txtCsrMobileNo;
+	
+	@FindBy(xpath = "//*[@id=\"csrCity\"]")
+	private WebElement txtCsrCity;
+	
+	@FindBy(xpath = "//*[@id=\"csrState\"]")
+	private WebElement ddlCsrState;
+	
+	@FindBy(xpath = "//*[@id=\"csrCompanyButton\"]")
+	private WebElement btnAddCsr;
+
+	@FindBy(xpath = "//*[@id=\"csrCompanyDetailCollapse\"]/div[2]/button[2]")
+	private WebElement btnCancelCsr;
+	
+	@FindBy(xpath = "//*[@id=\"tbl_csrCompany_wrapper\"]")
+	private WebElement tblCsrDetails;
+	
+	@FindBy(xpath = "//*[@id=\"tbl_csrCompany_next\"]")
+	private WebElement btnCsrDetailsNext;
+	
+	//Sub-Organization
+	@FindBy(xpath = "//*[@id=\"subOrgBtn\"]")
+	private WebElement btnSubOrganizationAdd;
+	
+	@FindBy(xpath = "//*[@id=\"subOrganizationName\"]")
+	private WebElement txtSubOrganizationName;
+	
+	
 	// Profile
 	@FindBy(id = "mcaNumber")
-	WebElement mcaCsrRegNoText;
+	private WebElement mcaCsrRegNoText;
 
 	@FindBy(id = "cinNumber")
-	WebElement cinRegistrationNoText;
+	private WebElement cinRegistrationNoText;
 
 	@FindBy(xpath = "//label[text()='Email ID']")
-	WebElement emailIdText;
+	private WebElement emailIdText;
 
 	public void organizationInfoEdit() {
 		organizationInfoEdit.click();

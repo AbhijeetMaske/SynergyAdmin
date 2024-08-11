@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" >
-<listeners>
-<listener class-name="com.synergyconnect.utilities.ExtentReportListener"></listener>	
-</listeners>
-  <test name="Test 1">
-    <classes>
-		<class name="com.synergyconnect.testcases.OrganizationDetails"></class>
-    </classes>
-  </test> <!-- Test -->
-  <test name="Test 2">
-	<classes>
-		<class name="com.synergyconnect.testcases.StakeholderAndUserCreation"></class>
-	</classes>
-  </test> 
-  <test name="Test 3">
-	  <classes>
-		 <class name="com.synergyconnect.testcases.AddDonar"></class>
-	  </classes>
-  </test>
-  <test name="Test 4">
-	  <classes>
-		  <class name="com.synergyconnect.testcases.AddBoardMembers"></class>
-	  </classes>
-  </test>
- 
-  </suite> <!-- Suite -->
-	  
+<suite name="SynergyAdmin">
+	<listeners>
+		<listener class-name="com.synergyconnect.utilities.ExtentReportListener"></listener>
+	</listeners>
+	<parameter name="baseUrl" value="https://test30.synergyapps.in" />
+	<parameter name="browser" value="chrome" />
+	<test name="Login Tests" preserve-order="true">
+		<parameter name="device" value="windows" />
+		<parameter name="author" value="Abhijeet" />
+		<classes>
+			<class name="com.synergyconnect.testcases.Login" />
+		</classes>
+	</test>
+</suite>
