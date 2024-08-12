@@ -51,8 +51,8 @@ public class Login extends BaseClass {
 			logger.info("Validated homepage URL");
 			test.log(Status.INFO, "Validated homepage URL");
 
-			loginPage.synergyWorks();
-			logger.info("Synergy Works validated");
+			loginPage.synergyAdmin();
+			logger.info("Synergy Admin validated");
 			test.log(Status.PASS, "Login functionality works as expected");
 
 		} catch (Exception e) {

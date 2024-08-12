@@ -41,8 +41,8 @@ public class LoginPage {
 	@FindBy(xpath = "//*[@id=\"socialIntegratedPlatform\"]")
 	WebElement NavBar;
 
-	@FindBy(xpath = "//*[@id=\"productworks\"]")
-	WebElement synergyWorks;
+	@FindBy(xpath = "//*[@id=\"productAdmin\"]")
+	WebElement synergyAdmin;
 
 	// identify Action on WebElement
 	public void enterUserid() {
@@ -67,7 +67,8 @@ public class LoginPage {
 		return currentURL;
 	}
 
-	public void synergyWorks() {
+	public void synergyAdmin() {
 		ElementInteractionUtils.click(NavBar);
+		ElementInteractionUtils.click(synergyAdmin);
 	}
 }
