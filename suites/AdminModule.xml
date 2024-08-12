@@ -11,6 +11,7 @@
 		<parameter name="author" value="Abhijeet" />
 		<classes>
 			<class name="com.synergyconnect.testcases.Login" />
+			<class name="com.synergyconnect.testcases.OrganizationDetails" />
 		</classes>
 	</test>
 </suite>
