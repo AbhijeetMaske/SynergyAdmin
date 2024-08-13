@@ -20,7 +20,7 @@ public class OrganizationDetails extends BaseClass {
 
 	@BeforeClass
 	public void setUp() {
-		parentTest = ExtentReportListener.createParentTest("OrganizationDetails",
+		parentTest = ExtentReportListener.createParentTest("Add Organization Info Details",
 				"Add Orgnization Details Information");
 		ExtentReportListener.tags("Regression", "Smoke");
 		organizationInfoPage = new OrganizationInfoPage(getDriver());

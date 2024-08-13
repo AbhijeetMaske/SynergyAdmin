@@ -2,11 +2,11 @@ package com.synergyconnect.pageobject.organization;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import com.synergyconnect.utilities.AlertUtils;
@@ -27,6 +27,7 @@ public class OrganizationInfoPage {
 		AU = new AlertUtils(driver);
 	}
 
+	WebElement Yearswitch;
 	// identify WebElements
 
 	@FindBy(xpath = "//span[contains(text(),'Organization Details')]")
@@ -344,36 +345,93 @@ public class OrganizationInfoPage {
 		ElementInteractionUtils.click(ddlAddOrganizationInfo);
 	}
 
-	public void AddorganizationInfo() {
+	public void AddorganizationInfo() throws InterruptedException {
 		ElementInteractionUtils.click(btnOrganizationInfoEdit);
-		ElementInteractionUtils.sendKeys(txtOrganizationName, "Society for Nutrition, Education and Health Action SNEHA, Mumbai");
-		ElementInteractionUtils.sendKeys(dtpIncorporationDate,"19/12/1998");
-		ElementInteractionUtils.sendKeys(txtShortName,"SNEHA");
-		ElementInteractionUtils.selectByVisibleText(ddlEntityType,"Entity Established under and Act of Parliament of State Legislature");
-		ElementInteractionUtils.sendKeys(txtCinNo,"L12345AA1234PLC012345");
-		ElementInteractionUtils.sendKeys(txtCrnNo,"12345678");
-		ElementInteractionUtils.sendKeys(txtMcaCsrRegNo,"MCA12345678");
-		ElementInteractionUtils.sendKeys(txtEntityPanNo,"EDCVG4567Q");
-		ElementInteractionUtils.sendKeys(txtContactPerson,"Jiten Dalvi");
-		ElementInteractionUtils.sendKeys(txtMobileNo,"9820074310");
-		ElementInteractionUtils.sendKeys(txtEmailId,"sneha@synergyconnect.in");
-		ElementInteractionUtils.sendKeys(txtAddressLineI,"Santacruz West");
-		ElementInteractionUtils.sendKeys(txtAddressLineII,"mumbai");
-		ElementInteractionUtils.sendKeys(txtCity,"Mumbai");
-		ElementInteractionUtils.sendKeys(txtPincode,"400054");
-		ElementInteractionUtils.selectByVisibleText(ddlCountry,"India");
-		ElementInteractionUtils.selectByVisibleText(ddlState,"Maharastra");
-		//Logo
-		ElementInteractionUtils.sendKeys(txaBriefDiscription, "SNEHA is a non-profit organization that works with women, children, adolescents, public health and safety systems and in the area of palliative care. Our innovative work in urban informal settlements in seven Municipal Corporations including Mumbai aims to reduce maternal and neonatal mortality and morbidity, child malnutrition, adolescent empowerment and sexuality, gender-based violence and palliative care.");
-		/* Media Sources */
-		ElementInteractionUtils.sendKeys(txtwebsite,"https://snehamumbai.org/");
-		ElementInteractionUtils.sendKeys(txtcsrLink,"https://snehamumbai.org/");
-		ElementInteractionUtils.sendKeys(txtlinkedIn,"https://www.linkedin.com/company/society-for-nutrition-education-and-health-action-sneha-");
-		ElementInteractionUtils.sendKeys(txtFacebook,"https://www.facebook.com/SnehaMumbai");
-		ElementInteractionUtils.sendKeys(txtInstagram,"https://www.instagram.com/give_india/https://www.instagram.com/snehamumbai_official/");
-		ElementInteractionUtils.sendKeys(txtTwitter,"https://twitter.com/SNEHAmumbai");
-		ElementInteractionUtils.sendKeys(txtYouTube,"https://youtube.com/SNEHAmumbai");
-		
+		ElementInteractionUtils.sendKeys(txtOrganizationName,
+				"Society for Nutrition, Education and Health Action SNEHA, Mumbai");
+		// ElementInteractionUtils.sendKeys(dtpIncorporationDate, "");
+		datePicker();
+//		ElementInteractionUtils.sendKeys(txtShortName, "SNEHA");
+//		ElementInteractionUtils.selectByVisibleText(ddlEntityType,
+//				"Entity Established under and Act of Parliament of State Legislature");
+//		ElementInteractionUtils.sendKeys(txtCinNo, "L12345AA1234PLC012345");
+//		ElementInteractionUtils.sendKeys(txtCrnNo, "12345678");
+//		ElementInteractionUtils.sendKeys(txtMcaCsrRegNo, "MCA12345678");
+//		ElementInteractionUtils.sendKeys(txtEntityPanNo, "EDCVG4567Q");
+//		ElementInteractionUtils.sendKeys(txtContactPerson, "Jiten Dalvi");
+//		ElementInteractionUtils.sendKeys(txtMobileNo, "9820074310");
+//		ElementInteractionUtils.sendKeys(txtEmailId, "sneha@synergyconnect.in");
+//		ElementInteractionUtils.sendKeys(txtAddressLineI, "Santacruz West");
+//		ElementInteractionUtils.sendKeys(txtAddressLineII, "mumbai");
+//		ElementInteractionUtils.sendKeys(txtCity, "Mumbai");
+//		ElementInteractionUtils.sendKeys(txtPincode, "400054");
+//		ElementInteractionUtils.selectByVisibleText(ddlCountry, "United States Of America");
+//		Thread.sleep(2000);
+//		ElementInteractionUtils.selectByVisibleText(ddlState, "New Jersey");
+//		// Logo
+//		ElementInteractionUtils.sendKeys(txaBriefDiscription,
+//				"SNEHA is a non-profit organization that works with women, children, adolescents, public health and safety systems and in the area of palliative care. Our innovative work in urban informal settlements in seven Municipal Corporations including Mumbai aims to reduce maternal and neonatal mortality and morbidity, child malnutrition, adolescent empowerment and sexuality, gender-based violence and palliative care.");
+//		/* Media Sources */
+//		ElementInteractionUtils.sendKeys(txtwebsite, "https://snehamumbai.org/");
+//		ElementInteractionUtils.sendKeys(txtcsrLink, "https://snehamumbai.org/");
+//		ElementInteractionUtils.sendKeys(txtlinkedIn,
+//				"https://www.linkedin.com/company/society-for-nutrition-education-and-health-action-sneha-");
+//		ElementInteractionUtils.sendKeys(txtFacebook, "https://www.facebook.com/SnehaMumbai");
+//		ElementInteractionUtils.sendKeys(txtInstagram,
+//				"https://www.instagram.com/give_india/https://www.instagram.com/snehamumbai_official/");
+//		ElementInteractionUtils.sendKeys(txtTwitter, "https://twitter.com/SNEHAmumbai");
+//		ElementInteractionUtils.sendKeys(txtYouTube, "https://youtube.com/SNEHAmumbai");
+
 	}
 
+	public void datePicker() {
+		dtpIncorporationDate.click();
+
+		WebElement yearSwitch = driver.findElement(By.xpath("/html/body/div[4]/div[1]/table/thead/tr[2]/th[2]"));
+		yearSwitch.click();
+
+		String calYearText = driver.findElement(By.xpath("/html/body/div[4]/div[2]/table/thead/tr[2]/th[2]")).getText();
+		System.out.println("Displayed Calendar Year: " + calYearText);
+
+		int displayedYear = Integer.parseInt(calYearText);
+		String date = "12/08/2028"; // Example date
+		String[] dateParts = date.split("/");
+		
+		String month = convertToMonth(Integer.parseInt(dateParts[1]));
+		int requiredYear = Integer.parseInt(dateParts[2]);
+		System.out.println("Required Year: " + requiredYear);
+
+		int yearDifference = displayedYear - requiredYear;
+		if (yearDifference != 0) {
+			String direction = yearDifference > 0 ? "previous" : "next";
+			By navigationButton = By.xpath(yearDifference > 0 ? "/html/body/div[4]/div[2]/table/thead/tr[2]/th[1]" // Previous
+																													// Year
+					: "/html/body/div[4]/div[2]/table/thead/tr[2]/th[3]"); // Next Year
+
+			for (int i = 0; i < Math.abs(yearDifference); i++) {
+				driver.findElement(navigationButton).click();
+				System.out.println("Clicked on " + direction + ": " + requiredYear);
+			}
+		}
+		System.out.println("Displayed Year after selection: "
+				+ driver.findElement(By.xpath("/html/body/div[4]/div[2]/table/thead/tr[2]/th[2]")).getText());
+		WebElement element = getDynamicElement("span", "text", month);
+		element.click();)
+	}
+
+	public String convertToMonth(int monthNumber) {
+	    String[] months = {
+	        "January", "February", "March", "April", "May", "June",
+	        "July", "August", "September", "October", "November", "December"
+	    };
+	    if (monthNumber >= 1 && monthNumber <= 12) {
+	        return months[monthNumber - 1];
+	    } else {
+	        return "Invalid month number";
+	    }
+	}
+	public WebElement getDynamicElement(String tagName, String attribute, String value) {
+	    String dynamicXpath = "//" + tagName + "[contains(@" + attribute + ",'" + value + "')]";
+	    return driver.findElement(By.xpath(dynamicXpath));
+	}
 }
