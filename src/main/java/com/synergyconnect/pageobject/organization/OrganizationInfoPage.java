@@ -396,7 +396,7 @@ public class OrganizationInfoPage {
 		int displayedYear = Integer.parseInt(calYearText);
 		String date = "12/08/2028"; // Example date
 		String[] dateParts = date.split("/");
-		
+		String day = dateParts[0];
 		String month = convertToMonth(Integer.parseInt(dateParts[1]));
 		int requiredYear = Integer.parseInt(dateParts[2]);
 		System.out.println("Required Year: " + requiredYear);
@@ -416,13 +416,16 @@ public class OrganizationInfoPage {
 		System.out.println("Displayed Year after selection: "
 				+ driver.findElement(By.xpath("/html/body/div[4]/div[2]/table/thead/tr[2]/th[2]")).getText());
 		WebElement element = getDynamicElement("span", "text", month);
-		element.click();)
+		element.click();
+		
+		driver.findElement(By.xpath("//*[@class='day' and text()='"+day+"']")).click();
+		
 	}
 
 	public String convertToMonth(int monthNumber) {
 	    String[] months = {
-	        "January", "February", "March", "April", "May", "June",
-	        "July", "August", "September", "October", "November", "December"
+	        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+	        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
 	    };
 	    if (monthNumber >= 1 && monthNumber <= 12) {
 	        return months[monthNumber - 1];
@@ -431,7 +434,7 @@ public class OrganizationInfoPage {
 	    }
 	}
 	public WebElement getDynamicElement(String tagName, String attribute, String value) {
-	    String dynamicXpath = "//" + tagName + "[contains(@" + attribute + ",'" + value + "')]";
+	    String dynamicXpath = "//" + tagName + "[contains(" + attribute + "(),'" + value + "')]";
 	    return driver.findElement(By.xpath(dynamicXpath));
 	}
 }
