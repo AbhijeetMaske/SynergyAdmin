@@ -391,7 +391,6 @@ public class OrganizationInfoPage {
 	}
 
 	public void datePicker(String date, WebElement webElement, String DatePicker_Switch,String DatePicker_Header, String DatePicker_prev,String DatePicker_next) throws InterruptedException {
-		
 		webElement.click();
 		WebElement yearToggleButton = null;
 		try{
@@ -410,9 +409,8 @@ public class OrganizationInfoPage {
 		String selectedMonth = convertMonthNumberToName(Integer.parseInt(dateParts[1]));
 		int selectedYear = Integer.parseInt(dateParts[2]);
 		logger.info("Selected Year: {}", selectedYear);
-		
-		System.out.println("Date "+selectedYear);
-		navigateToYear(displayedYear, selectedYear);
+
+		navigateToYear(displayedYear, selectedYear, DatePicker_Header);
 
 		WebElement monthElement = findElementByText("span", selectedMonth);
 		monthElement.click();
@@ -423,7 +421,7 @@ public class OrganizationInfoPage {
 		logger.info("Date selected: {}/{}/{}", selectedDay, selectedMonth, selectedYear);
 	}
 
-	private void navigateToYear(int currentYear, int targetYear) {
+	private void navigateToYear(int currentYear, int targetYear, String DatePicker_Header) {
 		int yearDifference = currentYear - targetYear;
 		if (yearDifference != 0) {
 			String navigationDirection = yearDifference > 0 ? "previous" : "next";
@@ -433,7 +431,8 @@ public class OrganizationInfoPage {
 
 			for (int i = 0; i < Math.abs(yearDifference); i++) {
 				driver.findElement(navigationButtonLocator).click();
-				logger.info("Clicked on {}: {}", navigationDirection, targetYear);
+				String Year = getTextByDynamicXpath(DatePicker_Header);
+				logger.info("Clicked on {}: {}", navigationDirection, Year);
 			}
 		}
 		logger.info("Displayed Year after selection: {}",
@@ -452,7 +451,6 @@ public class OrganizationInfoPage {
 
 	public WebElement findElementByText(String tagName, String text) {
 		String xpathExpression = String.format("//%s[contains(text(),'%s')]", tagName,text);
-		System.out.println(xpathExpression);
 		return driver.findElement(By.xpath(xpathExpression));
 	}
 	
@@ -461,7 +459,6 @@ public class OrganizationInfoPage {
 		WebDriverWait wait = new WebDriverWait(driver,SMALL_PAUSE);
 		try {
 	        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathExpression)));
-	        System.out.println("Found element: " + element);
 	        return element;
 	    } catch (Exception e) {
 	        System.out.println("Error in findElementByDynamicXpath: " + e.getMessage());
