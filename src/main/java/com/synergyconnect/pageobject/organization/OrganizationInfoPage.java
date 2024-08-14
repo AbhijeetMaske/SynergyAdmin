@@ -1,5 +1,7 @@
 package com.synergyconnect.pageobject.organization;
 
+import java.time.Duration;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -7,19 +9,22 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import com.synergyconnect.utilities.AlertUtils;
 import com.synergyconnect.utilities.ElementInteractionUtils;
 import com.synergyconnect.utilities.ReadConfig;
+import com.synergyconnect.common.Config;
 
 public class OrganizationInfoPage {
 	WebDriver driver;
 	ElementInteractionUtils EI;
 	AlertUtils AU;
 	private static final Logger logger = LogManager.getLogger(OrganizationInfoPage.class);
-	ReadConfig config = new ReadConfig();
-
+	ReadConfig readconfig = new ReadConfig();
+	Config config = new Config();
 	public OrganizationInfoPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -350,7 +355,8 @@ public class OrganizationInfoPage {
 		ElementInteractionUtils.sendKeys(txtOrganizationName,
 				"Society for Nutrition, Education and Health Action SNEHA, Mumbai");
 		// ElementInteractionUtils.sendKeys(dtpIncorporationDate, "");
-		datePicker();
+		datePicker("12/08/2028", dtpIncorporationDate, "/html/body/div[4]/div[1]/table/thead/tr[2]/th[2]",
+				"/html/body/div[4]/div[2]/table/thead/tr[2]/th[1]","/html/body/div[4]/div[2]/table/thead/tr[2]/th[3]");
 //		ElementInteractionUtils.sendKeys(txtShortName, "SNEHA");
 //		ElementInteractionUtils.selectByVisibleText(ddlEntityType,
 //				"Entity Established under and Act of Parliament of State Legislature");
@@ -384,57 +390,88 @@ public class OrganizationInfoPage {
 
 	}
 
-	public void datePicker() {
-		dtpIncorporationDate.click();
+	public void datePicker(String date, WebElement webElement, String DatePicker_Switch, String DatePicker_prev,String DatePicker_next) throws InterruptedException {
+		
+		webElement.click();
+		Thread.sleep(2000);
+		WebElement yearToggleButton = null;
+		try{
+		yearToggleButton = findElementByDynamicXpath(DatePicker_Switch);
+		yearToggleButton.click();
+		}catch(Exception e) {
+			System.out.println("error in findElementByDynamicXpath "+e);
+		}
 
-		WebElement yearSwitch = driver.findElement(By.xpath("/html/body/div[4]/div[1]/table/thead/tr[2]/th[2]"));
-		yearSwitch.click();
+		String displayedYearText = driver.findElement(By.xpath("/html/body/div[4]/div[2]/table/thead/tr[2]/th[2]")).getText();
+		logger.info("Displayed Calendar Year: {}", displayedYearText);
 
-		String calYearText = driver.findElement(By.xpath("/html/body/div[4]/div[2]/table/thead/tr[2]/th[2]")).getText();
-		System.out.println("Displayed Calendar Year: " + calYearText);
-
-		int displayedYear = Integer.parseInt(calYearText);
-		String date = "12/08/2028"; // Example date
+		int displayedYear = Integer.parseInt(displayedYearText);
 		String[] dateParts = date.split("/");
-		String day = dateParts[0];
-		String month = convertToMonth(Integer.parseInt(dateParts[1]));
-		int requiredYear = Integer.parseInt(dateParts[2]);
-		System.out.println("Required Year: " + requiredYear);
+		String selectedDay = dateParts[0];
+		String selectedMonth = convertMonthNumberToName(Integer.parseInt(dateParts[1]));
+		int selectedYear = Integer.parseInt(dateParts[2]);
+		logger.info("Selected Year: {}", selectedYear);
+		
+		System.out.println("Date "+selectedYear);
+		navigateToYear(displayedYear, selectedYear);
 
-		int yearDifference = displayedYear - requiredYear;
+		WebElement monthElement = findElementByText("span", selectedMonth);
+		monthElement.click();
+
+		WebElement dayElement = findDayElement(selectedDay);
+		dayElement.click();
+
+		logger.info("Date selected: {}/{}/{}", selectedDay, selectedMonth, selectedYear);
+	}
+
+	private void navigateToYear(int currentYear, int targetYear) {
+		int yearDifference = currentYear - targetYear;
 		if (yearDifference != 0) {
-			String direction = yearDifference > 0 ? "previous" : "next";
-			By navigationButton = By.xpath(yearDifference > 0 ? "/html/body/div[4]/div[2]/table/thead/tr[2]/th[1]" // Previous
-																													// Year
-					: "/html/body/div[4]/div[2]/table/thead/tr[2]/th[3]"); // Next Year
+			String navigationDirection = yearDifference > 0 ? "previous" : "next";
+			By navigationButtonLocator = By
+					.xpath(yearDifference > 0 ? "/html/body/div[4]/div[2]/table/thead/tr[2]/th[1]" // Previous Year button
+					: "/html/body/div[4]/div[2]/table/thead/tr[2]/th[3]" ); // Next Year button
 
 			for (int i = 0; i < Math.abs(yearDifference); i++) {
-				driver.findElement(navigationButton).click();
-				System.out.println("Clicked on " + direction + ": " + requiredYear);
+				driver.findElement(navigationButtonLocator).click();
+				logger.info("Clicked on {}: {}", navigationDirection, targetYear);
 			}
 		}
-		System.out.println("Displayed Year after selection: "
-				+ driver.findElement(By.xpath("/html/body/div[4]/div[2]/table/thead/tr[2]/th[2]")).getText());
-		WebElement element = getDynamicElement("span", "text", month);
-		element.click();
-		
-		driver.findElement(By.xpath("//*[@class='day' and text()='"+day+"']")).click();
-		
+		logger.info("Displayed Year after selection: {}",
+				driver.findElement(By.xpath("/html/body/div[4]/div[2]/table/thead/tr[2]/th[2]")).getText());
 	}
 
-	public String convertToMonth(int monthNumber) {
-	    String[] months = {
-	        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-	        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-	    };
-	    if (monthNumber >= 1 && monthNumber <= 12) {
-	        return months[monthNumber - 1];
-	    } else {
-	        return "Invalid month number";
-	    }
+	public String convertMonthNumberToName(int monthNumber) {
+		String[] months = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+		if (monthNumber >= 1 && monthNumber <= 12) {
+			return months[monthNumber - 1];
+		} else {
+			logger.error("Invalid month number: {}", monthNumber);
+			throw new IllegalArgumentException("Invalid month number: " + monthNumber);
+		}
 	}
-	public WebElement getDynamicElement(String tagName, String attribute, String value) {
-	    String dynamicXpath = "//" + tagName + "[contains(" + attribute + "(),'" + value + "')]";
-	    return driver.findElement(By.xpath(dynamicXpath));
+
+	public WebElement findElementByText(String tagName, String text) {
+		String xpathExpression = String.format("//%s[contains(text(),'%s')]", tagName,text);
+		System.out.println(xpathExpression);
+		return driver.findElement(By.xpath(xpathExpression));
+	}
+	
+	public WebElement findElementByDynamicXpath(String xpathExpression) {
+		Duration SMALL_PAUSE = Duration.ofSeconds(Config.SMALL_PAUSE);
+		WebDriverWait wait = new WebDriverWait(driver,SMALL_PAUSE);
+		try {
+	        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathExpression)));
+	        System.out.println("Found element: " + element);
+	        return element;
+	    } catch (Exception e) {
+	        System.out.println("Error in findElementByDynamicXpath: " + e.getMessage());
+	        throw e;
+	    }	    
+	}
+	
+	public WebElement findDayElement(String selectedDay) {
+	    String dayXpath = "//*[@class='day' and text()='" + selectedDay + "']";
+	    return driver.findElement(By.xpath(dayXpath));
 	}
 }
