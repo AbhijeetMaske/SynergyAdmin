@@ -1,7 +1,6 @@
 package com.synergyconnect.pageobject.organization;
 
 import java.time.Duration;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -25,6 +24,7 @@ public class OrganizationInfoPage {
 	private static final Logger logger = LogManager.getLogger(OrganizationInfoPage.class);
 	ReadConfig readconfig = new ReadConfig();
 	Config config = new Config();
+
 	public OrganizationInfoPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -355,8 +355,9 @@ public class OrganizationInfoPage {
 		ElementInteractionUtils.sendKeys(txtOrganizationName,
 				"Society for Nutrition, Education and Health Action SNEHA, Mumbai");
 		// ElementInteractionUtils.sendKeys(dtpIncorporationDate, "");
-		datePicker("12/08/2028", dtpIncorporationDate, "/html/body/div[4]/div[1]/table/thead/tr[2]/th[2]","/html/body/div[4]/div[2]/table/thead/tr[2]/th[2]",
-				"/html/body/div[4]/div[2]/table/thead/tr[2]/th[1]","/html/body/div[4]/div[2]/table/thead/tr[2]/th[3]");
+		datePicker("12/08/2028", dtpIncorporationDate, "/html/body/div[4]/div[1]/table/thead/tr[2]/th[2]",
+				"/html/body/div[4]/div[2]/table/thead/tr[2]/th[2]", "/html/body/div[4]/div[2]/table/thead/tr[2]/th[1]",
+				"/html/body/div[4]/div[2]/table/thead/tr[2]/th[3]");
 //		ElementInteractionUtils.sendKeys(txtShortName, "SNEHA");
 //		ElementInteractionUtils.selectByVisibleText(ddlEntityType,
 //				"Entity Established under and Act of Parliament of State Legislature");
@@ -390,14 +391,15 @@ public class OrganizationInfoPage {
 
 	}
 
-	public void datePicker(String date, WebElement webElement, String DatePicker_Switch,String DatePicker_Header, String DatePicker_prev,String DatePicker_next) throws InterruptedException {
+	public void datePicker(String date, WebElement webElement, String DatePicker_Switch, String DatePicker_Header,
+			String DatePicker_prev, String DatePicker_next) throws InterruptedException {
 		webElement.click();
 		WebElement yearToggleButton = null;
-		try{
-		yearToggleButton = findElementByDynamicXpath(DatePicker_Switch);
-		yearToggleButton.click();
-		}catch(Exception e) {
-			System.out.println("error in findElementByDynamicXpath "+e);
+		try {
+			yearToggleButton = findElementByDynamicXpath(DatePicker_Switch);
+			yearToggleButton.click();
+		} catch (Exception e) {
+			System.out.println("error in findElementByDynamicXpath " + e);
 		}
 
 		String displayedYearText = getTextByDynamicXpath(DatePicker_Header);
@@ -410,7 +412,7 @@ public class OrganizationInfoPage {
 		int selectedYear = Integer.parseInt(dateParts[2]);
 		logger.info("Selected Year: {}", selectedYear);
 
-		navigateToYear(displayedYear, selectedYear, DatePicker_Header);
+		navigateToYear(displayedYear, selectedYear, DatePicker_Header, DatePicker_prev, DatePicker_next);
 
 		WebElement monthElement = findElementByText("span", selectedMonth);
 		monthElement.click();
@@ -421,14 +423,13 @@ public class OrganizationInfoPage {
 		logger.info("Date selected: {}/{}/{}", selectedDay, selectedMonth, selectedYear);
 	}
 
-	private void navigateToYear(int currentYear, int targetYear, String DatePicker_Header) {
+	private void navigateToYear(int currentYear, int targetYear, String DatePicker_Header, String DatePicker_prev,
+			String DatePicker_next) {
 		int yearDifference = currentYear - targetYear;
 		if (yearDifference != 0) {
 			String navigationDirection = yearDifference > 0 ? "previous" : "next";
-			By navigationButtonLocator = By
-					.xpath(yearDifference > 0 ? "/html/body/div[4]/div[2]/table/thead/tr[2]/th[1]" // Previous Year button
-					: "/html/body/div[4]/div[2]/table/thead/tr[2]/th[3]" ); // Next Year button
-
+			By navigationButtonLocator = By.xpath(yearDifference > 0 ? DatePicker_prev// Previous Year // button
+					: DatePicker_next); // Next Year button
 			for (int i = 0; i < Math.abs(yearDifference); i++) {
 				driver.findElement(navigationButtonLocator).click();
 				String Year = getTextByDynamicXpath(DatePicker_Header);
@@ -450,38 +451,38 @@ public class OrganizationInfoPage {
 	}
 
 	public WebElement findElementByText(String tagName, String text) {
-		String xpathExpression = String.format("//%s[contains(text(),'%s')]", tagName,text);
+		String xpathExpression = String.format("//%s[contains(text(),'%s')]", tagName, text);
 		return driver.findElement(By.xpath(xpathExpression));
 	}
-	
+
 	public WebElement findElementByDynamicXpath(String xpathExpression) {
 		Duration SMALL_PAUSE = Duration.ofSeconds(Config.XSMALL_PAUSE);
-		WebDriverWait wait = new WebDriverWait(driver,SMALL_PAUSE);
+		WebDriverWait wait = new WebDriverWait(driver, SMALL_PAUSE);
 		try {
-	        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathExpression)));
-	        return element;
-	    } catch (Exception e) {
-	        System.out.println("Error in findElementByDynamicXpath: " + e.getMessage());
-	        throw e;
-	    }	    
+			WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathExpression)));
+			return element;
+		} catch (Exception e) {
+			System.out.println("Error in findElementByDynamicXpath: " + e.getMessage());
+			throw e;
+		}
 	}
-	
+
 	public WebElement findDayElement(String selectedDay) {
-	    String dayXpath = "//*[@class='day' and text()='" + selectedDay + "']";
-	    return driver.findElement(By.xpath(dayXpath));
+		String dayXpath = "//*[@class='day' and text()='" + selectedDay + "']";
+		return driver.findElement(By.xpath(dayXpath));
 	}
-	
+
 	public String getTextByDynamicXpath(String xpathExpression) {
-	    try {
-	    	Duration SMALL_PAUSE = Duration.ofSeconds(Config.XSMALL_PAUSE);
-	        WebDriverWait wait = new WebDriverWait(driver, SMALL_PAUSE);
-	        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathExpression)));
-	        String elementText = element.getText();
-	        logger.info("Text retrieved from element: {}", elementText);
-	        return elementText;
-	    } catch (Exception e) {
-	        logger.error("Error retrieving text with XPath {}: {}", xpathExpression, e.getMessage());
-	        throw e; // Re-throwing the exception to handle it in the calling method
-	    }
+		try {
+			Duration SMALL_PAUSE = Duration.ofSeconds(Config.XSMALL_PAUSE);
+			WebDriverWait wait = new WebDriverWait(driver, SMALL_PAUSE);
+			WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathExpression)));
+			String elementText = element.getText();
+			logger.info("Text retrieved from element: {}", elementText);
+			return elementText;
+		} catch (Exception e) {
+			logger.error("Error retrieving text with XPath {}: {}", xpathExpression, e.getMessage());
+			throw e; // Re-throwing the exception to handle it in the calling method
+		}
 	}
 }
