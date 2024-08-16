@@ -1,6 +1,10 @@
 package com.synergyconnect.pageobject.organization;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.regex.Pattern;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -355,7 +359,7 @@ public class OrganizationInfoPage {
 		ElementInteractionUtils.sendKeys(txtOrganizationName,
 				"Society for Nutrition, Education and Health Action SNEHA, Mumbai");
 		// ElementInteractionUtils.sendKeys(dtpIncorporationDate, "");
-		datePicker("12/08/2028", dtpIncorporationDate, "/html/body/div[4]/div[1]/table/thead/tr[2]/th[2]",
+		datePicker("18/08/2028", dtpIncorporationDate, "/html/body/div[4]/div[1]/table/thead/tr[2]/th[2]",
 				"/html/body/div[4]/div[2]/table/thead/tr[2]/th[2]", "/html/body/div[4]/div[2]/table/thead/tr[2]/th[1]",
 				"/html/body/div[4]/div[2]/table/thead/tr[2]/th[3]");
 //		ElementInteractionUtils.sendKeys(txtShortName, "SNEHA");
@@ -393,6 +397,10 @@ public class OrganizationInfoPage {
 
 	public void datePicker(String date, WebElement webElement, String DatePicker_Switch, String DatePicker_Header,
 			String DatePicker_prev, String DatePicker_next) throws InterruptedException {
+		if (!isValidDateFormat(date)) {
+			logger.error("Invalid date format: {}. Expected format is DD/MM/YYYY.", date);
+			throw new IllegalArgumentException("Invalid date format: " + date);
+		}
 		webElement.click();
 		WebElement yearToggleButton = null;
 		try {
@@ -417,7 +425,7 @@ public class OrganizationInfoPage {
 		WebElement monthElement = findElementByText("span", selectedMonth);
 		monthElement.click();
 
-		WebElement dayElement = findDayElement(selectedDay);
+		WebElement dayElement = xpathByClassAndText("day",selectedDay);
 		dayElement.click();
 
 		logger.info("Date selected: {}/{}/{}", selectedDay, selectedMonth, selectedYear);
@@ -436,8 +444,6 @@ public class OrganizationInfoPage {
 				logger.info("Clicked on {}: {}", navigationDirection, Year);
 			}
 		}
-		logger.info("Displayed Year after selection: {}",
-				driver.findElement(By.xpath("/html/body/div[4]/div[2]/table/thead/tr[2]/th[2]")).getText());
 	}
 
 	public String convertMonthNumberToName(int monthNumber) {
@@ -467,22 +473,48 @@ public class OrganizationInfoPage {
 		}
 	}
 
-	public WebElement findDayElement(String selectedDay) {
-		String dayXpath = "//*[@class='day' and text()='" + selectedDay + "']";
+	public WebElement xpathByClassAndText(String className, String text) {
+		String dayXpath = "//*[@class='"+className+"' and text()='" + text + "']";
 		return driver.findElement(By.xpath(dayXpath));
 	}
 
 	public String getTextByDynamicXpath(String xpathExpression) {
 		try {
-			Duration SMALL_PAUSE = Duration.ofSeconds(Config.XSMALL_PAUSE);
-			WebDriverWait wait = new WebDriverWait(driver, SMALL_PAUSE);
+			Duration XSMALL_PAUSE = Duration.ofSeconds(Config.XSMALL_PAUSE);
+			WebDriverWait wait = new WebDriverWait(driver, XSMALL_PAUSE);
 			WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathExpression)));
 			String elementText = element.getText();
 			logger.info("Text retrieved from element: {}", elementText);
 			return elementText;
 		} catch (Exception e) {
 			logger.error("Error retrieving text with XPath {}: {}", xpathExpression, e.getMessage());
-			throw e; // Re-throwing the exception to handle it in the calling method
+			throw e;
 		}
+	}
+
+	private boolean isValidDateFormat(String date) {
+		// Regular expression to validate the date format DD/MM/YYYY
+		String datePattern = "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\\d{4}$";
+		if (!Pattern.matches(datePattern, date)) {
+			return false;
+		}
+		// Split the date to check day and month range
+		String[] dateParts = date.split("/");
+		int day = Integer.parseInt(dateParts[0]);
+		int month = Integer.parseInt(dateParts[1]);
+
+		// Additional check to ensure the date is valid (e.g., no 30th of February)
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		sdf.setLenient(false);
+		try {
+			sdf.parse(date); // Parse the date to ensure it's valid
+		} catch (ParseException e) {
+			return false;
+		}
+		// Ensure day is between 1-31 and month is between 1-12
+		if (day < 1 || day > 31 || month < 1 || month > 12) {
+			return false;
+		}
+		return true;
 	}
 }
