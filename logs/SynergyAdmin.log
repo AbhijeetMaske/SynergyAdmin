@@ -3667,3 +3667,850 @@ Session ID: 835ae806894817e05f8d5ba62f6a9ad0
 2024-08-16 14:14:53.673 INFO  1576 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
 2024-08-16 14:14:54.714 INFO  1576 --- [main] ExtentReportListener : Test report opened in browser: C:\Users\Abhijeet\git\SynergyAdmin/extentReports/ExtentReport_2024_08_16_14_14_01.html
 2024-08-16 14:14:55.344 INFO  1576 --- [main] <== SynergyAdmin ==> : 🛑 WebDriver closed and session ended successfully.
+2024-08-16 16:04:32.853 INFO  6648 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_16_16_04_32
+2024-08-16 16:04:33.000 INFO  6648 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:04:33.001 INFO  6648 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:04:33.075 INFO  6648 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:04:33.076 INFO  6648 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:04:36.992 INFO  6648 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-16 16:04:37.001 INFO  6648 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-16 16:04:37.027 INFO  6648 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-16 16:04:37.400 INFO  6648 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-16 16:04:37.438 INFO  6648 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-16 16:04:37.439 INFO  6648 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-16 16:04:37.460 INFO  6648 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-16 16:04:37.489 INFO  6648 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:04:37.491 INFO  6648 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:04:37.491 INFO  6648 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-16 16:04:37.492 INFO  6648 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-16 16:04:37.535 INFO  6648 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (4270b746b6e4fb52a08b8d68e477b577)
+2024-08-16 16:04:39.922 INFO  6648 --- [main] <== SynergyAdmin ==> : Navigated to URL: https://test30.synergyapps.in
+2024-08-16 16:04:40.503 INFO  6648 --- [main] <== SynergyAdmin ==> : Browser window maximized
+2024-08-16 16:04:41.072 INFO  6648 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (4270b746b6e4fb52a08b8d68e477b577)] -> id: username]
+2024-08-16 16:04:41.820 INFO  6648 --- [main] <== SynergyAdmin ==> : Entered User ID
+2024-08-16 16:04:41.886 INFO  6648 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (4270b746b6e4fb52a08b8d68e477b577)] -> id: password]
+2024-08-16 16:04:42.613 INFO  6648 --- [main] <== SynergyAdmin ==> : Entered Password
+2024-08-16 16:05:05.807 INFO  6648 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-16 16:05:05.807 INFO  6648 --- [main] <== SynergyAdmin ==> : Clicked on Login button
+2024-08-16 16:05:05.814 INFO  6648 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-16 16:05:06.584 INFO  6648 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (4270b746b6e4fb52a08b8d68e477b577)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-16 16:05:09.899 INFO  6648 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (4270b746b6e4fb52a08b8d68e477b577)] -> xpath: //*[@id="productAdmin"]]
+2024-08-16 16:05:09.899 INFO  6648 --- [main] <== SynergyAdmin ==> : Synergy Admin validated
+2024-08-16 16:05:09.902 INFO  6648 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-16 16:05:09.906 INFO  6648 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-16 16:05:09.912 INFO  6648 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:05:09.914 INFO  6648 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:05:09.925 INFO  6648 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (4270b746b6e4fb52a08b8d68e477b577)
+2024-08-16 16:05:09.927 INFO  6648 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-16 16:05:09.928 INFO  6648 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-16 16:05:09.930 INFO  6648 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-16 16:05:10.644 INFO  6648 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (4270b746b6e4fb52a08b8d68e477b577)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-16 16:05:13.472 INFO  6648 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (4270b746b6e4fb52a08b8d68e477b577)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-16 16:05:13.475 INFO  6648 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-16 16:05:13.483 INFO  6648 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-16 16:05:13.490 INFO  6648 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: addOrganizationInfoDetails
+2024-08-16 16:05:13.491 INFO  6648 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: addOrganizationInfoDetails with browser: null
+2024-08-16 16:05:13.496 INFO  6648 --- [main] ExtentReportListener : Starting Test: addOrganizationInfoDetails
+2024-08-16 16:05:14.336 INFO  6648 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (4270b746b6e4fb52a08b8d68e477b577)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-16 16:05:14.420 INFO  6648 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (4270b746b6e4fb52a08b8d68e477b577)] -> xpath: //*[@id='organizationName']]
+2024-08-16 16:05:15.869 ERROR 6648 --- [main] ElementInteractionUtils : An error occurred while selecting the date: Input must be set
+2024-08-16 16:05:15.871 INFO  6648 --- [main] ExtentReportListener : Test Passed: addOrganizationInfoDetails
+2024-08-16 16:05:15.879 INFO  6648 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: addOrganizationInfoDetails
+2024-08-16 16:05:15.881 INFO  6648 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
+2024-08-16 16:05:18.739 INFO  6648 --- [main] ExtentReportListener : Test report opened in browser: C:\Users\Abhijeet\git\SynergyAdmin/extentReports/ExtentReport_2024_08_16_16_04_32.html
+2024-08-16 16:05:19.608 INFO  6648 --- [main] <== SynergyAdmin ==> : 🛑 WebDriver closed and session ended successfully.
+2024-08-16 16:07:32.657 INFO  6052 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_16_16_07_32
+2024-08-16 16:07:32.943 INFO  6052 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:07:32.945 INFO  6052 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:07:33.025 INFO  6052 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:07:33.026 INFO  6052 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:07:37.079 INFO  6052 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-16 16:07:37.082 INFO  6052 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-16 16:07:37.089 INFO  6052 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-16 16:07:37.340 INFO  6052 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-16 16:07:37.365 INFO  6052 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-16 16:07:37.366 INFO  6052 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-16 16:07:37.375 INFO  6052 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-16 16:07:37.393 INFO  6052 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:07:37.394 INFO  6052 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:07:37.395 INFO  6052 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-16 16:07:37.395 INFO  6052 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-16 16:07:37.490 INFO  6052 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (8a1bec3f46ea6ebd75d95f78759bb69c)
+2024-08-16 16:07:39.203 INFO  6052 --- [main] <== SynergyAdmin ==> : Navigated to URL: https://test30.synergyapps.in
+2024-08-16 16:07:39.787 INFO  6052 --- [main] <== SynergyAdmin ==> : Browser window maximized
+2024-08-16 16:07:40.379 INFO  6052 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (8a1bec3f46ea6ebd75d95f78759bb69c)] -> id: username]
+2024-08-16 16:07:41.160 INFO  6052 --- [main] <== SynergyAdmin ==> : Entered User ID
+2024-08-16 16:07:41.226 INFO  6052 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (8a1bec3f46ea6ebd75d95f78759bb69c)] -> id: password]
+2024-08-16 16:07:41.919 INFO  6052 --- [main] <== SynergyAdmin ==> : Entered Password
+2024-08-16 16:08:03.719 INFO  6052 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-16 16:08:03.719 INFO  6052 --- [main] <== SynergyAdmin ==> : Clicked on Login button
+2024-08-16 16:08:03.727 INFO  6052 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-16 16:08:04.506 INFO  6052 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (8a1bec3f46ea6ebd75d95f78759bb69c)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-16 16:08:08.905 INFO  6052 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (8a1bec3f46ea6ebd75d95f78759bb69c)] -> xpath: //*[@id="productAdmin"]]
+2024-08-16 16:08:08.906 INFO  6052 --- [main] <== SynergyAdmin ==> : Synergy Admin validated
+2024-08-16 16:08:08.908 INFO  6052 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-16 16:08:08.912 INFO  6052 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-16 16:08:08.920 INFO  6052 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:08:08.922 INFO  6052 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:08:08.943 INFO  6052 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (8a1bec3f46ea6ebd75d95f78759bb69c)
+2024-08-16 16:08:08.946 INFO  6052 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-16 16:08:08.947 INFO  6052 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-16 16:08:08.952 INFO  6052 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-16 16:08:09.711 INFO  6052 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (8a1bec3f46ea6ebd75d95f78759bb69c)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-16 16:08:12.875 INFO  6052 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (8a1bec3f46ea6ebd75d95f78759bb69c)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-16 16:08:12.877 INFO  6052 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-16 16:08:12.880 INFO  6052 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-16 16:08:12.890 INFO  6052 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: addOrganizationInfoDetails
+2024-08-16 16:08:12.890 INFO  6052 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: addOrganizationInfoDetails with browser: null
+2024-08-16 16:08:12.895 INFO  6052 --- [main] ExtentReportListener : Starting Test: addOrganizationInfoDetails
+2024-08-16 16:08:13.766 INFO  6052 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (8a1bec3f46ea6ebd75d95f78759bb69c)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-16 16:08:13.858 INFO  6052 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (8a1bec3f46ea6ebd75d95f78759bb69c)] -> xpath: //*[@id='organizationName']]
+2024-08-16 16:48:26.062 INFO  6492 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_16_16_48_26
+2024-08-16 16:48:26.237 INFO  6492 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:48:26.238 INFO  6492 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:48:26.296 INFO  6492 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:48:26.297 INFO  6492 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:48:29.431 INFO  6492 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-16 16:48:29.434 INFO  6492 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-16 16:48:29.440 INFO  6492 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-16 16:48:29.675 INFO  6492 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-16 16:48:29.697 INFO  6492 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-16 16:48:29.698 INFO  6492 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-16 16:48:29.705 INFO  6492 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-16 16:48:29.716 INFO  6492 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:48:29.717 INFO  6492 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:48:29.717 INFO  6492 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-16 16:48:29.717 INFO  6492 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-16 16:48:29.783 INFO  6492 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (d379fb76324f99e483ffb5944497a485)
+2024-08-16 16:48:32.306 INFO  6492 --- [main] <== SynergyAdmin ==> : Navigated to URL: https://test30.synergyapps.in
+2024-08-16 16:48:32.872 INFO  6492 --- [main] <== SynergyAdmin ==> : Browser window maximized
+2024-08-16 16:48:33.450 INFO  6492 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (d379fb76324f99e483ffb5944497a485)] -> id: username]
+2024-08-16 16:48:34.207 INFO  6492 --- [main] <== SynergyAdmin ==> : Entered User ID
+2024-08-16 16:48:34.258 INFO  6492 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (d379fb76324f99e483ffb5944497a485)] -> id: password]
+2024-08-16 16:48:34.960 INFO  6492 --- [main] <== SynergyAdmin ==> : Entered Password
+2024-08-16 16:49:01.092 INFO  6492 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-16 16:49:01.092 INFO  6492 --- [main] <== SynergyAdmin ==> : Clicked on Login button
+2024-08-16 16:49:01.101 INFO  6492 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-16 16:49:01.865 INFO  6492 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (d379fb76324f99e483ffb5944497a485)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-16 16:49:05.275 INFO  6492 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (d379fb76324f99e483ffb5944497a485)] -> xpath: //*[@id="productAdmin"]]
+2024-08-16 16:49:05.275 INFO  6492 --- [main] <== SynergyAdmin ==> : Synergy Admin validated
+2024-08-16 16:49:05.277 INFO  6492 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-16 16:49:05.280 INFO  6492 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-16 16:49:05.284 INFO  6492 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:49:05.285 INFO  6492 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 16:49:05.294 INFO  6492 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (d379fb76324f99e483ffb5944497a485)
+2024-08-16 16:49:05.296 INFO  6492 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-16 16:49:05.296 INFO  6492 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-16 16:49:05.300 INFO  6492 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-16 16:49:05.988 INFO  6492 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (d379fb76324f99e483ffb5944497a485)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-16 16:49:08.544 INFO  6492 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (d379fb76324f99e483ffb5944497a485)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-16 16:49:08.546 INFO  6492 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-16 16:49:08.551 INFO  6492 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-16 16:49:08.559 INFO  6492 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: addOrganizationInfoDetails
+2024-08-16 16:49:08.559 INFO  6492 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: addOrganizationInfoDetails with browser: null
+2024-08-16 16:49:08.565 INFO  6492 --- [main] ExtentReportListener : Starting Test: addOrganizationInfoDetails
+2024-08-16 16:49:09.342 INFO  6492 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (d379fb76324f99e483ffb5944497a485)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-16 16:49:09.574 INFO  6492 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (d379fb76324f99e483ffb5944497a485)] -> xpath: //*[@id='organizationName']]
+2024-08-16 17:14:29.134 ERROR 6492 --- [main] ElementInteractionUtils : An error occurred while selecting the date: Input must be set
+2024-08-16 17:14:41.014 INFO  1208 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_16_17_14_41
+2024-08-16 17:14:41.232 INFO  1208 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:14:41.234 INFO  1208 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:14:41.329 INFO  1208 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:14:41.331 INFO  1208 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:14:46.118 INFO  1208 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-16 17:14:46.126 INFO  1208 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-16 17:14:46.140 INFO  1208 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-16 17:14:46.526 INFO  1208 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-16 17:14:46.583 INFO  1208 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-16 17:14:46.584 INFO  1208 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-16 17:14:46.602 INFO  1208 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-16 17:14:46.622 INFO  1208 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:14:46.624 INFO  1208 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:14:46.624 INFO  1208 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-16 17:14:46.624 INFO  1208 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-16 17:14:46.673 INFO  1208 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (9f693c0c66d68a4284ae4bab4453c1e2)
+2024-08-16 17:14:49.925 INFO  1208 --- [main] <== SynergyAdmin ==> : Navigated to URL: https://test30.synergyapps.in
+2024-08-16 17:14:50.526 INFO  1208 --- [main] <== SynergyAdmin ==> : Browser window maximized
+2024-08-16 17:14:51.168 INFO  1208 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (9f693c0c66d68a4284ae4bab4453c1e2)] -> id: username]
+2024-08-16 17:14:52.037 INFO  1208 --- [main] <== SynergyAdmin ==> : Entered User ID
+2024-08-16 17:14:52.131 INFO  1208 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (9f693c0c66d68a4284ae4bab4453c1e2)] -> id: password]
+2024-08-16 17:14:53.001 INFO  1208 --- [main] <== SynergyAdmin ==> : Entered Password
+2024-08-16 17:15:22.636 INFO  1208 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-16 17:15:22.637 INFO  1208 --- [main] <== SynergyAdmin ==> : Clicked on Login button
+2024-08-16 17:15:22.654 INFO  1208 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-16 17:15:23.502 INFO  1208 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (9f693c0c66d68a4284ae4bab4453c1e2)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-16 17:15:27.468 INFO  1208 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (9f693c0c66d68a4284ae4bab4453c1e2)] -> xpath: //*[@id="productAdmin"]]
+2024-08-16 17:15:27.468 INFO  1208 --- [main] <== SynergyAdmin ==> : Synergy Admin validated
+2024-08-16 17:15:27.473 INFO  1208 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-16 17:15:27.477 INFO  1208 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-16 17:15:27.484 INFO  1208 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:15:27.486 INFO  1208 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:15:27.510 INFO  1208 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (9f693c0c66d68a4284ae4bab4453c1e2)
+2024-08-16 17:15:27.513 INFO  1208 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-16 17:15:27.514 INFO  1208 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-16 17:15:27.520 INFO  1208 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-16 17:15:28.379 INFO  1208 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (9f693c0c66d68a4284ae4bab4453c1e2)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-16 17:15:32.317 INFO  1208 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (9f693c0c66d68a4284ae4bab4453c1e2)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-16 17:15:32.320 INFO  1208 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-16 17:15:32.329 INFO  1208 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-16 17:15:32.330 INFO  1208 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: addOrganizationInfoDetails
+2024-08-16 17:15:32.331 INFO  1208 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: addOrganizationInfoDetails with browser: null
+2024-08-16 17:15:32.338 INFO  1208 --- [main] ExtentReportListener : Starting Test: addOrganizationInfoDetails
+2024-08-16 17:15:33.339 INFO  1208 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (9f693c0c66d68a4284ae4bab4453c1e2)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-16 17:15:33.550 INFO  1208 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (9f693c0c66d68a4284ae4bab4453c1e2)] -> xpath: //*[@id='organizationName']]
+2024-08-16 17:15:35.260 ERROR 1208 --- [main] ElementInteractionUtils : An error occurred while selecting the date: Input must be set
+2024-08-16 17:15:35.262 INFO  1208 --- [main] ExtentReportListener : Test Passed: addOrganizationInfoDetails
+2024-08-16 17:15:35.265 INFO  1208 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: addOrganizationInfoDetails
+2024-08-16 17:15:35.268 INFO  1208 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
+2024-08-16 17:15:36.941 INFO  1208 --- [main] ExtentReportListener : Test report opened in browser: C:\Users\Abhijeet\git\SynergyAdmin/extentReports/ExtentReport_2024_08_16_17_14_41.html
+2024-08-16 17:15:37.643 INFO  1208 --- [main] <== SynergyAdmin ==> : 🛑 WebDriver closed and session ended successfully.
+2024-08-16 17:17:54.775 INFO  6636 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_16_17_17_54
+2024-08-16 17:17:54.972 INFO  6636 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:17:54.974 INFO  6636 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:17:55.046 INFO  6636 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:17:55.047 INFO  6636 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:17:58.585 INFO  6636 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-16 17:17:58.593 INFO  6636 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-16 17:17:58.634 INFO  6636 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-16 17:17:59.056 INFO  6636 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-16 17:17:59.109 INFO  6636 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-16 17:17:59.111 INFO  6636 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-16 17:17:59.132 INFO  6636 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-16 17:17:59.160 INFO  6636 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:17:59.163 INFO  6636 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:17:59.164 INFO  6636 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-16 17:17:59.164 INFO  6636 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-16 17:17:59.248 INFO  6636 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (3d6bf4ff1be5df2c194089c65f002e50)
+2024-08-16 17:18:01.254 INFO  6636 --- [main] <== SynergyAdmin ==> : Navigated to URL: https://test30.synergyapps.in
+2024-08-16 17:18:01.859 INFO  6636 --- [main] <== SynergyAdmin ==> : Browser window maximized
+2024-08-16 17:18:02.495 INFO  6636 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (3d6bf4ff1be5df2c194089c65f002e50)] -> id: username]
+2024-08-16 17:18:03.399 INFO  6636 --- [main] <== SynergyAdmin ==> : Entered User ID
+2024-08-16 17:18:03.486 INFO  6636 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (3d6bf4ff1be5df2c194089c65f002e50)] -> id: password]
+2024-08-16 17:18:04.327 INFO  6636 --- [main] <== SynergyAdmin ==> : Entered Password
+2024-08-16 17:18:27.836 INFO  6636 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-16 17:18:27.836 INFO  6636 --- [main] <== SynergyAdmin ==> : Clicked on Login button
+2024-08-16 17:18:27.849 INFO  6636 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-16 17:18:28.715 INFO  6636 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (3d6bf4ff1be5df2c194089c65f002e50)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-16 17:18:32.509 INFO  6636 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (3d6bf4ff1be5df2c194089c65f002e50)] -> xpath: //*[@id="productAdmin"]]
+2024-08-16 17:18:32.510 INFO  6636 --- [main] <== SynergyAdmin ==> : Synergy Admin validated
+2024-08-16 17:18:32.514 INFO  6636 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-16 17:18:32.519 INFO  6636 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-16 17:18:32.526 INFO  6636 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:18:32.528 INFO  6636 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:18:32.550 INFO  6636 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (3d6bf4ff1be5df2c194089c65f002e50)
+2024-08-16 17:18:32.553 INFO  6636 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-16 17:18:32.554 INFO  6636 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-16 17:18:32.559 INFO  6636 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-16 17:18:33.435 INFO  6636 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (3d6bf4ff1be5df2c194089c65f002e50)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-16 17:18:36.683 INFO  6636 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (3d6bf4ff1be5df2c194089c65f002e50)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-16 17:18:36.686 INFO  6636 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-16 17:18:36.691 INFO  6636 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-16 17:18:36.696 INFO  6636 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: addOrganizationInfoDetails
+2024-08-16 17:18:36.696 INFO  6636 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: addOrganizationInfoDetails with browser: null
+2024-08-16 17:18:36.704 INFO  6636 --- [main] ExtentReportListener : Starting Test: addOrganizationInfoDetails
+2024-08-16 17:18:37.653 INFO  6636 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (3d6bf4ff1be5df2c194089c65f002e50)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-16 17:18:37.900 INFO  6636 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (3d6bf4ff1be5df2c194089c65f002e50)] -> xpath: //*[@id='organizationName']]
+2024-08-16 17:23:20.159 INFO  5624 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_16_17_23_20
+2024-08-16 17:23:20.350 INFO  5624 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:23:20.351 INFO  5624 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:23:20.430 INFO  5624 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:23:20.432 INFO  5624 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:23:24.015 INFO  5624 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-16 17:23:24.022 INFO  5624 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-16 17:23:24.036 INFO  5624 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-16 17:23:24.421 INFO  5624 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-16 17:23:24.476 INFO  5624 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-16 17:23:24.479 INFO  5624 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-16 17:23:24.498 INFO  5624 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-16 17:23:24.520 INFO  5624 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:23:24.523 INFO  5624 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:23:24.523 INFO  5624 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-16 17:23:24.524 INFO  5624 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-16 17:23:24.602 INFO  5624 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (f81f7b5ed0901887272b1e56d96ab08a)
+2024-08-16 17:23:26.602 INFO  5624 --- [main] <== SynergyAdmin ==> : Navigated to URL: https://test30.synergyapps.in
+2024-08-16 17:23:27.200 INFO  5624 --- [main] <== SynergyAdmin ==> : Browser window maximized
+2024-08-16 17:23:27.816 INFO  5624 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f81f7b5ed0901887272b1e56d96ab08a)] -> id: username]
+2024-08-16 17:23:28.724 INFO  5624 --- [main] <== SynergyAdmin ==> : Entered User ID
+2024-08-16 17:23:28.823 INFO  5624 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f81f7b5ed0901887272b1e56d96ab08a)] -> id: password]
+2024-08-16 17:23:29.667 INFO  5624 --- [main] <== SynergyAdmin ==> : Entered Password
+2024-08-16 17:23:52.871 INFO  5624 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-16 17:23:52.872 INFO  5624 --- [main] <== SynergyAdmin ==> : Clicked on Login button
+2024-08-16 17:23:52.890 INFO  5624 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-16 17:23:53.855 INFO  5624 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f81f7b5ed0901887272b1e56d96ab08a)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-16 17:23:57.477 INFO  5624 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f81f7b5ed0901887272b1e56d96ab08a)] -> xpath: //*[@id="productAdmin"]]
+2024-08-16 17:23:57.477 INFO  5624 --- [main] <== SynergyAdmin ==> : Synergy Admin validated
+2024-08-16 17:23:57.482 INFO  5624 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-16 17:23:57.485 INFO  5624 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-16 17:23:57.495 INFO  5624 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:23:57.497 INFO  5624 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:23:57.522 INFO  5624 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (f81f7b5ed0901887272b1e56d96ab08a)
+2024-08-16 17:23:57.527 INFO  5624 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-16 17:23:57.528 INFO  5624 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-16 17:23:57.538 INFO  5624 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-16 17:23:58.429 INFO  5624 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f81f7b5ed0901887272b1e56d96ab08a)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-16 17:24:01.575 INFO  5624 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f81f7b5ed0901887272b1e56d96ab08a)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-16 17:24:01.576 INFO  5624 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-16 17:24:01.583 INFO  5624 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-16 17:24:01.588 INFO  5624 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: addOrganizationInfoDetails
+2024-08-16 17:24:01.589 INFO  5624 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: addOrganizationInfoDetails with browser: null
+2024-08-16 17:24:01.595 INFO  5624 --- [main] ExtentReportListener : Starting Test: addOrganizationInfoDetails
+2024-08-16 17:24:02.576 INFO  5624 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f81f7b5ed0901887272b1e56d96ab08a)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-16 17:24:02.801 INFO  5624 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f81f7b5ed0901887272b1e56d96ab08a)] -> xpath: //*[@id='organizationName']]
+2024-08-16 17:25:55.534 ERROR 5624 --- [main] ElementInteractionUtils : An error occurred while selecting the date: Input must be set
+2024-08-16 17:26:35.640 INFO  1668 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_16_17_26_35
+2024-08-16 17:26:35.815 INFO  1668 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:26:35.816 INFO  1668 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:26:35.886 INFO  1668 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:26:35.886 INFO  1668 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:26:39.505 INFO  1668 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-16 17:26:39.512 INFO  1668 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-16 17:26:39.531 INFO  1668 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-16 17:26:39.968 INFO  1668 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-16 17:26:40.022 INFO  1668 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-16 17:26:40.024 INFO  1668 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-16 17:26:40.048 INFO  1668 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-16 17:26:40.072 INFO  1668 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:26:40.074 INFO  1668 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:26:40.074 INFO  1668 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-16 17:26:40.076 INFO  1668 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-16 17:26:40.162 INFO  1668 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (180b00b1f664032d550b330e3a7237cc)
+2024-08-16 17:26:41.955 INFO  1668 --- [main] <== SynergyAdmin ==> : Navigated to URL: https://test30.synergyapps.in
+2024-08-16 17:26:42.554 INFO  1668 --- [main] <== SynergyAdmin ==> : Browser window maximized
+2024-08-16 17:26:43.188 INFO  1668 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (180b00b1f664032d550b330e3a7237cc)] -> id: username]
+2024-08-16 17:26:44.176 INFO  1668 --- [main] <== SynergyAdmin ==> : Entered User ID
+2024-08-16 17:26:44.272 INFO  1668 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (180b00b1f664032d550b330e3a7237cc)] -> id: password]
+2024-08-16 17:26:45.094 INFO  1668 --- [main] <== SynergyAdmin ==> : Entered Password
+2024-08-16 17:27:08.489 INFO  1668 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-16 17:27:08.490 INFO  1668 --- [main] <== SynergyAdmin ==> : Clicked on Login button
+2024-08-16 17:27:08.505 INFO  1668 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-16 17:27:09.391 INFO  1668 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (180b00b1f664032d550b330e3a7237cc)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-16 17:27:13.119 INFO  1668 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (180b00b1f664032d550b330e3a7237cc)] -> xpath: //*[@id="productAdmin"]]
+2024-08-16 17:27:13.120 INFO  1668 --- [main] <== SynergyAdmin ==> : Synergy Admin validated
+2024-08-16 17:27:13.125 INFO  1668 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-16 17:27:13.131 INFO  1668 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-16 17:27:13.140 INFO  1668 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:27:13.200 INFO  1668 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:27:13.236 INFO  1668 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (180b00b1f664032d550b330e3a7237cc)
+2024-08-16 17:27:13.240 INFO  1668 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-16 17:27:13.241 INFO  1668 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-16 17:27:13.245 INFO  1668 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-16 17:27:14.106 INFO  1668 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (180b00b1f664032d550b330e3a7237cc)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-16 17:27:17.332 INFO  1668 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (180b00b1f664032d550b330e3a7237cc)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-16 17:27:17.334 INFO  1668 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-16 17:27:17.342 INFO  1668 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-16 17:27:17.359 INFO  1668 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: addOrganizationInfoDetails
+2024-08-16 17:27:17.361 INFO  1668 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: addOrganizationInfoDetails with browser: null
+2024-08-16 17:27:17.368 INFO  1668 --- [main] ExtentReportListener : Starting Test: addOrganizationInfoDetails
+2024-08-16 17:27:18.318 INFO  1668 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (180b00b1f664032d550b330e3a7237cc)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-16 17:27:18.580 INFO  1668 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (180b00b1f664032d550b330e3a7237cc)] -> xpath: //*[@id='organizationName']]
+2024-08-16 17:28:57.506 INFO  14172 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_16_17_28_57
+2024-08-16 17:28:57.682 INFO  14172 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:28:57.683 INFO  14172 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:28:57.781 INFO  14172 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:28:57.782 INFO  14172 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:29:01.066 INFO  14172 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-16 17:29:01.071 INFO  14172 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-16 17:29:01.086 INFO  14172 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-16 17:29:01.524 INFO  14172 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-16 17:29:01.573 INFO  14172 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-16 17:29:01.575 INFO  14172 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-16 17:29:01.593 INFO  14172 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-16 17:29:01.614 INFO  14172 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:29:01.615 INFO  14172 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:29:01.616 INFO  14172 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-16 17:29:01.617 INFO  14172 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-16 17:29:01.658 INFO  14172 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (c0115f44069825950acec430472f225b)
+2024-08-16 17:29:03.833 INFO  14172 --- [main] <== SynergyAdmin ==> : Navigated to URL: https://test30.synergyapps.in
+2024-08-16 17:29:04.444 INFO  14172 --- [main] <== SynergyAdmin ==> : Browser window maximized
+2024-08-16 17:29:05.050 INFO  14172 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (c0115f44069825950acec430472f225b)] -> id: username]
+2024-08-16 17:29:05.951 INFO  14172 --- [main] <== SynergyAdmin ==> : Entered User ID
+2024-08-16 17:29:06.021 INFO  14172 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (c0115f44069825950acec430472f225b)] -> id: password]
+2024-08-16 17:29:06.820 INFO  14172 --- [main] <== SynergyAdmin ==> : Entered Password
+2024-08-16 17:29:30.127 INFO  14172 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-16 17:29:30.127 INFO  14172 --- [main] <== SynergyAdmin ==> : Clicked on Login button
+2024-08-16 17:29:30.140 INFO  14172 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-16 17:29:30.999 INFO  14172 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (c0115f44069825950acec430472f225b)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-16 17:29:34.680 INFO  14172 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (c0115f44069825950acec430472f225b)] -> xpath: //*[@id="productAdmin"]]
+2024-08-16 17:29:34.681 INFO  14172 --- [main] <== SynergyAdmin ==> : Synergy Admin validated
+2024-08-16 17:29:34.685 INFO  14172 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-16 17:29:34.690 INFO  14172 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-16 17:29:34.697 INFO  14172 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:29:34.699 INFO  14172 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:29:34.726 INFO  14172 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (c0115f44069825950acec430472f225b)
+2024-08-16 17:29:34.730 INFO  14172 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-16 17:29:34.730 INFO  14172 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-16 17:29:34.733 INFO  14172 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-16 17:29:35.619 INFO  14172 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (c0115f44069825950acec430472f225b)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-16 17:29:39.286 INFO  14172 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (c0115f44069825950acec430472f225b)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-16 17:29:39.287 INFO  14172 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-16 17:29:39.293 INFO  14172 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-16 17:29:39.298 INFO  14172 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: addOrganizationInfoDetails
+2024-08-16 17:29:39.299 INFO  14172 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: addOrganizationInfoDetails with browser: null
+2024-08-16 17:29:39.309 INFO  14172 --- [main] ExtentReportListener : Starting Test: addOrganizationInfoDetails
+2024-08-16 17:29:40.303 INFO  14172 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (c0115f44069825950acec430472f225b)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-16 17:29:40.532 INFO  14172 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (c0115f44069825950acec430472f225b)] -> xpath: //*[@id='organizationName']]
+2024-08-16 17:29:42.098 ERROR 14172 --- [main] ElementInteractionUtils : An error occurred while selecting the date: Input must be set
+2024-08-16 17:29:42.099 INFO  14172 --- [main] ExtentReportListener : Test Passed: addOrganizationInfoDetails
+2024-08-16 17:29:42.103 INFO  14172 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: addOrganizationInfoDetails
+2024-08-16 17:29:42.105 INFO  14172 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
+2024-08-16 17:29:44.043 INFO  14172 --- [main] ExtentReportListener : Test report opened in browser: C:\Users\Abhijeet\git\SynergyAdmin/extentReports/ExtentReport_2024_08_16_17_28_57.html
+2024-08-16 17:29:44.926 INFO  14172 --- [main] <== SynergyAdmin ==> : 🛑 WebDriver closed and session ended successfully.
+2024-08-16 17:30:41.009 INFO  9200 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_16_17_30_40
+2024-08-16 17:30:41.206 INFO  9200 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:30:41.207 INFO  9200 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:30:41.288 INFO  9200 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:30:41.289 INFO  9200 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:30:45.230 INFO  9200 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-16 17:30:45.237 INFO  9200 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-16 17:30:45.254 INFO  9200 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-16 17:30:45.689 INFO  9200 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-16 17:30:45.739 INFO  9200 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-16 17:30:45.741 INFO  9200 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-16 17:30:45.760 INFO  9200 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-16 17:30:45.784 INFO  9200 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:30:45.788 INFO  9200 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:30:45.790 INFO  9200 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-16 17:30:45.792 INFO  9200 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-16 17:30:45.882 INFO  9200 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (1fffc3e401b949a6bd709b1ca0041824)
+2024-08-16 17:30:47.702 INFO  9200 --- [main] <== SynergyAdmin ==> : Navigated to URL: https://test30.synergyapps.in
+2024-08-16 17:30:48.365 INFO  9200 --- [main] <== SynergyAdmin ==> : Browser window maximized
+2024-08-16 17:30:48.987 INFO  9200 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (1fffc3e401b949a6bd709b1ca0041824)] -> id: username]
+2024-08-16 17:30:49.837 INFO  9200 --- [main] <== SynergyAdmin ==> : Entered User ID
+2024-08-16 17:30:49.890 INFO  9200 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (1fffc3e401b949a6bd709b1ca0041824)] -> id: password]
+2024-08-16 17:30:50.616 INFO  9200 --- [main] <== SynergyAdmin ==> : Entered Password
+2024-08-16 17:31:14.280 INFO  9200 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-16 17:31:14.281 INFO  9200 --- [main] <== SynergyAdmin ==> : Clicked on Login button
+2024-08-16 17:31:14.299 INFO  9200 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-16 17:31:15.138 INFO  9200 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (1fffc3e401b949a6bd709b1ca0041824)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-16 17:31:18.623 INFO  9200 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (1fffc3e401b949a6bd709b1ca0041824)] -> xpath: //*[@id="productAdmin"]]
+2024-08-16 17:31:18.623 INFO  9200 --- [main] <== SynergyAdmin ==> : Synergy Admin validated
+2024-08-16 17:31:18.626 INFO  9200 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-16 17:31:18.629 INFO  9200 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-16 17:31:18.635 INFO  9200 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:31:18.637 INFO  9200 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:31:18.656 INFO  9200 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (1fffc3e401b949a6bd709b1ca0041824)
+2024-08-16 17:31:18.659 INFO  9200 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-16 17:31:18.662 INFO  9200 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-16 17:31:18.667 INFO  9200 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-16 17:31:19.531 INFO  9200 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (1fffc3e401b949a6bd709b1ca0041824)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-16 17:31:23.029 INFO  9200 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (1fffc3e401b949a6bd709b1ca0041824)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-16 17:31:23.030 INFO  9200 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-16 17:31:23.040 INFO  9200 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-16 17:31:23.047 INFO  9200 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: addOrganizationInfoDetails
+2024-08-16 17:31:23.047 INFO  9200 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: addOrganizationInfoDetails with browser: null
+2024-08-16 17:31:23.055 INFO  9200 --- [main] ExtentReportListener : Starting Test: addOrganizationInfoDetails
+2024-08-16 17:31:24.415 INFO  9200 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (1fffc3e401b949a6bd709b1ca0041824)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-16 17:31:24.639 INFO  9200 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (1fffc3e401b949a6bd709b1ca0041824)] -> xpath: //*[@id='organizationName']]
+2024-08-16 17:32:28.595 INFO  6636 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_16_17_32_28
+2024-08-16 17:32:28.754 INFO  6636 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:32:28.755 INFO  6636 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:32:28.813 INFO  6636 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:32:28.813 INFO  6636 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:32:32.456 INFO  6636 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-16 17:32:32.465 INFO  6636 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-16 17:32:32.481 INFO  6636 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-16 17:32:32.925 INFO  6636 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-16 17:32:32.983 INFO  6636 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-16 17:32:32.985 INFO  6636 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-16 17:32:33.007 INFO  6636 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-16 17:32:33.027 INFO  6636 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:32:33.029 INFO  6636 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:32:33.030 INFO  6636 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-16 17:32:33.031 INFO  6636 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-16 17:32:33.118 INFO  6636 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (ab4f166961db737a703d8c26fd3d4e3b)
+2024-08-16 17:32:35.072 INFO  6636 --- [main] <== SynergyAdmin ==> : Navigated to URL: https://test30.synergyapps.in
+2024-08-16 17:32:35.669 INFO  6636 --- [main] <== SynergyAdmin ==> : Browser window maximized
+2024-08-16 17:32:36.302 INFO  6636 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (ab4f166961db737a703d8c26fd3d4e3b)] -> id: username]
+2024-08-16 17:32:37.248 INFO  6636 --- [main] <== SynergyAdmin ==> : Entered User ID
+2024-08-16 17:32:37.346 INFO  6636 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (ab4f166961db737a703d8c26fd3d4e3b)] -> id: password]
+2024-08-16 17:32:38.161 INFO  6636 --- [main] <== SynergyAdmin ==> : Entered Password
+2024-08-16 17:33:03.748 INFO  6636 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-16 17:33:03.748 INFO  6636 --- [main] <== SynergyAdmin ==> : Clicked on Login button
+2024-08-16 17:33:03.768 INFO  6636 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-16 17:33:04.725 INFO  6636 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (ab4f166961db737a703d8c26fd3d4e3b)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-16 17:33:14.407 INFO  6636 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (ab4f166961db737a703d8c26fd3d4e3b)] -> xpath: //*[@id="productAdmin"]]
+2024-08-16 17:33:14.407 INFO  6636 --- [main] <== SynergyAdmin ==> : Synergy Admin validated
+2024-08-16 17:33:14.413 INFO  6636 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-16 17:33:14.422 INFO  6636 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-16 17:33:14.436 INFO  6636 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:33:14.436 INFO  6636 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:33:14.470 INFO  6636 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (ab4f166961db737a703d8c26fd3d4e3b)
+2024-08-16 17:33:14.476 INFO  6636 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-16 17:33:14.476 INFO  6636 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-16 17:33:14.481 INFO  6636 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-16 17:33:15.318 INFO  6636 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (ab4f166961db737a703d8c26fd3d4e3b)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-16 17:33:18.980 INFO  6636 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (ab4f166961db737a703d8c26fd3d4e3b)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-16 17:33:18.982 INFO  6636 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-16 17:33:18.987 INFO  6636 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-16 17:33:18.992 INFO  6636 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: addOrganizationInfoDetails
+2024-08-16 17:33:18.993 INFO  6636 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: addOrganizationInfoDetails with browser: null
+2024-08-16 17:33:18.998 INFO  6636 --- [main] ExtentReportListener : Starting Test: addOrganizationInfoDetails
+2024-08-16 17:33:19.958 INFO  6636 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (ab4f166961db737a703d8c26fd3d4e3b)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-16 17:33:20.026 INFO  6636 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (ab4f166961db737a703d8c26fd3d4e3b)] -> xpath: //*[@id='organizationName']]
+2024-08-16 17:36:09.584 INFO  9672 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_16_17_36_09
+2024-08-16 17:36:09.815 INFO  9672 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:36:09.816 INFO  9672 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:36:09.885 INFO  9672 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:36:09.886 INFO  9672 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:36:13.159 INFO  9672 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-16 17:36:13.166 INFO  9672 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-16 17:36:13.190 INFO  9672 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-16 17:36:13.619 INFO  9672 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-16 17:36:13.669 INFO  9672 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-16 17:36:13.671 INFO  9672 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-16 17:36:13.689 INFO  9672 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-16 17:36:13.708 INFO  9672 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:36:13.710 INFO  9672 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:36:13.711 INFO  9672 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-16 17:36:13.711 INFO  9672 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-16 17:36:13.757 INFO  9672 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (b8d7ef95e843c71ddda4b7d0404112b2)
+2024-08-16 17:36:15.606 INFO  9672 --- [main] <== SynergyAdmin ==> : Navigated to URL: https://test30.synergyapps.in
+2024-08-16 17:36:16.205 INFO  9672 --- [main] <== SynergyAdmin ==> : Browser window maximized
+2024-08-16 17:36:16.833 INFO  9672 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (b8d7ef95e843c71ddda4b7d0404112b2)] -> id: username]
+2024-08-16 17:36:17.736 INFO  9672 --- [main] <== SynergyAdmin ==> : Entered User ID
+2024-08-16 17:36:17.822 INFO  9672 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (b8d7ef95e843c71ddda4b7d0404112b2)] -> id: password]
+2024-08-16 17:36:18.601 INFO  9672 --- [main] <== SynergyAdmin ==> : Entered Password
+2024-08-16 17:36:41.668 INFO  9672 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-16 17:36:41.668 INFO  9672 --- [main] <== SynergyAdmin ==> : Clicked on Login button
+2024-08-16 17:36:41.681 INFO  9672 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-16 17:36:42.509 INFO  9672 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (b8d7ef95e843c71ddda4b7d0404112b2)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-16 17:36:46.574 INFO  9672 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (b8d7ef95e843c71ddda4b7d0404112b2)] -> xpath: //*[@id="productAdmin"]]
+2024-08-16 17:36:46.575 INFO  9672 --- [main] <== SynergyAdmin ==> : Synergy Admin validated
+2024-08-16 17:36:46.579 INFO  9672 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-16 17:36:46.584 INFO  9672 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-16 17:36:46.592 INFO  9672 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:36:46.594 INFO  9672 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:36:46.615 INFO  9672 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (b8d7ef95e843c71ddda4b7d0404112b2)
+2024-08-16 17:36:46.618 INFO  9672 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-16 17:36:46.619 INFO  9672 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-16 17:36:46.622 INFO  9672 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-16 17:36:47.467 INFO  9672 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (b8d7ef95e843c71ddda4b7d0404112b2)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-16 17:36:50.826 INFO  9672 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (b8d7ef95e843c71ddda4b7d0404112b2)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-16 17:36:50.828 INFO  9672 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-16 17:36:50.832 INFO  9672 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-16 17:36:50.836 INFO  9672 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: addOrganizationInfoDetails
+2024-08-16 17:36:50.837 INFO  9672 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: addOrganizationInfoDetails with browser: null
+2024-08-16 17:36:50.840 INFO  9672 --- [main] ExtentReportListener : Starting Test: addOrganizationInfoDetails
+2024-08-16 17:36:51.829 INFO  9672 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (b8d7ef95e843c71ddda4b7d0404112b2)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-16 17:36:52.067 INFO  9672 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (b8d7ef95e843c71ddda4b7d0404112b2)] -> xpath: //*[@id='organizationName']]
+2024-08-16 17:36:54.241 INFO  9672 --- [main] ElementInteractionUtils : Text retrieved from element: 2024
+2024-08-16 17:36:54.242 INFO  9672 --- [main] ElementInteractionUtils : Displayed Calendar Year: 2024
+2024-08-16 17:36:54.243 INFO  9672 --- [main] ElementInteractionUtils : Selected Year: 2028
+2024-08-16 17:36:54.821 INFO  9672 --- [main] ElementInteractionUtils : Text retrieved from element: 2028
+2024-08-16 17:36:54.821 INFO  9672 --- [main] ElementInteractionUtils : Displayed Year after selection: 2028
+2024-08-16 17:36:54.824 ERROR 9672 --- [main] ElementInteractionUtils : An error occurred while selecting the date: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "com.synergyconnect.utilities.WebElementLocators.driver" is null
+2024-08-16 17:36:54.827 INFO  9672 --- [main] ExtentReportListener : Test Passed: addOrganizationInfoDetails
+2024-08-16 17:36:54.831 INFO  9672 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: addOrganizationInfoDetails
+2024-08-16 17:36:54.832 INFO  9672 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
+2024-08-16 17:36:56.596 INFO  9672 --- [main] ExtentReportListener : Test report opened in browser: C:\Users\Abhijeet\git\SynergyAdmin/extentReports/ExtentReport_2024_08_16_17_36_09.html
+2024-08-16 17:36:57.358 INFO  9672 --- [main] <== SynergyAdmin ==> : 🛑 WebDriver closed and session ended successfully.
+2024-08-16 17:43:23.730 INFO  9792 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_16_17_43_23
+2024-08-16 17:43:23.912 INFO  9792 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:43:23.913 INFO  9792 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:43:23.983 INFO  9792 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:43:23.984 INFO  9792 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:43:27.308 INFO  9792 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-16 17:43:27.314 INFO  9792 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-16 17:43:27.331 INFO  9792 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-16 17:43:27.699 INFO  9792 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-16 17:43:27.754 INFO  9792 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-16 17:43:27.756 INFO  9792 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-16 17:43:27.776 INFO  9792 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-16 17:43:27.797 INFO  9792 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:43:27.799 INFO  9792 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:43:27.802 INFO  9792 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-16 17:43:27.803 INFO  9792 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-16 17:43:27.840 INFO  9792 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (d0e75c0569b34644a7f7a003ca3366c7)
+2024-08-16 17:43:29.872 INFO  9792 --- [main] <== SynergyAdmin ==> : Navigated to URL: https://test30.synergyapps.in
+2024-08-16 17:43:30.478 INFO  9792 --- [main] <== SynergyAdmin ==> : Browser window maximized
+2024-08-16 17:43:31.096 INFO  9792 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (d0e75c0569b34644a7f7a003ca3366c7)] -> id: username]
+2024-08-16 17:43:32.047 INFO  9792 --- [main] <== SynergyAdmin ==> : Entered User ID
+2024-08-16 17:43:32.122 INFO  9792 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (d0e75c0569b34644a7f7a003ca3366c7)] -> id: password]
+2024-08-16 17:43:32.922 INFO  9792 --- [main] <== SynergyAdmin ==> : Entered Password
+2024-08-16 17:43:55.318 INFO  9792 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-16 17:43:55.319 INFO  9792 --- [main] <== SynergyAdmin ==> : Clicked on Login button
+2024-08-16 17:43:55.332 INFO  9792 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-16 17:43:56.172 INFO  9792 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (d0e75c0569b34644a7f7a003ca3366c7)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-16 17:44:00.759 INFO  9792 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (d0e75c0569b34644a7f7a003ca3366c7)] -> xpath: //*[@id="productAdmin"]]
+2024-08-16 17:44:00.759 INFO  9792 --- [main] <== SynergyAdmin ==> : Synergy Admin validated
+2024-08-16 17:44:00.763 INFO  9792 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-16 17:44:00.769 INFO  9792 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-16 17:44:00.774 INFO  9792 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:44:00.775 INFO  9792 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 17:44:00.796 INFO  9792 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (d0e75c0569b34644a7f7a003ca3366c7)
+2024-08-16 17:44:00.797 INFO  9792 --- [main] WebElementLocators : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (d0e75c0569b34644a7f7a003ca3366c7)
+2024-08-16 17:44:00.800 INFO  9792 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-16 17:44:00.800 INFO  9792 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-16 17:44:00.805 INFO  9792 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-16 17:44:01.583 INFO  9792 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (d0e75c0569b34644a7f7a003ca3366c7)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-16 17:44:04.835 INFO  9792 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (d0e75c0569b34644a7f7a003ca3366c7)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-16 17:44:04.836 INFO  9792 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-16 17:44:04.839 INFO  9792 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-16 17:44:04.843 INFO  9792 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: addOrganizationInfoDetails
+2024-08-16 17:44:04.844 INFO  9792 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: addOrganizationInfoDetails with browser: null
+2024-08-16 17:44:04.858 INFO  9792 --- [main] ExtentReportListener : Starting Test: addOrganizationInfoDetails
+2024-08-16 17:44:05.796 INFO  9792 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (d0e75c0569b34644a7f7a003ca3366c7)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-16 17:44:06.075 INFO  9792 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (d0e75c0569b34644a7f7a003ca3366c7)] -> xpath: //*[@id='organizationName']]
+2024-08-16 17:44:08.325 INFO  9792 --- [main] ElementInteractionUtils : Text retrieved from element: 2024
+2024-08-16 17:44:08.326 INFO  9792 --- [main] ElementInteractionUtils : Displayed Calendar Year: 2024
+2024-08-16 17:44:08.327 INFO  9792 --- [main] ElementInteractionUtils : Selected Year: 2028
+2024-08-16 17:44:08.946 INFO  9792 --- [main] ElementInteractionUtils : Text retrieved from element: 2028
+2024-08-16 17:44:08.946 INFO  9792 --- [main] ElementInteractionUtils : Displayed Year after selection: 2028
+2024-08-16 17:44:09.241 INFO  9792 --- [main] ElementInteractionUtils : Date selected: 18/Aug/2028
+2024-08-16 17:44:09.244 INFO  9792 --- [main] ExtentReportListener : Test Passed: addOrganizationInfoDetails
+2024-08-16 17:44:09.248 INFO  9792 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: addOrganizationInfoDetails
+2024-08-16 17:44:09.250 INFO  9792 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
+2024-08-16 17:44:11.005 INFO  9792 --- [main] ExtentReportListener : Test report opened in browser: C:\Users\Abhijeet\git\SynergyAdmin/extentReports/ExtentReport_2024_08_16_17_43_23.html
+2024-08-16 17:44:11.727 INFO  9792 --- [main] <== SynergyAdmin ==> : 🛑 WebDriver closed and session ended successfully.
+2024-08-16 19:13:59.036 INFO  2464 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_16_19_13_59
+2024-08-16 19:13:59.239 INFO  2464 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:13:59.244 INFO  2464 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:13:59.321 INFO  2464 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:13:59.321 INFO  2464 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:14:03.724 INFO  2464 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-16 19:14:03.729 INFO  2464 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-16 19:14:03.767 INFO  2464 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-16 19:14:04.196 INFO  2464 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-16 19:14:04.253 INFO  2464 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-16 19:14:04.256 INFO  2464 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-16 19:14:04.281 INFO  2464 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-16 19:14:04.344 INFO  2464 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:14:04.347 INFO  2464 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:14:04.347 INFO  2464 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-16 19:14:04.348 INFO  2464 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-16 19:14:04.411 INFO  2464 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)
+2024-08-16 19:14:06.898 INFO  2464 --- [main] <== SynergyAdmin ==> : Navigated to URL: https://test30.synergyapps.in
+2024-08-16 19:14:07.508 INFO  2464 --- [main] <== SynergyAdmin ==> : Browser window maximized
+2024-08-16 19:14:08.129 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> id: username]
+2024-08-16 19:14:08.988 INFO  2464 --- [main] <== SynergyAdmin ==> : Entered User ID
+2024-08-16 19:14:09.084 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> id: password]
+2024-08-16 19:14:09.884 INFO  2464 --- [main] <== SynergyAdmin ==> : Entered Password
+2024-08-16 19:14:34.991 INFO  2464 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-16 19:14:34.991 INFO  2464 --- [main] <== SynergyAdmin ==> : Clicked on Login button
+2024-08-16 19:14:35.005 INFO  2464 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-16 19:14:35.888 INFO  2464 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-16 19:14:39.194 INFO  2464 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="productAdmin"]]
+2024-08-16 19:14:39.194 INFO  2464 --- [main] <== SynergyAdmin ==> : Synergy Admin validated
+2024-08-16 19:14:39.199 INFO  2464 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-16 19:14:39.204 INFO  2464 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-16 19:14:39.213 INFO  2464 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:14:39.216 INFO  2464 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:14:39.247 INFO  2464 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)
+2024-08-16 19:14:39.248 INFO  2464 --- [main] WebElementLocators : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)
+2024-08-16 19:14:39.252 INFO  2464 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-16 19:14:39.253 INFO  2464 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-16 19:14:39.257 INFO  2464 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-16 19:14:40.091 INFO  2464 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-16 19:14:42.938 INFO  2464 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-16 19:14:42.941 INFO  2464 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-16 19:14:42.944 INFO  2464 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-16 19:14:42.971 INFO  2464 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: addOrganizationInfoDetails
+2024-08-16 19:14:42.973 INFO  2464 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: addOrganizationInfoDetails with browser: null
+2024-08-16 19:14:42.982 INFO  2464 --- [main] ExtentReportListener : Starting Test: addOrganizationInfoDetails
+2024-08-16 19:14:43.991 INFO  2464 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-16 19:14:44.549 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id='organizationName']]
+2024-08-16 19:14:46.939 INFO  2464 --- [main] ElementInteractionUtils : Text retrieved from element: 2024
+2024-08-16 19:14:46.940 INFO  2464 --- [main] ElementInteractionUtils : Displayed Calendar Year: 2024
+2024-08-16 19:14:46.941 INFO  2464 --- [main] ElementInteractionUtils : Selected Year: 2028
+2024-08-16 19:14:49.682 INFO  2464 --- [main] ElementInteractionUtils : Text retrieved from element: 2028
+2024-08-16 19:14:49.682 INFO  2464 --- [main] ElementInteractionUtils : Displayed Year after selection: 2028
+2024-08-16 19:14:51.088 INFO  2464 --- [main] ElementInteractionUtils : Date selected: 18/Aug/2028
+2024-08-16 19:14:51.310 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="organisationAbbreviation"]]
+2024-08-16 19:14:52.279 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="registeredWith"]]
+2024-08-16 19:14:52.951 INFO  2464 --- [main] ElementInteractionUtils : Successfully selected the value 'Entity Established under and Act of Parliament of State Legislature' from the dropdown list: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="registeredWith"]]
+2024-08-16 19:14:52.995 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="cinRegistrationNo"]]
+2024-08-16 19:14:54.223 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="crn"]]
+2024-08-16 19:14:55.306 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="mcaNO"]]
+2024-08-16 19:14:56.795 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="entitypanNo"]]
+2024-08-16 19:14:58.272 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="organizationContactPerson"]]
+2024-08-16 19:14:59.572 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="organizationContactPersonContact"]]
+2024-08-16 19:15:00.803 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="contactEmailId"]]
+2024-08-16 19:15:02.260 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="address.location"]]
+2024-08-16 19:15:03.644 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="address.locationII"]]
+2024-08-16 19:15:04.816 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="address.village"]]
+2024-08-16 19:15:06.247 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="address.pinCode"]]
+2024-08-16 19:15:07.606 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="country"]]
+2024-08-16 19:15:08.751 INFO  2464 --- [main] ElementInteractionUtils : Successfully selected the value 'United States Of America' from the dropdown list: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="country"]]
+2024-08-16 19:15:10.828 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="state"]]
+2024-08-16 19:15:11.484 INFO  2464 --- [main] ElementInteractionUtils : Successfully selected the value 'New Jersey' from the dropdown list: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="state"]]
+2024-08-16 19:15:11.570 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="aboutOrganization"]]
+2024-08-16 19:15:13.721 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="socialNetwork.website"]]
+2024-08-16 19:15:15.144 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="socialNetwork.csrPageLink"]]
+2024-08-16 19:15:16.179 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="socialNetwork.linkedIn"]]
+2024-08-16 19:15:17.648 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="socialNetwork.facebook"]]
+2024-08-16 19:15:19.071 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="socialNetwork.instagram"]]
+2024-08-16 19:15:20.724 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="socialNetwork.twitter"]]
+2024-08-16 19:15:21.999 INFO  2464 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (411f984fcaaaae243060611f9e3ffa82)] -> xpath: //*[@id="socialNetwork.youtube"]]
+2024-08-16 19:15:23.094 INFO  2464 --- [main] ExtentReportListener : Test Passed: addOrganizationInfoDetails
+2024-08-16 19:15:23.100 INFO  2464 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: addOrganizationInfoDetails
+2024-08-16 19:15:23.101 INFO  2464 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
+2024-08-16 19:15:24.958 INFO  2464 --- [main] ExtentReportListener : Test report opened in browser: C:\Users\Abhijeet\git\SynergyAdmin/extentReports/ExtentReport_2024_08_16_19_13_59.html
+2024-08-16 19:15:25.771 INFO  2464 --- [main] <== SynergyAdmin ==> : 🛑 WebDriver closed and session ended successfully.
+2024-08-16 19:16:23.567 INFO  4396 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_16_19_16_23
+2024-08-16 19:16:23.721 INFO  4396 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:16:23.722 INFO  4396 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:16:23.810 INFO  4396 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:16:23.811 INFO  4396 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:16:27.442 INFO  4396 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-16 19:16:27.454 INFO  4396 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-16 19:16:27.472 INFO  4396 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-16 19:16:27.881 INFO  4396 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-16 19:16:27.936 INFO  4396 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-16 19:16:27.939 INFO  4396 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-16 19:16:27.960 INFO  4396 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-16 19:16:27.986 INFO  4396 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:16:27.987 INFO  4396 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:16:27.988 INFO  4396 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-16 19:16:27.989 INFO  4396 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-16 19:16:28.028 INFO  4396 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)
+2024-08-16 19:16:30.029 INFO  4396 --- [main] <== SynergyAdmin ==> : Navigated to URL: https://test30.synergyapps.in
+2024-08-16 19:16:30.633 INFO  4396 --- [main] <== SynergyAdmin ==> : Browser window maximized
+2024-08-16 19:16:31.250 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> id: username]
+2024-08-16 19:16:32.138 INFO  4396 --- [main] <== SynergyAdmin ==> : Entered User ID
+2024-08-16 19:16:32.208 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> id: password]
+2024-08-16 19:16:33.082 INFO  4396 --- [main] <== SynergyAdmin ==> : Entered Password
+2024-08-16 19:16:56.196 INFO  4396 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-16 19:16:56.197 INFO  4396 --- [main] <== SynergyAdmin ==> : Clicked on Login button
+2024-08-16 19:16:56.217 INFO  4396 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-16 19:16:57.114 INFO  4396 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-16 19:17:00.794 INFO  4396 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="productAdmin"]]
+2024-08-16 19:17:00.795 INFO  4396 --- [main] <== SynergyAdmin ==> : Synergy Admin validated
+2024-08-16 19:17:00.800 INFO  4396 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-16 19:17:00.805 INFO  4396 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-16 19:17:00.833 INFO  4396 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:17:00.835 INFO  4396 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:17:00.855 INFO  4396 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)
+2024-08-16 19:17:00.867 INFO  4396 --- [main] WebElementLocators : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)
+2024-08-16 19:17:00.868 INFO  4396 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-16 19:17:00.869 INFO  4396 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-16 19:17:00.873 INFO  4396 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-16 19:17:01.666 INFO  4396 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-16 19:17:05.010 INFO  4396 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-16 19:17:05.010 INFO  4396 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-16 19:17:05.019 INFO  4396 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-16 19:17:05.033 INFO  4396 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: addOrganizationInfoDetails
+2024-08-16 19:17:05.035 INFO  4396 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: addOrganizationInfoDetails with browser: null
+2024-08-16 19:17:05.042 INFO  4396 --- [main] ExtentReportListener : Starting Test: addOrganizationInfoDetails
+2024-08-16 19:17:06.026 INFO  4396 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-16 19:17:06.338 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id='organizationName']]
+2024-08-16 19:18:26.145 INFO  4396 --- [main] ElementInteractionUtils : Text retrieved from element: 2024
+2024-08-16 19:18:27.220 INFO  4396 --- [main] ElementInteractionUtils : Displayed Calendar Year: 2024
+2024-08-16 19:18:31.961 INFO  4396 --- [main] ElementInteractionUtils : Selected Year: 2028
+2024-08-16 19:18:41.576 INFO  4396 --- [main] ElementInteractionUtils : Text retrieved from element: 2028
+2024-08-16 19:18:41.578 INFO  4396 --- [main] ElementInteractionUtils : Displayed Year after selection: 2028
+2024-08-16 19:19:06.211 INFO  4396 --- [main] ElementInteractionUtils : Date selected: 18/Aug/2028
+2024-08-16 19:19:14.155 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="organisationAbbreviation"]]
+2024-08-16 19:19:49.502 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="registeredWith"]]
+2024-08-16 19:20:02.810 INFO  4396 --- [main] ElementInteractionUtils : Successfully selected the value 'Entity Established under and Act of Parliament of State Legislature' from the dropdown list: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="registeredWith"]]
+2024-08-16 19:21:16.348 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="cinRegistrationNo"]]
+2024-08-16 19:22:42.790 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="crn"]]
+2024-08-16 19:22:56.162 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="mcaNO"]]
+2024-08-16 19:23:06.834 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="entitypanNo"]]
+2024-08-16 19:23:13.887 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="organizationContactPerson"]]
+2024-08-16 19:23:15.731 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="organizationContactPersonContact"]]
+2024-08-16 19:23:17.657 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="contactEmailId"]]
+2024-08-16 19:23:19.657 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="address.location"]]
+2024-08-16 19:23:21.526 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="address.locationII"]]
+2024-08-16 19:23:23.465 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="address.village"]]
+2024-08-16 19:23:25.164 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="address.pinCode"]]
+2024-08-16 19:23:27.060 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="country"]]
+2024-08-16 19:23:28.507 INFO  4396 --- [main] ElementInteractionUtils : Successfully selected the value 'United States Of America' from the dropdown list: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="country"]]
+2024-08-16 19:23:30.806 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="state"]]
+2024-08-16 19:23:31.527 INFO  4396 --- [main] ElementInteractionUtils : Successfully selected the value 'New Jersey' from the dropdown list: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="state"]]
+2024-08-16 19:23:31.881 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="aboutOrganization"]]
+2024-08-16 19:23:34.649 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="socialNetwork.website"]]
+2024-08-16 19:23:36.617 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="socialNetwork.csrPageLink"]]
+2024-08-16 19:23:38.121 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="socialNetwork.linkedIn"]]
+2024-08-16 19:23:40.321 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="socialNetwork.facebook"]]
+2024-08-16 19:23:42.206 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="socialNetwork.instagram"]]
+2024-08-16 19:23:43.713 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="socialNetwork.twitter"]]
+2024-08-16 19:23:44.874 INFO  4396 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f43907b25dfe580959fa405c3bc49a12)] -> xpath: //*[@id="socialNetwork.youtube"]]
+2024-08-16 19:23:45.902 INFO  4396 --- [main] ExtentReportListener : Test Passed: addOrganizationInfoDetails
+2024-08-16 19:23:45.909 INFO  4396 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: addOrganizationInfoDetails
+2024-08-16 19:23:45.910 INFO  4396 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
+2024-08-16 19:23:47.064 INFO  4396 --- [main] ExtentReportListener : Test report opened in browser: C:\Users\Abhijeet\git\SynergyAdmin/extentReports/ExtentReport_2024_08_16_19_16_23.html
+2024-08-16 19:23:48.513 INFO  4396 --- [main] <== SynergyAdmin ==> : 🛑 WebDriver closed and session ended successfully.
+2024-08-16 19:24:39.800 INFO  1220 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_16_19_24_39
+2024-08-16 19:24:39.984 INFO  1220 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:24:39.985 INFO  1220 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:24:40.059 INFO  1220 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:24:40.060 INFO  1220 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:24:43.244 INFO  1220 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-16 19:24:43.247 INFO  1220 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-16 19:24:43.259 INFO  1220 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-16 19:24:43.464 INFO  1220 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-16 19:24:43.513 INFO  1220 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-16 19:24:43.514 INFO  1220 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-16 19:24:43.527 INFO  1220 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-16 19:24:43.547 INFO  1220 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:24:43.550 INFO  1220 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:24:43.552 INFO  1220 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-16 19:24:43.553 INFO  1220 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-16 19:24:43.598 INFO  1220 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)
+2024-08-16 19:24:45.471 INFO  1220 --- [main] <== SynergyAdmin ==> : Navigated to URL: https://test30.synergyapps.in
+2024-08-16 19:24:46.065 INFO  1220 --- [main] <== SynergyAdmin ==> : Browser window maximized
+2024-08-16 19:24:46.661 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> id: username]
+2024-08-16 19:24:47.513 INFO  1220 --- [main] <== SynergyAdmin ==> : Entered User ID
+2024-08-16 19:24:47.604 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> id: password]
+2024-08-16 19:24:48.460 INFO  1220 --- [main] <== SynergyAdmin ==> : Entered Password
+2024-08-16 19:25:11.968 INFO  1220 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-16 19:25:11.969 INFO  1220 --- [main] <== SynergyAdmin ==> : Clicked on Login button
+2024-08-16 19:25:11.985 INFO  1220 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-16 19:25:12.818 INFO  1220 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-16 19:25:18.400 INFO  1220 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="productAdmin"]]
+2024-08-16 19:25:18.401 INFO  1220 --- [main] <== SynergyAdmin ==> : Synergy Admin validated
+2024-08-16 19:25:18.405 INFO  1220 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-16 19:25:18.410 INFO  1220 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-16 19:25:18.417 INFO  1220 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:25:18.418 INFO  1220 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-16 19:25:18.440 INFO  1220 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)
+2024-08-16 19:25:18.440 INFO  1220 --- [main] WebElementLocators : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)
+2024-08-16 19:25:18.443 INFO  1220 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-16 19:25:18.444 INFO  1220 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-16 19:25:18.449 INFO  1220 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-16 19:25:19.229 INFO  1220 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-16 19:25:22.502 INFO  1220 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-16 19:25:22.504 INFO  1220 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-16 19:25:22.510 INFO  1220 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-16 19:25:22.517 INFO  1220 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: addOrganizationInfoDetails
+2024-08-16 19:25:22.521 INFO  1220 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: addOrganizationInfoDetails with browser: null
+2024-08-16 19:25:22.528 INFO  1220 --- [main] ExtentReportListener : Starting Test: addOrganizationInfoDetails
+2024-08-16 19:25:23.489 INFO  1220 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-16 19:25:23.555 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id='organizationName']]
+2024-08-16 19:25:26.182 INFO  1220 --- [main] ElementInteractionUtils : Text retrieved from element: 2024
+2024-08-16 19:25:26.182 INFO  1220 --- [main] ElementInteractionUtils : Displayed Calendar Year: 2024
+2024-08-16 19:25:26.183 INFO  1220 --- [main] ElementInteractionUtils : Selected Year: 2028
+2024-08-16 19:25:28.962 INFO  1220 --- [main] ElementInteractionUtils : Text retrieved from element: 2028
+2024-08-16 19:25:28.964 INFO  1220 --- [main] ElementInteractionUtils : Displayed Year after selection: 2028
+2024-08-16 19:25:30.396 INFO  1220 --- [main] ElementInteractionUtils : Date selected: 18/Aug/2028
+2024-08-16 19:25:30.610 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="organisationAbbreviation"]]
+2024-08-16 19:25:31.677 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="registeredWith"]]
+2024-08-16 19:25:32.063 INFO  1220 --- [main] ElementInteractionUtils : Successfully selected the value 'Entity Established under and Act of Parliament of State Legislature' from the dropdown list: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="registeredWith"]]
+2024-08-16 19:25:32.302 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="cinRegistrationNo"]]
+2024-08-16 19:25:33.537 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="crn"]]
+2024-08-16 19:25:34.587 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="mcaNO"]]
+2024-08-16 19:25:35.953 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="entitypanNo"]]
+2024-08-16 19:25:37.330 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="organizationContactPerson"]]
+2024-08-16 19:25:38.701 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="organizationContactPersonContact"]]
+2024-08-16 19:25:39.859 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="contactEmailId"]]
+2024-08-16 19:25:41.248 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="address.location"]]
+2024-08-16 19:25:42.595 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="address.locationII"]]
+2024-08-16 19:25:44.073 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="address.village"]]
+2024-08-16 19:25:45.282 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="address.pinCode"]]
+2024-08-16 19:25:46.428 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="country"]]
+2024-08-16 19:25:47.785 INFO  1220 --- [main] ElementInteractionUtils : Successfully selected the value 'United States Of America' from the dropdown list: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="country"]]
+2024-08-16 19:25:49.876 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="state"]]
+2024-08-16 19:25:50.656 INFO  1220 --- [main] ElementInteractionUtils : Successfully selected the value 'New Jersey' from the dropdown list: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="state"]]
+2024-08-16 19:25:50.746 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="aboutOrganization"]]
+2024-08-16 19:25:52.816 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="socialNetwork.website"]]
+2024-08-16 19:25:54.158 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="socialNetwork.csrPageLink"]]
+2024-08-16 19:25:55.187 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="socialNetwork.linkedIn"]]
+2024-08-16 19:25:56.879 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="socialNetwork.facebook"]]
+2024-08-16 19:25:58.124 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="socialNetwork.instagram"]]
+2024-08-16 19:25:59.823 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="socialNetwork.twitter"]]
+2024-08-16 19:26:00.888 INFO  1220 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (e42a8bb2399c70ae84637b5887a56acb)] -> xpath: //*[@id="socialNetwork.youtube"]]
+2024-08-16 19:26:01.796 INFO  1220 --- [main] ExtentReportListener : Test Passed: addOrganizationInfoDetails
+2024-08-16 19:26:01.807 INFO  1220 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: addOrganizationInfoDetails
+2024-08-16 19:26:01.808 INFO  1220 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
+2024-08-16 19:26:02.934 INFO  1220 --- [main] ExtentReportListener : Test report opened in browser: C:\Users\Abhijeet\git\SynergyAdmin/extentReports/ExtentReport_2024_08_16_19_24_39.html
+2024-08-16 19:26:04.041 INFO  1220 --- [main] <== SynergyAdmin ==> : 🛑 WebDriver closed and session ended successfully.

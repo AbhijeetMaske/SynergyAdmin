@@ -1,20 +1,30 @@
 package com.synergyconnect.utilities;
 
-import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
+import java.util.regex.Pattern;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.synergyconnect.common.BaseClass;
 import com.synergyconnect.common.Config;
 
@@ -345,30 +355,6 @@ public class ElementInteractionUtils {
 			logger.error("Unable to wait for invisibility of element: " + webElement.toString(), e);
 		}
 		return status;
-	}
-
-	/********************************************************************************************
-	 * wait for web element and set text in it.
-	 * 
-	 * @param webElement {@link WebElement} -webElement to click
-	 * @param text       {@link String} - text to enter
-	 * @return status {@link boolean} - true/false
-	 * 
-	 * @author Abhijeet Maske Created June 27,2023
-	 * @version 1.0 June 27,2023
-	 ********************************************************************************************/
-	public static WebElement findElement(By byelement, Duration timeout) {
-		WebElement webelement = null;
-		try {
-			FluentWait<WebDriver> fluentWait = new FluentWait<>(driver).withTimeout(timeout)
-					.ignoring(NoSuchElementException.class);
-			webelement = fluentWait.until(ExpectedConditions.presenceOfElementLocated(byelement));
-			logger.info("Element is visible: " + byelement.toString());
-		} catch (Exception e) {
-			e.printStackTrace();
-			logger.error("Unable to find webElement: " + byelement);
-		}
-		return webelement;
 	}
 
 	/********************************************************************************************
@@ -735,7 +721,7 @@ public class ElementInteractionUtils {
 		}
 	}
 
-	public void highlightElement(By locator) {
+	public static void highlightElement(By locator) {
 		WebElement webElement = driver.findElement(locator);
 		highlightElement(webElement);
 	}
@@ -1423,14 +1409,17 @@ public class ElementInteractionUtils {
 	}
 
 	/********************************************************************************************
-	 * Verifies if a specified text is present in a table column and performs an action if found.
+	 * Verifies if a specified text is present in a table column and performs an
+	 * action if found.
 	 * 
-	 * @param tableId              The ID of the table.
-	 * @param tableColumnIndex     The column index to search in.
-	 * @param searchText           The text to search for.
-	 * @param nextButton           The WebElement representing the next button.
-	 * @param actionButtonPrefix   The XPath prefix for locating the action button within the same row.
-	 * @param actionButtonPostfix  The XPath postfix for locating the action button within the same row.
+	 * @param tableId             The ID of the table.
+	 * @param tableColumnIndex    The column index to search in.
+	 * @param searchText          The text to search for.
+	 * @param nextButton          The WebElement representing the next button.
+	 * @param actionButtonPrefix  The XPath prefix for locating the action button
+	 *                            within the same row.
+	 * @param actionButtonPostfix The XPath postfix for locating the action button
+	 *                            within the same row.
 	 * @return True if the text is found and action performed, false otherwise.
 	 * 
 	 * @version 1.0 July 08, 2024
@@ -1454,7 +1443,8 @@ public class ElementInteractionUtils {
 					if (cellValue.contains(searchText)) {
 						highlightElement(searchText);
 						logger.info("Text '{}' found in cell value: {}", searchText, cellValue);
-						WebElement actionElement = driver.findElement(By.xpath(actionButtonPrefix + i + actionButtonPostfix));
+						WebElement actionElement = driver
+								.findElement(By.xpath(actionButtonPrefix + i + actionButtonPostfix));
 						if (actionElement.isDisplayed()) {
 							actionElement.click();
 							logger.info("Action performed on text '{}'", searchText);
@@ -1483,13 +1473,16 @@ public class ElementInteractionUtils {
 	}
 
 	/********************************************************************************************
-	 * Verifies if a specified text is present in a table column and performs an action if found.
+	 * Verifies if a specified text is present in a table column and performs an
+	 * action if found.
 	 * 
-	 * @param tableId              The ID of the table.
-	 * @param tableColumnIndex     The column index to search in.
-	 * @param searchText           The text to search for.
-	 * @param nextButton           The WebElement representing the next button.
-	 * @param additionalLookupValues A map containing column indexes and expected values for additional verification within the same row.
+	 * @param tableId                The ID of the table.
+	 * @param tableColumnIndex       The column index to search in.
+	 * @param searchText             The text to search for.
+	 * @param nextButton             The WebElement representing the next button.
+	 * @param additionalLookupValues A map containing column indexes and expected
+	 *                               values for additional verification within the
+	 *                               same row.
 	 * @return True if the text is found, false otherwise.
 	 * 
 	 * @version 1.0 July 08, 2024
@@ -1532,7 +1525,7 @@ public class ElementInteractionUtils {
 
 						if (allValuesMatch) {
 							logger.info("All lookup values match for text '{}'", searchText);
-							return true;																
+							return true;
 						}
 					}
 				}
@@ -1555,16 +1548,22 @@ public class ElementInteractionUtils {
 			return false;
 		}
 	}
+
 	/********************************************************************************************
-	 * Verifies if a specified text is present in a table column and performs an action if found.
+	 * Verifies if a specified text is present in a table column and performs an
+	 * action if found.
 	 * 
-	 * @param tableId              The ID of the table.
-	 * @param tableColumnIndex     The column index to search in.
-	 * @param searchText           The text to search for.
-	 * @param nextButton           The WebElement representing the next button.
-	 * @param actionButtonPrefix   The XPath prefix for locating the action button within the same row.
-	 * @param actionButtonPostfix  The XPath postfix for locating the action button within the same row.
-	 * @param additionalLookupValues A map containing column indexes and expected values for additional verification within the same row.
+	 * @param tableId                The ID of the table.
+	 * @param tableColumnIndex       The column index to search in.
+	 * @param searchText             The text to search for.
+	 * @param nextButton             The WebElement representing the next button.
+	 * @param actionButtonPrefix     The XPath prefix for locating the action button
+	 *                               within the same row.
+	 * @param actionButtonPostfix    The XPath postfix for locating the action
+	 *                               button within the same row.
+	 * @param additionalLookupValues A map containing column indexes and expected
+	 *                               values for additional verification within the
+	 *                               same row.
 	 * @return True if the text is found and action performed, false otherwise.
 	 * 
 	 * @version 1.0 July 08, 2024
@@ -1606,10 +1605,10 @@ public class ElementInteractionUtils {
 						}
 
 						if (allValuesMatch) {
-							logger.info("All lookup values match for text '{}'", searchText);																									
+							logger.info("All lookup values match for text '{}'", searchText);
 							if (actionButton.isDisplayed()) {
 								highlightElement(actionButton);
-								actionButton.click();								
+								actionButton.click();
 								logger.info("clickedon action button '{}'", searchText);
 								logger.info("Action performed on text '{}'", searchText);
 								return true;
@@ -1636,7 +1635,7 @@ public class ElementInteractionUtils {
 			return false;
 		}
 	}
-	
+
 	public static String getElementVisibleText(WebElement webElement) {
 		String text = null;
 		try {
@@ -1647,4 +1646,108 @@ public class ElementInteractionUtils {
 		}
 		return text;
 	}
+
+	public static void datePicker(String date, WebElement webElement, String DatePicker_Switch,
+			String DatePicker_Header, String DatePicker_prev, String DatePicker_next) throws InterruptedException {
+		try {
+			if (!isValidDateFormat(date)) {
+				logger.error("Invalid date format: {}. Expected format is DD/MM/YYYY.", date);
+				throw new IllegalArgumentException("Invalid date format: " + date);
+			}
+			webElement.click();
+			WebElement yearToggleButton = WebElementLocators.xpathBytext(DatePicker_Switch);
+			highlightElement(yearToggleButton);
+			yearToggleButton.click();
+
+			String displayedYearText = getTextByDynamicXpath(DatePicker_Header);
+			logger.info("Displayed Calendar Year: {}", displayedYearText);
+
+			int displayedYear = Integer.parseInt(displayedYearText);
+			String[] dateParts = date.split("/");
+			String selectedDay = dateParts[0];
+			String selectedMonth = convertMonthNumberToName(Integer.parseInt(dateParts[1]));
+			int selectedYear = Integer.parseInt(dateParts[2]);
+			logger.info("Selected Year: {}", selectedYear);
+
+			navigateToYear(displayedYear, selectedYear, DatePicker_Header, DatePicker_prev, DatePicker_next);
+
+			WebElement monthElement = WebElementLocators.findElementByText("span", selectedMonth);
+			highlightElement(monthElement);
+			monthElement.click();
+
+			WebElement dayElement = WebElementLocators.xpathByClassAndText("day", selectedDay);
+			highlightElement(dayElement);
+			dayElement.click();
+
+			logger.info("Date selected: {}/{}/{}", selectedDay, selectedMonth, selectedYear);
+		} catch (Exception e) {
+			logger.error("An error occurred while selecting the date: {}", e.getMessage());
+			throw new RuntimeException(e);
+		}
+	}
+
+	private static void navigateToYear(int displayedYear, int targetYear, String DatePicker_Header,
+			String DatePicker_prev, String DatePicker_next) {
+		int yearDifference = displayedYear - targetYear;
+		if (yearDifference != 0) {
+			By navigationButtonLocator = By.xpath(yearDifference > 0 ? DatePicker_prev : DatePicker_next);
+			for (int i = 0; i < Math.abs(yearDifference); i++) {
+				highlightElement(navigationButtonLocator);
+				driver.findElement(navigationButtonLocator).click();
+				logger.debug("Navigated to year: {}", targetYear);
+			}
+			logger.info("Displayed Year after selection: {}", getTextByDynamicXpath(DatePicker_Header));
+		}
+	}
+
+	public static String convertMonthNumberToName(int monthNumber) {
+		String[] months = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+		if (monthNumber >= 1 && monthNumber <= 12) {
+			return months[monthNumber - 1];
+		} else {
+			logger.error("Invalid month number: {}", monthNumber);
+			throw new IllegalArgumentException("Invalid month number: " + monthNumber);
+		}
+	}
+
+	public static String getTextByDynamicXpath(String xpathExpression) {
+		try {
+			Duration XSMALL_PAUSE = Duration.ofSeconds(Config.XSMALL_PAUSE);
+			WebDriverWait wait = new WebDriverWait(driver, XSMALL_PAUSE);
+			WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathExpression)));
+			String elementText = element.getText();
+			logger.info("Text retrieved from element: {}", elementText);
+			return elementText;
+		} catch (Exception e) {
+			logger.error("Error retrieving text with XPath {}: {}", xpathExpression, e.getMessage());
+			throw e;
+		}
+	}
+
+	private static boolean isValidDateFormat(String date) {
+		// Regular expression to validate the date format DD/MM/YYYY
+		String datePattern = "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\\d{4}$";
+		if (!Pattern.matches(datePattern, date)) {
+			return false;
+		}
+		// Split the date to check day and month range
+		String[] dateParts = date.split("/");
+		int day = Integer.parseInt(dateParts[0]);
+		int month = Integer.parseInt(dateParts[1]);
+
+		// Additional check to ensure the date is valid (e.g., no 30th of February)
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		sdf.setLenient(false);
+		try {
+			sdf.parse(date); // Parse the date to ensure it's valid
+		} catch (ParseException e) {
+			return false;
+		}
+		// Ensure day is between 1-31 and month is between 1-12
+		if (day < 1 || day > 31 || month < 1 || month > 12) {
+			return false;
+		}
+		return true;
+	}
+
 }
