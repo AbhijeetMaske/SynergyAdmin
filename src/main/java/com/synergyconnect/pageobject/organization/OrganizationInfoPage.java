@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.synergyconnect.common.Config;
@@ -349,7 +350,9 @@ public class OrganizationInfoPage {
 		ElementInteractionUtils.click(ddlAddOrganizationInfo);
 	}
 
+	@Test
 	public void AddorganizationInfo() throws InterruptedException {
+		try {
 		ElementInteractionUtils.click(btnOrganizationInfoEdit);
 		ElementInteractionUtils.sendKeys(txtOrganizationName,
 				"Society for Nutrition, Education and Health Action SNEHA, Mumbai");
@@ -387,6 +390,14 @@ public class OrganizationInfoPage {
 				"https://www.instagram.com/give_india/https://www.instagram.com/snehamumbai_official/");
 		ElementInteractionUtils.sendKeys(txtTwitter, "https://twitter.com/SNEHAmumbai");
 		ElementInteractionUtils.sendKeys(txtYouTube, "https://youtube.com/SNEHAmumbai");
-
+		ElementInteractionUtils.click(establishedByCompanyOrGroupOfCompaniesYes);
+		ElementInteractionUtils.click(subOrganizationYes);
+		ElementInteractionUtils.click(btnOrgnizationInfoSubmit);
+		String SubmitToasterMessage = AU.getToasterText();
+		Assert.assertEquals(SubmitToasterMessage, "Organization data updated");
+		}
+		catch(Exception e) {		
+			logger.error("Exception occurred during add Organization Info: ", e);
+		}
 	}
 }

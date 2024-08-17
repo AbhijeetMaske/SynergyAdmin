@@ -1,5 +1,6 @@
 package com.synergyconnect.testcases;
 
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -8,56 +9,39 @@ import com.synergyconnect.pageobject.LoginPage;
 import com.synergyconnect.utilities.ExtentReportListener;
 
 public class Login extends BaseClass {
+	private ExtentTest parentTest;
+
+	@BeforeClass
+	public void setUp() {
+		parentTest = ExtentReportListener.createParentTest("Login Test", "Verify that login functionality works")
+				.assignAuthor("Abhijeet Maske");
+		ExtentReportListener.tags("Regression", "Smoke");
+		LoginPage loginPage = new LoginPage(getDriver());
+	}
+
 	@Test(priority = 1, testName = "Login Test", alwaysRun = true)
 	public void verifyLoginIsWorking() throws InterruptedException {
-		// Create parent test node
-		ExtentTest parentTest = ExtentReportListener
-				.createParentTest("Login Test", "Verify that login functionality works").assignAuthor("Abhijeet Maske");
 
-		// Assign tags
-		ExtentReportListener.tags("Regression", "Smoke");
-
-		// Create a child node for the actual test steps
-		ExtentTest test = parentTest.createNode("Login Functionality Test");
-
+		ExtentTest childTest = parentTest.createNode("Login Functionality Test");
 		LoginPage loginPage = new LoginPage(getDriver());
 
 		try {
 			getDriver().get(url);
-			logger.info("Navigated to URL: " + url);
-			test.log(Status.INFO, "Navigated to URL: " + url);
-
-			Thread.sleep(500);
-
 			getDriver().manage().window().maximize();
-			logger.info("Browser window maximized");
-			test.log(Status.INFO, "Browser window maximized");
-
-			Thread.sleep(500);
-
-			loginPage.enterUserid();
-			logger.info("Entered User ID");
-			test.log(Status.INFO, "Entered User ID");
-
-			loginPage.enterPassword();
-			logger.info("Entered Password");
-			test.log(Status.INFO, "Entered Password");
-
-			loginPage.clickOnLogin();
-			logger.info("Clicked on Login button");
-			test.log(Status.INFO, "Clicked on Login button");
+			loginPage.portalLogin();
+			childTest.log(Status.INFO, "Portal Logged successfully");
 
 			loginPage.getHompageUrl();
 			logger.info("Validated homepage URL");
-			test.log(Status.INFO, "Validated homepage URL");
+			childTest.log(Status.INFO, "Validated homepage URL");
 
 			loginPage.synergyAdmin();
-			logger.info("Synergy Admin validated");
-			test.log(Status.PASS, "Login functionality works as expected");
+			logger.info("Redirected to Synergy Admin");
+			childTest.log(Status.PASS, "Redirected to Synergy Admin");
 
 		} catch (Exception e) {
 			logger.error("Test case verifyLoginIsWorking failed: " + e.getMessage());
-			test.log(Status.FAIL, "Test case verifyLoginIsWorking failed: " + e.getMessage());
+			childTest.log(Status.FAIL, "Test case verifyLoginIsWorking failed: " + e.getMessage());
 		}
 	}
 }
