@@ -40,14 +40,19 @@ public class WebElementLocators {
 	}
 
 	/********************************************************************************************
-	 * wait for web element and set text in it.
+	 * Finds a web element using the specified locator and waits until the element
+	 * is present within the given timeout period.
 	 * 
-	 * @param webElement {@link WebElement} -webElement to click
-	 * @param text       {@link String} - text to enter
-	 * @return status {@link boolean} - true/false
+	 * This method uses a FluentWait to wait for the presence of the element located
+	 * by the provided `By` locator. If the element is found within the timeout
+	 * period, it is returned.
 	 * 
-	 * @author Abhijeet Maske Created June 27,2023
-	 * @version 1.0 June 27,2023
+	 * @param byelement the `By` locator used to identify the web element
+	 * @param timeout   the duration to wait for the element to be located
+	 * @return the found `WebElement`, or `null` if the element is not found
+	 * 
+	 * @author Abhijeet Maske Created August 17, 2024
+	 * @version 1.0 August 17, 2024
 	 ********************************************************************************************/
 	public static WebElement findElement(By byelement, Duration timeout) {
 		WebElement webelement = null;
@@ -63,11 +68,39 @@ public class WebElementLocators {
 		return webelement;
 	}
 
+	/********************************************************************************************
+	 * Finds a web element based on its tag name and the text it contains.
+	 * 
+	 * This method constructs an XPath expression using the provided tag name and
+	 * text, then finds and returns the matching web element.
+	 * 
+	 * @param tagName the tag name of the web element
+	 * @param text    the text contained within the web element
+	 * @return the found `WebElement`, or `null` if no matching element is found
+	 * 
+	 * @author Abhijeet Maske Created August 17, 2024
+	 * @version 1.0 August 17, 2024
+	 ********************************************************************************************/
 	public static WebElement findElementByText(String tagName, String text) {
 		String xpathExpression = String.format("//%s[contains(text(),'%s')]", tagName, text);
 		return driver.findElement(By.xpath(xpathExpression));
 	}
 
+	/********************************************************************************************
+	 * Finds a web element using an XPath expression and waits until the element is
+	 * visible.
+	 * 
+	 * This method uses a `WebDriverWait` to wait for the visibility of the element
+	 * located by the provided XPath expression within a small timeout period.
+	 * 
+	 * @param text the XPath expression used to locate the web element
+	 * @return the found `WebElement`, or `null` if the element is not found
+	 * @throws Exception if an error occurs while waiting for the element to become
+	 *                   visible
+	 * 
+	 * @author Abhijeet Maske Created August 17, 2024
+	 * @version 1.0 August 17, 2024
+	 ********************************************************************************************/
 	public static WebElement xpathBytext(String text) {
 		Duration SMALL_PAUSE = Duration.ofSeconds(Config.XSMALL_PAUSE);
 		wait = new WebDriverWait(driver, SMALL_PAUSE);
@@ -80,6 +113,19 @@ public class WebElementLocators {
 		}
 	}
 
+	/********************************************************************************************
+	 * Finds a web element using its class name and the exact text it contains.
+	 * 
+	 * This method constructs an XPath expression using the provided class name and
+	 * text, then finds and returns the matching web element.
+	 * 
+	 * @param className the class name of the web element
+	 * @param text      the exact text contained within the web element
+	 * @return the found `WebElement`, or `null` if no matching element is found
+	 * 
+	 * @author Abhijeet Maske Created August 17, 2024
+	 * @version 1.0 August 17, 2024
+	 ********************************************************************************************/
 	public static WebElement xpathByClassAndText(String className, String text) {
 		String dayXpath = "//*[@class='" + className + "' and text()='" + text + "']";
 		return driver.findElement(By.xpath(dayXpath));
