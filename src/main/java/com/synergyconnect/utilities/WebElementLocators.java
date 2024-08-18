@@ -82,8 +82,16 @@ public class WebElementLocators {
 	 * @version 1.0 August 17, 2024
 	 ********************************************************************************************/
 	public static WebElement findElementByText(String tagName, String text) {
-		String xpathExpression = String.format("//%s[contains(text(),'%s')]", tagName, text);
-		return driver.findElement(By.xpath(xpathExpression));
+		WebElement element = null;
+	    String xpathExpression = String.format("//%s[contains(text(),'%s')]", tagName, text);
+	    try {
+	        element = driver.findElement(By.xpath(xpathExpression));
+	        logger.info("Element found with tag name: {} and text: {}", tagName, text);
+	    } catch (Exception e) {
+	        logger.error("Error locating element with tag name: {} and text: {}", tagName, text, e);
+	        throw e;
+	    }
+	    return element;
 	}
 
 	/********************************************************************************************
