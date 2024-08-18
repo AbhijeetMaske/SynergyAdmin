@@ -127,8 +127,43 @@ public class WebElementLocators {
 	 * @version 1.0 August 17, 2024
 	 ********************************************************************************************/
 	public static WebElement xpathByClassAndText(String className, String text) {
-		String dayXpath = "//*[@class='" + className + "' and text()='" + text + "']";
-		return driver.findElement(By.xpath(dayXpath));
+		WebElement element = null;
+	    String xpathExpression = "//*[@class='" + className + "' and text()='" + text + "']";
+	    try {
+	        element = driver.findElement(By.xpath(xpathExpression));
+	        logger.info("Element found with class name: {} and text: {}", className, text);
+	    } catch (Exception e) {
+	        logger.error("Error locating element with class name: {} and text: {}", className, text, e);
+	        throw e;
+	    }
+	    return element;
 	}
 
+	/********************************************************************************************
+	 * Finds a web element using its id and the exact text it contains.
+	 * 
+	 * This method constructs an XPath expression using the provided id and text,
+	 * then finds and returns the matching web element.
+	 * 
+	 * @param id   the id attribute of the web element
+	 * @param text the exact text contained within the web element
+	 * @return the found `WebElement`, or `null` if no matching element is found
+	 * 
+	 * @throws Exception if an error occurs while locating the element
+	 * 
+	 * @author Abhijeet Maske Created August 17, 2024
+	 * @version 1.0 August 17, 2024
+	 ********************************************************************************************/
+	public static WebElement xpathByIdAndText(String id, String text) {
+		String xpathExpression = "//*[@id='" + id + "' and text()='" + text + "']";
+		WebElement element = null;
+		try {
+			element = driver.findElement(By.xpath(xpathExpression));
+			logger.info("Element found with id: {} and text: {}", id, text);
+		} catch (Exception e) {
+			logger.error("Error in locating element with id: {} and text: {}", id, text, e);
+			throw e;
+		}
+		return element;
+	}
 }
