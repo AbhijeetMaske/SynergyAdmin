@@ -1,5 +1,7 @@
 package com.synergyconnect.utilities;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -1636,6 +1638,34 @@ public class ElementInteractionUtils {
 		}
 	}
 
+	/********************************************************************************************
+	 * Uploads a file to the specified web element (e.g., file input field).
+	 * 
+	 * This method accepts the file path and sends it to the upload input field, allowing the file to be uploaded.
+	 * 
+	 * @param uploadButton the web element (file input field) where the file will be uploaded
+	 * @param filePath the absolute path of the file to be uploaded
+	 * @throws Exception if an error occurs during the file upload process
+	 * 
+	 * @author Abhijeet Maske
+	 * Created August 17, 2024
+	 * @version 1.0 August 17, 2024
+	 ********************************************************************************************/
+	public static void uploadFile(WebElement uploadButton, String filePath) throws Exception {
+	    try {
+	        File file = new File(filePath);
+	        if (file.exists() && file.isFile()) {
+	            uploadButton.sendKeys(file.getAbsolutePath());
+	            logger.info("File uploaded successfully: {}", filePath);
+	        } else {
+	            logger.error("File not found or invalid: {}", filePath);
+	            throw new FileNotFoundException("File not found or invalid: " + filePath);
+	        }
+	    } catch (Exception e) {
+	        logger.error("Error during file upload: {}", filePath, e);
+	        throw e;
+	    }
+	}
 	public static String getElementVisibleText(WebElement webElement) {
 		String text = null;
 		try {
