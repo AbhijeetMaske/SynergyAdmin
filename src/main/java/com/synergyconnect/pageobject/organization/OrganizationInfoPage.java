@@ -1,7 +1,10 @@
 package com.synergyconnect.pageobject.organization;
 
+import java.io.File;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -96,7 +99,7 @@ public class OrganizationInfoPage {
 	@FindBy(xpath = "//*[@id=\"state\"]")
 	private WebElement ddlState;
 
-	@FindBy(xpath = "//label[@for='organizationLogo']")
+	@FindBy(xpath = "//input[@id='organizationLogo']")
 	private WebElement btnUploadLogo;
 
 	@FindBy(xpath = "//*[@id=\"aboutOrganization\"]")
@@ -377,7 +380,7 @@ public class OrganizationInfoPage {
 		ElementInteractionUtils.selectByVisibleText(ddlCountry, "United States Of America");
 		Thread.sleep(2000);
 		ElementInteractionUtils.selectByVisibleText(ddlState, "New Jersey");
-		// Logo
+		ElementInteractionUtils.uploadFile(btnUploadLogo, "C:\\Users\\Abhijeet\\git\\SynergyAdmin\\src\\test\\resources\\SynergyLogo.jpg");
 		ElementInteractionUtils.sendKeys(txaBriefDiscription,
 				"SNEHA is a non-profit organization that works with women, children, adolescents, public health and safety systems and in the area of palliative care. Our innovative work in urban informal settlements in seven Municipal Corporations including Mumbai aims to reduce maternal and neonatal mortality and morbidity, child malnutrition, adolescent empowerment and sexuality, gender-based violence and palliative care.");
 		/* Media Sources */
@@ -394,7 +397,7 @@ public class OrganizationInfoPage {
 		ElementInteractionUtils.click(subOrganizationYes);
 		ElementInteractionUtils.click(btnOrgnizationInfoSubmit);
 		String SubmitToasterMessage = AU.getToasterText();
-		Assert.assertEquals(SubmitToasterMessage, "Organization data updated");
+		Assert.assertEquals(SubmitToasterMessage, "Organization data updated !");
 		}
 		catch(Exception e) {		
 			logger.error("Exception occurred during add Organization Info: ", e);
