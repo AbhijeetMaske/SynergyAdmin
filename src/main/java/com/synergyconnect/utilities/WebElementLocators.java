@@ -81,7 +81,7 @@ public class WebElementLocators {
 	 * @author Abhijeet Maske Created August 17, 2024
 	 * @version 1.0 August 17, 2024
 	 ********************************************************************************************/
-	public static WebElement findElementByText(String tagName, String text) {
+	public static WebElement xpathByTagnameAndText(String tagName, String text) {
 		WebElement element = null;
 	    String xpathExpression = String.format("//%s[contains(text(),'%s')]", tagName, text);
 	    try {

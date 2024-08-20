@@ -1641,31 +1641,44 @@ public class ElementInteractionUtils {
 	/********************************************************************************************
 	 * Uploads a file to the specified web element (e.g., file input field).
 	 * 
-	 * This method accepts the file path and sends it to the upload input field, allowing the file to be uploaded.
+	 * This method accepts the file path and sends it to the upload input field,
+	 * allowing the file to be uploaded.
 	 * 
-	 * @param uploadButton the web element (file input field) where the file will be uploaded
-	 * @param filePath the absolute path of the file to be uploaded
+	 * @param uploadButton the web element (file input field) where the file will be
+	 *                     uploaded
+	 * @param filePath     the absolute path of the file to be uploaded
 	 * @throws Exception if an error occurs during the file upload process
 	 * 
-	 * @author Abhijeet Maske
-	 * Created August 17, 2024
+	 * @author Abhijeet Maske Created August 17, 2024
 	 * @version 1.0 August 17, 2024
 	 ********************************************************************************************/
 	public static void uploadFile(WebElement uploadButton, String filePath) throws Exception {
-	    try {
-	        File file = new File(filePath);
-	        if (file.exists() && file.isFile()) {
-	            uploadButton.sendKeys(file.getAbsolutePath());
-	            logger.info("File uploaded successfully: {}", filePath);
-	        } else {
-	            logger.error("File not found or invalid: {}", filePath);
-	            throw new FileNotFoundException("File not found or invalid: " + filePath);
-	        }
-	    } catch (Exception e) {
-	        logger.error("Error during file upload: {}", filePath, e);
-	        throw e;
-	    }
+		try {
+			File file = new File(filePath);
+			if (file.exists() && file.isFile()) {
+				uploadButton.sendKeys(file.getAbsolutePath());
+				logger.info("File uploaded successfully: {}", filePath);
+			} else {
+				logger.error("File not found or invalid: {}", filePath);
+				throw new FileNotFoundException("File not found or invalid: " + filePath);
+			}
+		} catch (Exception e) {
+			logger.error("Error during file upload: {}", filePath, e);
+			throw e;
+		}
 	}
+
+	/********************************************************************************************
+	 * Retrieves the visible text of a web element. This method attempts to retrieve
+	 * the text content of the provided web element.
+	 * 
+	 * @param webElement the web element from which the text is to be retrieved
+	 * @return the visible text of the web element, or `null` if an exception occurs
+	 * 
+	 * @author Abhijeet Maske Created August 20, 2024
+	 * @version 1.0 August 17, 2024
+	 ********************************************************************************************/
+
 	public static String getElementVisibleText(WebElement webElement) {
 		String text = null;
 		try {
@@ -1677,6 +1690,24 @@ public class ElementInteractionUtils {
 		return text;
 	}
 
+	/* Datepicker Start */
+	/********************************************************************************************
+	 * Selects a date from a date picker UI element. This method validates the date
+	 * format, navigates through the calendar UI, and selects the specified date.
+	 * 
+	 * @param date              the date to be selected in the format DD/MM/YYYY
+	 * @param webElement        the web element representing the date picker input field
+	 * @param DatePicker_Switch the XPath expression for the calendar's switch button (e.g., year selector)
+	 * @param DatePicker_Header the XPath expression for the calendar's header (e.g., displaying the year)
+	 * @param DatePicker_prev   the XPath expression for the previous year button
+	 * @param DatePicker_next   the XPath expression for the next year button
+	 * 
+	 * @throws InterruptedException if the thread is interrupted during execution
+	 * @throws RuntimeException     if an error occurs during date selection
+	 * 
+	 * @author Abhijeet Maske Created August 17, 2024
+	 * @version 1.0 August 17, 2024
+	 ********************************************************************************************/
 	public static void datePicker(String date, WebElement webElement, String DatePicker_Switch,
 			String DatePicker_Header, String DatePicker_prev, String DatePicker_next) throws InterruptedException {
 		try {
@@ -1701,7 +1732,7 @@ public class ElementInteractionUtils {
 
 			navigateToYear(displayedYear, selectedYear, DatePicker_Header, DatePicker_prev, DatePicker_next);
 
-			WebElement monthElement = WebElementLocators.findElementByText("span", selectedMonth);
+			WebElement monthElement = WebElementLocators.xpathByTagnameAndText("span", selectedMonth);
 			highlightElement(monthElement);
 			monthElement.click();
 
@@ -1716,6 +1747,22 @@ public class ElementInteractionUtils {
 		}
 	}
 
+	/********************************************************************************************
+	 * Navigates the calendar to the target year.
+	 * 
+	 * This method calculates the difference between the currently displayed year
+	 * and the target year, and clicks the appropriate navigation button until the
+	 * target year is displayed.
+	 * 
+	 * @param displayedYear     the currently displayed year on the calendar
+	 * @param targetYear        the year to navigate to
+	 * @param DatePicker_Header the XPath expression for the calendar's header (e.g., displaying the year)
+	 * @param DatePicker_prev   the XPath expression for the previous year button
+	 * @param DatePicker_next   the XPath expression for the next year button
+	 * 
+	 * @author Abhijeet Maske Created August 17, 2024
+	 * @version 1.0 August 17, 2024
+	 ********************************************************************************************/
 	private static void navigateToYear(int displayedYear, int targetYear, String DatePicker_Header,
 			String DatePicker_prev, String DatePicker_next) {
 		int yearDifference = displayedYear - targetYear;
@@ -1730,6 +1777,19 @@ public class ElementInteractionUtils {
 		}
 	}
 
+	/********************************************************************************************
+	 * Converts a numeric month to its corresponding abbreviated name.
+	 * 
+	 * This method converts the given month number (1-12) into its corresponding
+	 * month name (e.g., 1 -> Jan, 2 -> Feb).
+	 * 
+	 * @param monthNumber the numeric month (1-12)
+	 * @return the abbreviated month name (e.g., "Jan", "Feb")	 * 
+	 * @throws IllegalArgumentException if the month number is invalid
+	 * 
+	 * @author Abhijeet Maske Created August 17, 2024
+	 * @version 1.0 August 17, 2024
+	 ********************************************************************************************/
 	public static String convertMonthNumberToName(int monthNumber) {
 		String[] months = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
 		if (monthNumber >= 1 && monthNumber <= 12) {
@@ -1740,6 +1800,20 @@ public class ElementInteractionUtils {
 		}
 	}
 
+	/********************************************************************************************
+	 * Retrieves text from an element using a dynamic XPath expression.
+	 * 
+	 * This method waits until the element located by the provided XPath expression
+	 * is visible, then retrieves and returns the text content of that element.
+	 * 
+	 * @param xpathExpression the XPath expression used to locate the element
+	 * @return the text content of the located element
+	 * 
+	 * @throws Exception if an error occurs while locating or retrieving the element's text
+	 * 
+	 * @author Abhijeet Maske Created August 17, 2024
+	 * @version 1.0 August 17, 2024
+	 ********************************************************************************************/
 	public static String getTextByDynamicXpath(String xpathExpression) {
 		try {
 			Duration XSMALL_PAUSE = Duration.ofSeconds(Config.XSMALL_PAUSE);
@@ -1754,6 +1828,20 @@ public class ElementInteractionUtils {
 		}
 	}
 
+	/********************************************************************************************
+	 * Validates whether the given date is in the format DD/MM/YYYY and is a valid
+	 * calendar date.
+	 * 
+	 * This method uses regular expressions and the `SimpleDateFormat` class to
+	 * ensure that the date is correctly formatted and represents a valid date on
+	 * the calendar.
+	 * 
+	 * @param date the date string to validate
+	 * @return `true` if the date is valid and correctly formatted, `false` otherwise
+	 * 
+	 * @author Abhijeet Maske Created August 17, 2024
+	 * @version 1.0 August 17, 2024
+	 ********************************************************************************************/
 	private static boolean isValidDateFormat(String date) {
 		// Regular expression to validate the date format DD/MM/YYYY
 		String datePattern = "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\\d{4}$";
@@ -1779,5 +1867,5 @@ public class ElementInteractionUtils {
 		}
 		return true;
 	}
-
+	/* Datepicker end */
 }
