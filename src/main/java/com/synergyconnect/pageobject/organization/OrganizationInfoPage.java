@@ -296,6 +296,9 @@ public class OrganizationInfoPage {
 	/* Social Media Links */
 	@FindBy(xpath = "//*[@class=\"fa fa-globe\" and @data-original-title=\"Website\"]/ancestor::a")
 	private WebElement frmOrgnizationProfileSocialMediaWebsite;
+	
+	@FindBy(xpath = "//*[@class=\"fa fa-link\" and @data-original-title=\"Link\"]/ancestor::a")
+	private WebElement frmOrgnizationProfileSocialMediaCsrPage;
 
 	@FindBy(xpath = "//*[@class=\"fa fa-linkedin\" and @data-original-title=\"Linkedin\"]/ancestor::a")
 	private WebElement frmOrgnizationProfileSocialMediaLinkedin;
@@ -308,7 +311,10 @@ public class OrganizationInfoPage {
 
 	@FindBy(xpath = "//*[@class=\"fa fa-times\" and @data-original-title=\"Twitter\"]/ancestor::a")
 	private WebElement frmOrgnizationProfileSocialMediaTwitter;
-
+	
+	@FindBy(xpath = "//*[@class=\"fa fa-youtube\" and @data-original-title=\"Youtube\"]/ancestor::a")
+	private WebElement frmOrgnizationProfileSocialMediaYoutube;
+	
 	/* CSR Company Details - Card */
 	@FindBy(xpath = "//*[@id=\"csrCompanyListDiv\"]/li")
 	private WebElement frmOrgnizationProfileCsrCompanyCount;
@@ -347,6 +353,37 @@ public class OrganizationInfoPage {
 	@FindBy(xpath = "//*[@id=\"csrCompanyListDiv\"]/li[1]/div/div[2]/div/div[2]/p[3]/text()")
 	private WebElement frmOrgnizationProfileSubOrganizationMobileNumber;
 
+	/* Organization Info Data */
+	private String OrganiationName = "Society for Nutrition, Education and Health Action SNEHA, Mumbai";
+	private String OrgnizationIncorporationDate = "18/08/2028";
+	String DatePicker_Switch = "/html/body/div[4]/div[1]/table/thead/tr[2]/th[2]";
+	String DatePicker_Header = "/html/body/div[4]/div[2]/table/thead/tr[2]/th[2]";
+	String DatePicker_prev = "/html/body/div[4]/div[2]/table/thead/tr[2]/th[1]";
+	String DatePicker_next = "/html/body/div[4]/div[2]/table/thead/tr[2]/th[3]";
+	String OrganizationShortName = "SNEHA";
+	String EntityType = "Entity Established under and Act of Parliament of State Legislature";
+	String OrganizationCinNo = "L12345AA1234PLC012345";
+	String OrganizationCrnNo = "12345678";
+	String OrganizationMcaCsrRegNo = "MCA12345678";
+	String OrganizationPanNo = "EDCVG4567Q";
+	String OrganizationContactPerson = "Jiten Dalvi";
+	String OrganizationMobileNo = "9820074310";
+	String OrganizationEmailId = "sneha@synergyconnect.in";
+	String OrganizationAddressLineI = "Santacruz West";
+	String OrganizationAddressLineII = "mumbai";
+	String OrganizationCity = "Mumbai";
+	String OrganizationPincode = "400054";
+	String OrganizationCountry = "United States Of America";
+	String OrganizationState = "New Jersey";
+	String OrganizationBriefDiscription = "SNEHA is a non-profit organization that works with women, children, adolescents, public health and safety systems and in the area of palliative care. Our innovative work in urban informal settlements in seven Municipal Corporations including Mumbai aims to reduce maternal and neonatal mortality and morbidity, child malnutrition, adolescent empowerment and sexuality, gender-based violence and palliative care.";
+	String OrganizationWebsite = "https://snehamumbai.org/";
+	String OrganizationCsrPage = "https://snehamumbai.org/";
+	String OrganizationLinkedIn = "https://www.linkedin.com/company/society-for-nutrition-education-and-health-action-sneha-";
+	String OrganizationFacebook = "https://www.facebook.com/SnehaMumbai";
+	String OrganizationInstagram = "https://www.instagram.com/give_india/https://www.instagram.com/snehamumbai_official";
+	String OrganizationTwitter = "https://twitter.com/SNEHAmumbai";
+	String OrganizationYoutube = "https://youtube.com/SNEHAmumbai";
+
 	@Test
 	public void redirectToAddOrganizationInfoAndValidateUrl() throws InterruptedException {
 		ElementInteractionUtils.click(ddlOrganizationDetails);
@@ -356,51 +393,73 @@ public class OrganizationInfoPage {
 	@Test
 	public void AddorganizationInfo() throws InterruptedException {
 		try {
-		ElementInteractionUtils.click(btnOrganizationInfoEdit);
-		ElementInteractionUtils.sendKeys(txtOrganizationName,
-				"Society for Nutrition, Education and Health Action SNEHA, Mumbai");
-		// ElementInteractionUtils.sendKeys(dtpIncorporationDate, "");
-		ElementInteractionUtils.datePicker("18/08/2028", dtpIncorporationDate,
-				"/html/body/div[4]/div[1]/table/thead/tr[2]/th[2]", "/html/body/div[4]/div[2]/table/thead/tr[2]/th[2]",
-				"/html/body/div[4]/div[2]/table/thead/tr[2]/th[1]", "/html/body/div[4]/div[2]/table/thead/tr[2]/th[3]");
-		ElementInteractionUtils.sendKeys(txtShortName, "SNEHA");
-		ElementInteractionUtils.selectByVisibleText(ddlEntityType,
-				"Entity Established under and Act of Parliament of State Legislature");
-		ElementInteractionUtils.sendKeys(txtCinNo, "L12345AA1234PLC012345");
-		ElementInteractionUtils.sendKeys(txtCrnNo, "12345678");
-		ElementInteractionUtils.sendKeys(txtMcaCsrRegNo, "MCA12345678");
-		ElementInteractionUtils.sendKeys(txtEntityPanNo, "EDCVG4567Q");
-		ElementInteractionUtils.sendKeys(txtContactPerson, "Jiten Dalvi");
-		ElementInteractionUtils.sendKeys(txtMobileNo, "9820074310");
-		ElementInteractionUtils.sendKeys(txtEmailId, "sneha@synergyconnect.in");
-		ElementInteractionUtils.sendKeys(txtAddressLineI, "Santacruz West");
-		ElementInteractionUtils.sendKeys(txtAddressLineII, "mumbai");
-		ElementInteractionUtils.sendKeys(txtCity, "Mumbai");
-		ElementInteractionUtils.sendKeys(txtPincode, "400054");
-		ElementInteractionUtils.selectByVisibleText(ddlCountry, "United States Of America");
-		Thread.sleep(2000);
-		ElementInteractionUtils.selectByVisibleText(ddlState, "New Jersey");
-		ElementInteractionUtils.uploadFile(btnUploadLogo, "C:\\Users\\Abhijeet\\git\\SynergyAdmin\\src\\test\\resources\\SynergyLogo.jpg");
-		ElementInteractionUtils.sendKeys(txaBriefDiscription,
-				"SNEHA is a non-profit organization that works with women, children, adolescents, public health and safety systems and in the area of palliative care. Our innovative work in urban informal settlements in seven Municipal Corporations including Mumbai aims to reduce maternal and neonatal mortality and morbidity, child malnutrition, adolescent empowerment and sexuality, gender-based violence and palliative care.");
-		/* Media Sources */
-		ElementInteractionUtils.sendKeys(txtwebsite, "https://snehamumbai.org/");
-		ElementInteractionUtils.sendKeys(txtcsrLink, "https://snehamumbai.org/");
-		ElementInteractionUtils.sendKeys(txtlinkedIn,
-				"https://www.linkedin.com/company/society-for-nutrition-education-and-health-action-sneha-");
-		ElementInteractionUtils.sendKeys(txtFacebook, "https://www.facebook.com/SnehaMumbai");
-		ElementInteractionUtils.sendKeys(txtInstagram,
-				"https://www.instagram.com/give_india/https://www.instagram.com/snehamumbai_official/");
-		ElementInteractionUtils.sendKeys(txtTwitter, "https://twitter.com/SNEHAmumbai");
-		ElementInteractionUtils.sendKeys(txtYouTube, "https://youtube.com/SNEHAmumbai");
-		ElementInteractionUtils.click(establishedByCompanyOrGroupOfCompaniesYes);
-		ElementInteractionUtils.click(subOrganizationYes);
-		ElementInteractionUtils.click(btnOrgnizationInfoSubmit);
-		String SubmitToasterMessage = AU.getToasterText();
-		Assert.assertEquals(SubmitToasterMessage, "Organization data updated !");
-		}
-		catch(Exception e) {		
+			ElementInteractionUtils.click(btnOrganizationInfoEdit);
+			ElementInteractionUtils.sendKeys(txtOrganizationName, OrganiationName);
+			// ElementInteractionUtils.sendKeys(dtpIncorporationDate, "");
+			ElementInteractionUtils.datePicker(OrgnizationIncorporationDate, dtpIncorporationDate, DatePicker_Switch,
+					DatePicker_Header, DatePicker_prev, DatePicker_next);
+			ElementInteractionUtils.sendKeys(txtShortName, OrganizationShortName);
+			ElementInteractionUtils.selectByVisibleText(ddlEntityType, EntityType);
+			ElementInteractionUtils.sendKeys(txtCinNo, OrganizationCinNo);
+			ElementInteractionUtils.sendKeys(txtCrnNo, OrganizationCrnNo);
+			ElementInteractionUtils.sendKeys(txtMcaCsrRegNo, OrganizationMcaCsrRegNo);
+			ElementInteractionUtils.sendKeys(txtEntityPanNo, OrganizationPanNo);
+			ElementInteractionUtils.sendKeys(txtContactPerson, OrganizationContactPerson);
+			ElementInteractionUtils.sendKeys(txtMobileNo, OrganizationMobileNo);
+			ElementInteractionUtils.sendKeys(txtEmailId, OrganizationEmailId);
+			ElementInteractionUtils.sendKeys(txtAddressLineI, OrganizationAddressLineI);
+			ElementInteractionUtils.sendKeys(txtAddressLineII, OrganizationAddressLineII);
+			ElementInteractionUtils.sendKeys(txtCity, OrganizationCity);
+			ElementInteractionUtils.sendKeys(txtPincode, OrganizationPincode);
+			ElementInteractionUtils.selectByVisibleText(ddlCountry, OrganizationCountry);
+			Thread.sleep(2000);
+			ElementInteractionUtils.selectByVisibleText(ddlState, OrganizationState);
+			ElementInteractionUtils.uploadFile(btnUploadLogo,
+					"C:\\Users\\Abhijeet\\git\\SynergyAdmin\\src\\test\\resources\\SynergyLogo.jpg");
+			ElementInteractionUtils.sendKeys(txaBriefDiscription, OrganizationBriefDiscription);
+			/* Media Sources */
+			ElementInteractionUtils.sendKeys(txtwebsite, OrganizationWebsite);
+			ElementInteractionUtils.sendKeys(txtcsrLink, OrganizationCsrPage);
+			ElementInteractionUtils.sendKeys(txtlinkedIn, OrganizationLinkedIn);
+			ElementInteractionUtils.sendKeys(txtFacebook, OrganizationFacebook);
+			ElementInteractionUtils.sendKeys(txtInstagram, OrganizationInstagram);
+			ElementInteractionUtils.sendKeys(txtTwitter, OrganizationTwitter);
+			ElementInteractionUtils.sendKeys(txtYouTube, OrganizationYoutube);
+			ElementInteractionUtils.click(establishedByCompanyOrGroupOfCompaniesYes);
+			ElementInteractionUtils.click(subOrganizationYes);
+			ElementInteractionUtils.click(btnOrgnizationInfoSubmit);
+			String SubmitToasterMessage = AU.getToasterText();
+			Assert.assertEquals(SubmitToasterMessage, "Organization data updated !");
+		} catch (Exception e) {
 			logger.error("Exception occurred during add Organization Info: ", e);
+		}
+	}
+
+	@Test
+	public void VerifyOrganizationProfile() {
+		try {
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileDescription, OrganizationBriefDiscription);
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileIncorporationDate, OrgnizationIncorporationDate);
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileOrgType, EntityType);
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileCinRegistrationNo, OrganizationCinNo);
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileMcaCsrRegNo, OrganizationMcaCsrRegNo);
+			
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileAddress,OrganizationAddressLineI);
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileContactPerson, OrganizationContactPerson);
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileMobileNumber, OrganizationMobileNo);
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileEmailId, OrganizationEmailId);
+			
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaWebsite, OrganizationWebsite);
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaCsrPage, OrganizationCsrPage);
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaLinkedin, OrganizationLinkedIn);
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaFacebook, OrganizationFacebook);
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaInstagram, OrganizationInstagram);
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaTwitter, OrganizationTwitter);
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaYoutube, OrganizationYoutube);
+
+			
+		} catch (Exception e) {
+
 		}
 	}
 }

@@ -38,15 +38,27 @@ public class OrganizationDetails extends BaseClass {
 		}
 	}
 	
-	@Test(priority = 2, alwaysRun = true, dependsOnMethods = "pageRedirection")
-	public void addOrganizationInfoDetails() {
-		ExtentTest childTest = parentTest.createNode("Adding organization info details");
+//	@Test(priority = 2, alwaysRun = true, dependsOnMethods = "pageRedirection")
+//	public void addOrganizationInfoDetails() {
+//		ExtentTest childTest = parentTest.createNode("Adding organization info details");
+//		ExtentReportListener.author("Abhijeet Maske");
+//		try {
+//			organizationInfoPage.AddorganizationInfo();
+//			childTest.log(Status.PASS, "organization info details added successfully");
+//		} catch (Exception e) {
+//			childTest.log(Status.FAIL, "organization info details failed: " + e.getMessage());
+//		}
+//	}
+	
+	@Test(priority = 3, alwaysRun = true, dependsOnMethods = "pageRedirection")
+	public void VerifyOrganizationInfoDetails() {
+		ExtentTest childTest = parentTest.createNode("Verified organization profile details");
 		ExtentReportListener.author("Abhijeet Maske");
 		try {
-			organizationInfoPage.AddorganizationInfo();
-			childTest.log(Status.PASS, "organization info details added successfully");
+			organizationInfoPage.VerifyOrganizationProfile();
+			childTest.log(Status.PASS, "Verified organization profile details successfully");
 		} catch (Exception e) {
-			childTest.log(Status.FAIL, "organization info details failed: " + e.getMessage());
+			childTest.log(Status.FAIL, "organization profile details verification failed: " + e.getMessage());
 		}
 	}
 }

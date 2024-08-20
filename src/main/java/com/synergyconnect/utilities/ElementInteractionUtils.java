@@ -419,6 +419,7 @@ public class ElementInteractionUtils {
 		boolean status = false;
 		waitForElementToBeVisible(webElement);
 		try {
+			highlightElement(webElement);
 			status = webElement.getText().contains(text);
 			logger.info("Verifying text: " + text + " within web element: " + webElement);
 		} catch (Exception e) {
