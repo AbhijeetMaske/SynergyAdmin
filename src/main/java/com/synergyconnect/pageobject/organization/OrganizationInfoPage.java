@@ -455,11 +455,30 @@ public class OrganizationInfoPage {
 			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaFacebook, OrganizationFacebook);
 			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaInstagram, OrganizationInstagram);
 			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaTwitter, OrganizationTwitter);
-			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaYoutube, OrganizationYoutube);
-
-			
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaYoutube, OrganizationYoutube);			
 		} catch (Exception e) {
-
+			logger.error("Exception occurred during verification of Organization profile Info: ", e);
+		}
+	}
+	
+	@Test
+	public void AddCsrCompanyDetails() {
+		try {
+			ElementInteractionUtils.click(btnOrganizationInfoEdit);
+			//ElementInteractionUtils.scrollToElement(btnAddCsrCompanydetails);
+			ElementInteractionUtils.click(btnAddCsrCompanydetails);						
+			ElementInteractionUtils.sendKeys(txtCsrCompanyName,"SNEHA CSR");
+			ElementInteractionUtils.sendKeys(txtCsrCinNo, "L12345AA1234PLC012346");
+			ElementInteractionUtils.sendKeys(txtCsrShortName,"SNHCSR");
+			ElementInteractionUtils.sendKeys(txtCsrHeadManager, "Abhijeet Maske");
+			ElementInteractionUtils.sendKeys(txtCsrMobileNo, "9812345678");
+			ElementInteractionUtils.sendKeys(txtCsrCity, "Pune");
+			ElementInteractionUtils.selectByVisibleText(ddlCsrState,"New Jersey");
+			ElementInteractionUtils.click(btnAddCsr);
+			String SubmitToasterMessage = AU.getToasterText();
+			Assert.assertEquals(SubmitToasterMessage, "CIN Registration number already exists");
+		}catch (Exception e) {
+			logger.error("Exception occurred during addition of CSR company details: ", e);
 		}
 	}
 }

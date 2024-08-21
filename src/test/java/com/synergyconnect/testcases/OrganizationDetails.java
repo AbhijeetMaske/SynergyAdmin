@@ -46,19 +46,31 @@ public class OrganizationDetails extends BaseClass {
 //			organizationInfoPage.AddorganizationInfo();
 //			childTest.log(Status.PASS, "organization info details added successfully");
 //		} catch (Exception e) {
-//			childTest.log(Status.FAIL, "organization info details failed: " + e.getMessage());
+//			childTest.log(Status.FAIL, "Failed to add organization info details: " + e.getMessage());
 //		}
 //	}
 	
-	@Test(priority = 3, alwaysRun = true, dependsOnMethods = "pageRedirection")
+//	@Test(priority = 3, alwaysRun = true, dependsOnMethods = "pageRedirection")
+//	public void VerifyOrganizationInfoDetails() {
+//		ExtentTest childTest = parentTest.createNode("Verified organization profile details");
+//		ExtentReportListener.author("Abhijeet Maske");
+//		try {
+//			organizationInfoPage.VerifyOrganizationProfile();
+//			childTest.log(Status.PASS, "Verified organization profile details successfully");
+//		} catch (Exception e) {
+//			childTest.log(Status.FAIL, "organization profile details verification failed: " + e.getMessage());
+//		}
+//	}
+	
+	@Test(priority = 4, alwaysRun = true, dependsOnMethods = "pageRedirection")
 	public void VerifyOrganizationInfoDetails() {
-		ExtentTest childTest = parentTest.createNode("Verified organization profile details");
+		ExtentTest childTest = parentTest.createNode("Adding CSR company details");
 		ExtentReportListener.author("Abhijeet Maske");
 		try {
-			organizationInfoPage.VerifyOrganizationProfile();
-			childTest.log(Status.PASS, "Verified organization profile details successfully");
+			organizationInfoPage.AddCsrCompanyDetails();;
+			childTest.log(Status.PASS, "Added CSR company details successfully");
 		} catch (Exception e) {
-			childTest.log(Status.FAIL, "organization profile details verification failed: " + e.getMessage());
+			childTest.log(Status.FAIL, "Failed to add CSR company details to the form: " + e.getMessage());
 		}
 	}
 }

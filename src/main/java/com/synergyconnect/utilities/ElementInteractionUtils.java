@@ -537,19 +537,25 @@ public class ElementInteractionUtils {
 	 * @author Abhijeet Maske Created June 27,2023
 	 * @version 1.0 June 27,2023
 	 ********************************************************************************************/
-	public static boolean scrollIntoView(WebElement webElement) {
+	public static boolean scrollToElement(WebElement webElement) {
 		boolean status = false;
-		WebElement webelement;
+		wait.until(ExpectedConditions.visibilityOf(webElement));
 		try {
-			logger.info("Scrolling into view: " + webElement.toString());
-			((RemoteWebDriver) driver).executeScript("argument[0].scrollIntoView();", webElement);
-			webelement = driver.findElement(By.xpath("(//*[contains(text(),'')])[1]"));
-			click(webelement);
-			// Actions action = new Actions(driver);
-			action.moveByOffset(8000, 8000).click().perform();
+			if (webElement == null) {
+				logger.error("Cannot scroll to null WebElement.");
+				throw new IllegalArgumentException("WebElement is null.");
+			}			
+			highlightElement(webElement);
+			pause(500);
+			JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+			jsExecutor.executeScript("arguments[0].scrollIntoView(true);", webElement);
+			logger.info("Scrolled to element: {}", webElement);
 			status = true;
 		} catch (Exception e) {
-			logger.error("Exception occurred while scrolling into view: " + e.getMessage(), e);
+			String errorMsg = String.format("An error occurred while scrolling to the element: %s. Error: %s", webElement,
+					e.getMessage());
+			logger.error(errorMsg, e);
+			throw new RuntimeException(errorMsg, e);
 		}
 		return status;
 	}
@@ -627,7 +633,7 @@ public class ElementInteractionUtils {
 		WebElement getElementByText;
 		try {
 			getElementByText = driver.findElement(By.xpath("(//*[contains(text(),\"" + text + "\")])[]1]"));
-			ElementInteractionUtils.scrollIntoView(getElementByText);
+			ElementInteractionUtils.scrollToElement(getElementByText);
 			if (ElementInteractionUtils.isPresent(getElementByText, 60)
 					|| ElementInteractionUtils.waitForElementToBeVisible(getElementByText)) {
 				status = true;
@@ -1697,9 +1703,12 @@ public class ElementInteractionUtils {
 	 * format, navigates through the calendar UI, and selects the specified date.
 	 * 
 	 * @param date              the date to be selected in the format DD/MM/YYYY
-	 * @param webElement        the web element representing the date picker input field
-	 * @param DatePicker_Switch the XPath expression for the calendar's switch button (e.g., year selector)
-	 * @param DatePicker_Header the XPath expression for the calendar's header (e.g., displaying the year)
+	 * @param webElement        the web element representing the date picker input
+	 *                          field
+	 * @param DatePicker_Switch the XPath expression for the calendar's switch
+	 *                          button (e.g., year selector)
+	 * @param DatePicker_Header the XPath expression for the calendar's header
+	 *                          (e.g., displaying the year)
 	 * @param DatePicker_prev   the XPath expression for the previous year button
 	 * @param DatePicker_next   the XPath expression for the next year button
 	 * 
@@ -1757,7 +1766,8 @@ public class ElementInteractionUtils {
 	 * 
 	 * @param displayedYear     the currently displayed year on the calendar
 	 * @param targetYear        the year to navigate to
-	 * @param DatePicker_Header the XPath expression for the calendar's header (e.g., displaying the year)
+	 * @param DatePicker_Header the XPath expression for the calendar's header
+	 *                          (e.g., displaying the year)
 	 * @param DatePicker_prev   the XPath expression for the previous year button
 	 * @param DatePicker_next   the XPath expression for the next year button
 	 * 
@@ -1785,7 +1795,7 @@ public class ElementInteractionUtils {
 	 * month name (e.g., 1 -> Jan, 2 -> Feb).
 	 * 
 	 * @param monthNumber the numeric month (1-12)
-	 * @return the abbreviated month name (e.g., "Jan", "Feb")	 * 
+	 * @return the abbreviated month name (e.g., "Jan", "Feb") *
 	 * @throws IllegalArgumentException if the month number is invalid
 	 * 
 	 * @author Abhijeet Maske Created August 17, 2024
@@ -1810,7 +1820,8 @@ public class ElementInteractionUtils {
 	 * @param xpathExpression the XPath expression used to locate the element
 	 * @return the text content of the located element
 	 * 
-	 * @throws Exception if an error occurs while locating or retrieving the element's text
+	 * @throws Exception if an error occurs while locating or retrieving the
+	 *                   element's text
 	 * 
 	 * @author Abhijeet Maske Created August 17, 2024
 	 * @version 1.0 August 17, 2024
@@ -1838,7 +1849,8 @@ public class ElementInteractionUtils {
 	 * the calendar.
 	 * 
 	 * @param date the date string to validate
-	 * @return `true` if the date is valid and correctly formatted, `false` otherwise
+	 * @return `true` if the date is valid and correctly formatted, `false`
+	 *         otherwise
 	 * 
 	 * @author Abhijeet Maske Created August 17, 2024
 	 * @version 1.0 August 17, 2024
