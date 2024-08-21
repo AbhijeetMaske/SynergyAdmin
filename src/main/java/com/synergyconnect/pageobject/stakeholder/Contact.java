@@ -38,61 +38,6 @@ public Contact(WebDriver driver) {
 	WebElement Comment;
 	
 	@FindBy(xpath="(//button[text()='Submit'])[4]")
-	WebElement Submit;
-	 
-	public void clickOnContact() {
-		Contact.click();
-		ExtentReportListener.getExtent().log(Status.PASS, "Click on Contact Successfully ");
-
-		}
-	
-	public void enterFirstName(String firstName) {
-		FirstName.sendKeys(firstName);
-		ExtentReportListener.getExtent().log(Status.PASS, "First Name Entered :"+firstName);
-
-		}
-	
-	public void enterLastName(String laseName) {
-		LastName.sendKeys(laseName);
-		ExtentReportListener.getExtent().log(Status.PASS, "Last Name Entered :"+laseName);
-
-		}
-	
-	public void enterDesignation(String designation) {
-		Designation.sendKeys(designation);
-		ExtentReportListener.getExtent().log(Status.PASS, "Designation Entered :"+designation);
-
-		}
-	public void clickOnDecisionMarker() {
-		DecisionMarker.sendKeys();
-		ExtentReportListener.getExtent().log(Status.PASS, "Clicked on Decision Marker Successfully ");
-
-		}
-	
-	public void enterEmailId(String emailId) {
-		EmailId.sendKeys(emailId);
-		ExtentReportListener.getExtent().log(Status.PASS, "EmailId Entered :"+emailId);
-
-		}
-	
-	public void enterMobileNumber(String mobileNumber) {
-		MobileNumber.sendKeys(mobileNumber);
-		ExtentReportListener.getExtent().log(Status.PASS, "Mobile Number Entered :"+mobileNumber);
-
-		}
-	
-	public void enterComment(String comment) {
-		Comment.sendKeys(comment);
-		ExtentReportListener.getExtent().log(Status.PASS, "Comment Entered :"+comment);
-
-		}
-	
-	public void clickOnSubmit() {
-		Submit.click();
-		ExtentReportListener.getExtent().log(Status.PASS, "Clicked on Submit Successfully ");
-
-		}
-	
-	
+	WebElement Submit;	
 
 }

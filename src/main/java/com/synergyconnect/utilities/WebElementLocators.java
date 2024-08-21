@@ -12,10 +12,23 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.synergyconnect.common.BaseClass;
 import com.synergyconnect.common.Config;
 
+/**
+ * Utility class for locating and interacting with web elements. Requires a
+ * WebDriver instance for its operations.
+ * 
+ * This class provides various methods to find web elements based on different
+ * attributes like tag name, text, class name, and id. It also includes methods
+ * to handle elements that require a wait for their presence or visibility.
+ * 
+ * @RequiresDriver Indicates that this class requires a WebDriver instance.
+ * 
+ * @author Abhijeet Maske
+ * @version 1.0
+ * @since August 17, 2024
+ */
 public class WebElementLocators {
 	private static final Logger logger = LogManager.getLogger(WebElementLocators.class);
 	private static WebDriverWait wait;
@@ -24,12 +37,19 @@ public class WebElementLocators {
 	public static WebDriver driver;
 	static private Actions action;
 
+	/**
+	 * Constructor for WebElementLocators. Initializes the WebDriver instance and
+	 * sets up the wait and actions utilities.
+	 * 
+	 * @param webDriver The WebDriver instance to be used by this class.
+	 */
 	public WebElementLocators(WebDriver webDriver) {
 		driver = BaseClass.getDriver();
 		if (driver == null) {
-			logger.error("WebDriver is null in ElementInteractionUtils constructor.");
+			logger.error("WebDriver is null in WebElementLocators  constructor.");
+			throw new IllegalStateException("WebDriver is null in WebElementLocators  constructor.");
 		} else {
-			logger.info("WebDriver initialized in ElementInteractionUtils: " + driver);
+			logger.info("WebDriver initialized in WebElementLocators: {}", driver);
 		}
 		setWait(driver);
 		WebElementLocators.action = new Actions(driver);
@@ -54,18 +74,18 @@ public class WebElementLocators {
 	 * @author Abhijeet Maske Created August 17, 2024
 	 * @version 1.0 August 17, 2024
 	 ********************************************************************************************/
-	public static WebElement findElement(By byelement, Duration timeout) {
-		WebElement webelement = null;
+	public static WebElement findElement(By byElement, Duration timeout) {
+		WebElement webElement = null;
 		try {
 			FluentWait<WebDriver> fluentWait = new FluentWait<>(driver).withTimeout(timeout)
 					.ignoring(NoSuchElementException.class);
-			webelement = fluentWait.until(ExpectedConditions.presenceOfElementLocated(byelement));
-			logger.info("Element is visible: " + byelement.toString());
+			webElement = fluentWait.until(ExpectedConditions.presenceOfElementLocated(byElement));
+			logger.info("Element is visible: {}", byElement);
 		} catch (Exception e) {
 			e.printStackTrace();
-			logger.error("Unable to find webElement: " + byelement);
+			logger.error("Unable to find webElement: {}. Class: {}", byElement, WebElementLocators.class.getName(), e);
 		}
-		return webelement;
+		return webElement;
 	}
 
 	/********************************************************************************************
@@ -82,16 +102,16 @@ public class WebElementLocators {
 	 * @version 1.0 August 17, 2024
 	 ********************************************************************************************/
 	public static WebElement xpathByTagnameAndText(String tagName, String text) {
-		WebElement element = null;
-	    String xpathExpression = String.format("//%s[contains(text(),'%s')]", tagName, text);
-	    try {
-	        element = driver.findElement(By.xpath(xpathExpression));
-	        logger.info("Element found with tag name: {} and text: {}", tagName, text);
-	    } catch (Exception e) {
-	        logger.error("Error locating element with tag name: {} and text: {}", tagName, text, e);
-	        throw e;
-	    }
-	    return element;
+		WebElement webElement = null;
+		String xpathExpression = String.format("//%s[contains(text(),'%s')]", tagName, text);
+		try {
+			webElement = driver.findElement(By.xpath(xpathExpression));
+			logger.info("Element found with tag name: {} and text: {}", tagName, text);
+		} catch (Exception e) {
+			logger.error("Error locating element with tag name: {} and text: {}", tagName, text, e);
+			throw e;
+		}
+		return webElement;
 	}
 
 	/********************************************************************************************
@@ -110,11 +130,11 @@ public class WebElementLocators {
 	 * @version 1.0 August 17, 2024
 	 ********************************************************************************************/
 	public static WebElement xpathBytext(String text) {
-		Duration SMALL_PAUSE = Duration.ofSeconds(Config.XSMALL_PAUSE);
-		wait = new WebDriverWait(driver, SMALL_PAUSE);
+		Duration XSMALL_PAUSE = Duration.ofSeconds(Config.XSMALL_PAUSE);
+		wait = new WebDriverWait(driver, XSMALL_PAUSE);
 		try {
-			WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(text)));
-			return element;
+			WebElement webElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(text)));
+			return webElement;
 		} catch (Exception e) {
 			System.out.println("Error in xpath by text: " + e.getMessage());
 			throw e;
@@ -136,15 +156,15 @@ public class WebElementLocators {
 	 ********************************************************************************************/
 	public static WebElement xpathByClassAndText(String className, String text) {
 		WebElement element = null;
-	    String xpathExpression = "//*[@class='" + className + "' and text()='" + text + "']";
-	    try {
-	        element = driver.findElement(By.xpath(xpathExpression));
-	        logger.info("Element found with class name: {} and text: {}", className, text);
-	    } catch (Exception e) {
-	        logger.error("Error locating element with class name: {} and text: {}", className, text, e);
-	        throw e;
-	    }
-	    return element;
+		String xpathExpression = "//*[@class='" + className + "' and text()='" + text + "']";
+		try {
+			element = driver.findElement(By.xpath(xpathExpression));
+			logger.info("Element found with class name: {} and text: {}", className, text);
+		} catch (Exception e) {
+			logger.error("Error locating element with class name: {} and text: {}", className, text, e);
+			throw e;
+		}
+		return element;
 	}
 
 	/********************************************************************************************
@@ -164,14 +184,14 @@ public class WebElementLocators {
 	 ********************************************************************************************/
 	public static WebElement xpathByIdAndText(String id, String text) {
 		String xpathExpression = "//*[@id='" + id + "' and text()='" + text + "']";
-		WebElement element = null;
+		WebElement webElement = null;
 		try {
-			element = driver.findElement(By.xpath(xpathExpression));
+			webElement = driver.findElement(By.xpath(xpathExpression));
 			logger.info("Element found with id: {} and text: {}", id, text);
 		} catch (Exception e) {
 			logger.error("Error in locating element with id: {} and text: {}", id, text, e);
 			throw e;
 		}
-		return element;
+		return webElement;
 	}
 }

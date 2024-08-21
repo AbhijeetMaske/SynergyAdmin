@@ -23,22 +23,5 @@ public Corporate(WebDriver driver) {
 	@FindBy(id="corporateSubmitBtn")
 	WebElement Submit;
 	
-	public void clickOnCorporate() {
-		Corporate.click();
-		ExtentReportListener.getExtent().log(Status.PASS, "Click on Corporate Successfully ");
-
-		}
-	
-	public void clicOnCompanyType() {
-		CompanyType.click();
-		ExtentReportListener.getExtent().log(Status.PASS, "Company Type Selected ");
-
-		}
-	
-	public void clickOnSubmit() {
-		Submit.click();
-		ExtentReportListener.getExtent().log(Status.PASS, "Click on Donar Successfully ");
-
-		}
 	
 }

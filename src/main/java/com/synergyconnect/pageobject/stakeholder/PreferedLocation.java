@@ -25,35 +25,5 @@ public PreferedLocation(WebDriver driver) {
 	
 	@FindBy(id="donorPreferredLocationButton")
 	WebElement  Submit;
-	
-	public void clickOnPreferdLocation() {
-		PreferedLocation.click();
-		ExtentReportListener.getExtent().log(Status.PASS, "Click on Prefered Location Successfully ");
-
-		}
-	
-	public void clickOnPreferedCountry(String country) {
-		Select c=new Select(PreferedCountry);
-		c.selectByVisibleText(country);
-		ExtentReportListener.getExtent().log(Status.PASS, "Donar selected :"+country);
-
-		}
-	
-	public void clickOnState(String state) {
-		Select s=new Select(State);
-		s.selectByVisibleText(state);
-		ExtentReportListener.getExtent().log(Status.PASS, "State selected :"+state);
-
-		}
-	
-	public void clickOnSubmit() {
-		Submit.click();
-		ExtentReportListener.getExtent().log(Status.PASS, "Click on Submit Successfully ");
-
-		}
-	
-	
-	
-	
 
 }
