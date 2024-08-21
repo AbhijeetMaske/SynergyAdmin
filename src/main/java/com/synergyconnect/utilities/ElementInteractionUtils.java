@@ -1393,6 +1393,7 @@ public class ElementInteractionUtils {
 					String cellValue = driver.findElement(By.xpath(rowXpathPrefix + i + colXpathSuffix)).getText();
 					if (cellValue.contains(searchText)) {
 						highlightElement(searchText);
+						pause(100);
 						logger.info("Text '{}' found in cell value: {}", searchText, cellValue);
 						return true;
 					}

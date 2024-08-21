@@ -18,6 +18,8 @@ import com.synergyconnect.utilities.ElementInteractionUtils;
 import com.synergyconnect.utilities.ReadConfig;
 import com.synergyconnect.utilities.WebElementLocators;
 
+import groovyjarjarantlr4.v4.parse.ANTLRParser.element_return;
+
 public class OrganizationInfoPage {
 	WebDriver driver;
 	ElementInteractionUtils EI;
@@ -465,7 +467,6 @@ public class OrganizationInfoPage {
 	public void AddCsrCompanyDetails() {
 		try {
 			ElementInteractionUtils.click(btnOrganizationInfoEdit);
-			//ElementInteractionUtils.scrollToElement(btnAddCsrCompanydetails);
 			ElementInteractionUtils.click(btnAddCsrCompanydetails);						
 			ElementInteractionUtils.sendKeys(txtCsrCompanyName,"SNEHA CSR");
 			ElementInteractionUtils.sendKeys(txtCsrCinNo, "L12345AA1234PLC012346");
@@ -478,6 +479,24 @@ public class OrganizationInfoPage {
 			String SubmitToasterMessage = AU.getToasterText();
 			Assert.assertEquals(SubmitToasterMessage, "CIN Registration number already exists");
 		}catch (Exception e) {
+			logger.error("Exception occurred during addition of CSR company details: ", e);
+		}
+	}
+	
+	@Test
+	public void verifyAddedCsrCompanyDetails() {
+		try {
+			ElementInteractionUtils.refresh();
+			ElementInteractionUtils.pause(500);
+			ElementInteractionUtils.click(btnOrganizationInfoEdit);
+			ElementInteractionUtils.scrollToElement(btnAddCsrCompanydetails);
+			boolean result = ElementInteractionUtils.verifyTextInTable("tbl_csrCompany",2,"SNEHA CSR",btnCsrDetailsNext);
+			Assert.assertTrue(result, "Added CSR details data NOT found in the table.");
+		}catch (AssertionError ae) {
+			logger.error("Assertion failed while verifying added CSR details: ", ae);
+			throw ae;
+		}
+		catch (Exception e) {
 			logger.error("Exception occurred during addition of CSR company details: ", e);
 		}
 	}

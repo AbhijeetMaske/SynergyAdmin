@@ -63,7 +63,7 @@ public class OrganizationDetails extends BaseClass {
 //	}
 	
 	@Test(priority = 4, alwaysRun = true, dependsOnMethods = "pageRedirection")
-	public void VerifyOrganizationInfoDetails() {
+	public void AddCsrCompanyDetails() {
 		ExtentTest childTest = parentTest.createNode("Adding CSR company details");
 		ExtentReportListener.author("Abhijeet Maske");
 		try {
@@ -71,6 +71,18 @@ public class OrganizationDetails extends BaseClass {
 			childTest.log(Status.PASS, "Added CSR company details successfully");
 		} catch (Exception e) {
 			childTest.log(Status.FAIL, "Failed to add CSR company details to the form: " + e.getMessage());
+		}
+	}
+	
+	@Test(priority = 5, alwaysRun = true, dependsOnMethods = "pageRedirection")
+	public void VerifyCsrCompanyDetails() {
+		ExtentTest childTest = parentTest.createNode("verifying CSR company details");
+		ExtentReportListener.author("Abhijeet Maske");
+		try {
+			organizationInfoPage.verifyAddedCsrCompanyDetails();;
+			childTest.log(Status.PASS, "verified CSR company details successfully");
+		} catch (Exception e) {
+			childTest.log(Status.FAIL, "Failed to verify CSR company details: " + e.getMessage());
 		}
 	}
 }
