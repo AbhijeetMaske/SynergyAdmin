@@ -216,10 +216,10 @@ public class OrganizationInfoPage {
 	private WebElement uplSubOrganizationLogo;
 
 	@FindBy(xpath = "//*[@id=\"aboutSubOrganization\"]")
-	private WebElement uplSubOrganizationBriefIntroduction;
+	private WebElement txaSubOrganizationBriefIntroduction;
 
 	/* Contact Person Details */
-	@FindBy(xpath = "//*[@id=\"aboutSubOrganization\"]")
+	@FindBy(xpath = "//*[@id=\"subOrgContactPerson\"]")
 	private WebElement txtSubOrganizationContactName;
 
 	@FindBy(xpath = "//*[@id=\"subOrgMobileNumber\"]")
@@ -504,7 +504,28 @@ public class OrganizationInfoPage {
 		try {
 			ElementInteractionUtils.click(btnSubOrganizationAdd);
 			ElementInteractionUtils.sendKeys(txtSubOrganizationName, "SNEHA SUB ORG");
-			ElementInteractionUtils.sendKeys(txtSubOrganizationName, "SNEHA SUB ORG");
+			ElementInteractionUtils.datePicker("12/04/2024", dtpSubOrganizationIncorporationDate);
+			ElementInteractionUtils.sendKeys(txtSubOrganizationShortName, "SNHSUB");
+			ElementInteractionUtils.selectByVisibleText(ddlSubOrganizationTypeOfOrgnization, "NGO");
+			ElementInteractionUtils.selectByVisibleText(ddlSubOrganizationOrgnizationType,"Registered Public Trust with 12A and 80G");
+			ElementInteractionUtils.sendKeys(txtSubOrganizationCin,"AZQSC1451E");
+			ElementInteractionUtils.sendKeys(txtSubOrganizationMcaCsrRegNo,"123456");
+			ElementInteractionUtils.sendKeys(txtSubOrganizationPanNo,"AZQSC1231E");
+			ElementInteractionUtils.uploadFile(uplSubOrganizationLogo,"C:\\Users\\Abhijeet\\git\\SynergyAdmin\\src\\test\\resources\\SnehaLogo.jpg");
+			ElementInteractionUtils.sendKeys(txaSubOrganizationBriefIntroduction,"SNEHA is a non-profit organization that works with women, children, adolescents, public health and safety systems and in the area of palliative care. Our innovative work in urban informal settlements in seven Municipal Corporations including Mumbai aims to reduce maternal and neonatal mortality and morbidity, child malnutrition, adolescent empowerment and sexuality, gender-based violence and palliative care.");
+			ElementInteractionUtils.pause(500);
+			ElementInteractionUtils.sendKeys(txtSubOrganizationContactName, "Jiten Dalvi");
+			ElementInteractionUtils.sendKeys(txtSubOrganizationMobileNumber, "9820074310");
+			ElementInteractionUtils.sendKeys(txtSubOrganizationEmailId, "sneha@synergyconnect.in");
+			ElementInteractionUtils.sendKeys(txtSubOrganizationAddressLineI, "Santacruz West");
+			ElementInteractionUtils.sendKeys(txtSubOrganizationAddressLineII, "mumbai");
+			ElementInteractionUtils.selectByVisibleText(ddlSubOrganizationCountry,"United States Of America");
+			ElementInteractionUtils.selectByVisibleText(ddlSubOrganizationState,"New Jersey");
+			ElementInteractionUtils.sendKeys(txtSubOrganizationCity, "Mumbai");
+			ElementInteractionUtils.sendKeys(txtSubOrganizationPincode, "400054");
+			ElementInteractionUtils.click(btnAddSubOrganization);
+			String SubmitToasterMessage = AU.getToasterText();
+			Assert.assertEquals(SubmitToasterMessage, "CIN Registration number already exists");
 		} catch (Exception e) {
 			logger.error("Exception occurred during addition of CSR company details: ", e);
 		}
