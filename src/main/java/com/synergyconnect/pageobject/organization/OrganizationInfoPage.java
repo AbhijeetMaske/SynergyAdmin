@@ -298,7 +298,7 @@ public class OrganizationInfoPage {
 	/* Social Media Links */
 	@FindBy(xpath = "//*[@class=\"fa fa-globe\" and @data-original-title=\"Website\"]/ancestor::a")
 	private WebElement frmOrgnizationProfileSocialMediaWebsite;
-	
+
 	@FindBy(xpath = "//*[@class=\"fa fa-link\" and @data-original-title=\"Link\"]/ancestor::a")
 	private WebElement frmOrgnizationProfileSocialMediaCsrPage;
 
@@ -313,10 +313,10 @@ public class OrganizationInfoPage {
 
 	@FindBy(xpath = "//*[@class=\"fa fa-times\" and @data-original-title=\"Twitter\"]/ancestor::a")
 	private WebElement frmOrgnizationProfileSocialMediaTwitter;
-	
+
 	@FindBy(xpath = "//*[@class=\"fa fa-youtube\" and @data-original-title=\"Youtube\"]/ancestor::a")
 	private WebElement frmOrgnizationProfileSocialMediaYoutube;
-	
+
 	/* CSR Company Details - Card */
 	@FindBy(xpath = "//*[@id=\"csrCompanyListDiv\"]/li")
 	private WebElement frmOrgnizationProfileCsrCompanyCount;
@@ -398,8 +398,7 @@ public class OrganizationInfoPage {
 			ElementInteractionUtils.click(btnOrganizationInfoEdit);
 			ElementInteractionUtils.sendKeys(txtOrganizationName, OrganiationName);
 			// ElementInteractionUtils.sendKeys(dtpIncorporationDate, "");
-			ElementInteractionUtils.datePicker(OrgnizationIncorporationDate, dtpIncorporationDate, DatePicker_Switch,
-					DatePicker_Header, DatePicker_prev, DatePicker_next);
+			ElementInteractionUtils.datePicker(OrgnizationIncorporationDate, dtpIncorporationDate);
 			ElementInteractionUtils.sendKeys(txtShortName, OrganizationShortName);
 			ElementInteractionUtils.selectByVisibleText(ddlEntityType, EntityType);
 			ElementInteractionUtils.sendKeys(txtCinNo, OrganizationCinNo);
@@ -445,58 +444,68 @@ public class OrganizationInfoPage {
 			ElementInteractionUtils.verifyText(frmOrgnizationProfileOrgType, EntityType);
 			ElementInteractionUtils.verifyText(frmOrgnizationProfileCinRegistrationNo, OrganizationCinNo);
 			ElementInteractionUtils.verifyText(frmOrgnizationProfileMcaCsrRegNo, OrganizationMcaCsrRegNo);
-			
-			ElementInteractionUtils.verifyText(frmOrgnizationProfileAddress,OrganizationAddressLineI);
+
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileAddress, OrganizationAddressLineI);
 			ElementInteractionUtils.verifyText(frmOrgnizationProfileContactPerson, OrganizationContactPerson);
 			ElementInteractionUtils.verifyText(frmOrgnizationProfileMobileNumber, OrganizationMobileNo);
 			ElementInteractionUtils.verifyText(frmOrgnizationProfileEmailId, OrganizationEmailId);
-			
+
 			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaWebsite, OrganizationWebsite);
 			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaCsrPage, OrganizationCsrPage);
 			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaLinkedin, OrganizationLinkedIn);
 			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaFacebook, OrganizationFacebook);
 			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaInstagram, OrganizationInstagram);
 			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaTwitter, OrganizationTwitter);
-			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaYoutube, OrganizationYoutube);			
+			ElementInteractionUtils.verifyText(frmOrgnizationProfileSocialMediaYoutube, OrganizationYoutube);
 		} catch (Exception e) {
 			logger.error("Exception occurred during verification of Organization profile Info: ", e);
 		}
 	}
-	
+
 	@Test
 	public void AddCsrCompanyDetails() {
 		try {
 			ElementInteractionUtils.click(btnOrganizationInfoEdit);
-			ElementInteractionUtils.click(btnAddCsrCompanydetails);						
-			ElementInteractionUtils.sendKeys(txtCsrCompanyName,"SNEHA CSR");
+			ElementInteractionUtils.click(btnAddCsrCompanydetails);
+			ElementInteractionUtils.sendKeys(txtCsrCompanyName, "SNEHA CSR");
 			ElementInteractionUtils.sendKeys(txtCsrCinNo, "L12345AA1234PLC012346");
-			ElementInteractionUtils.sendKeys(txtCsrShortName,"SNHCSR");
+			ElementInteractionUtils.sendKeys(txtCsrShortName, "SNHCSR");
 			ElementInteractionUtils.sendKeys(txtCsrHeadManager, "Abhijeet Maske");
 			ElementInteractionUtils.sendKeys(txtCsrMobileNo, "9812345678");
 			ElementInteractionUtils.sendKeys(txtCsrCity, "Pune");
-			ElementInteractionUtils.selectByVisibleText(ddlCsrState,"New Jersey");
+			ElementInteractionUtils.selectByVisibleText(ddlCsrState, "New Jersey");
 			ElementInteractionUtils.click(btnAddCsr);
 			String SubmitToasterMessage = AU.getToasterText();
 			Assert.assertEquals(SubmitToasterMessage, "CIN Registration number already exists");
-		}catch (Exception e) {
+			ElementInteractionUtils.click(btnCancelCsr);
+		} catch (Exception e) {
 			logger.error("Exception occurred during addition of CSR company details: ", e);
 		}
 	}
-	
+
 	@Test
 	public void verifyAddedCsrCompanyDetails() {
 		try {
-			ElementInteractionUtils.refresh();
 			ElementInteractionUtils.pause(500);
-			ElementInteractionUtils.click(btnOrganizationInfoEdit);
 			ElementInteractionUtils.scrollToElement(btnAddCsrCompanydetails);
-			boolean result = ElementInteractionUtils.verifyTextInTable("tbl_csrCompany",2,"SNEHA CSR",btnCsrDetailsNext);
+			boolean result = ElementInteractionUtils.verifyTextInTable("tbl_csrCompany", 2, "SNEHA CSR",
+					btnCsrDetailsNext);
 			Assert.assertTrue(result, "Added CSR details data NOT found in the table.");
-		}catch (AssertionError ae) {
+		} catch (AssertionError ae) {
 			logger.error("Assertion failed while verifying added CSR details: ", ae);
 			throw ae;
+		} catch (Exception e) {
+			logger.error("Exception occurred during addition of CSR company details: ", e);
 		}
-		catch (Exception e) {
+	}
+
+	@Test
+	public void AddSubOrganization() {
+		try {
+			ElementInteractionUtils.click(btnSubOrganizationAdd);
+			ElementInteractionUtils.sendKeys(txtSubOrganizationName, "SNEHA SUB ORG");
+			ElementInteractionUtils.sendKeys(txtSubOrganizationName, "SNEHA SUB ORG");
+		} catch (Exception e) {
 			logger.error("Exception occurred during addition of CSR company details: ", e);
 		}
 	}
