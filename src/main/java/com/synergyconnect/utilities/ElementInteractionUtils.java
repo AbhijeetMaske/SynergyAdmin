@@ -1719,19 +1719,18 @@ public class ElementInteractionUtils {
 	 * @author Abhijeet Maske Created August 17, 2024
 	 * @version 1.0 August 17, 2024
 	 ********************************************************************************************/
-	public static void datePicker(String date, WebElement webElement, String DatePicker_Switch,
-			String DatePicker_Header, String DatePicker_prev, String DatePicker_next) throws InterruptedException {
+	public static void datePicker(String date, WebElement webElement) throws InterruptedException {
 		try {
 			if (!isValidDateFormat(date)) {
 				logger.error("Invalid date format: {}. Expected format is DD/MM/YYYY.", date);
 				throw new IllegalArgumentException("Invalid date format: " + date);
 			}
 			webElement.click();
-			WebElement yearToggleButton = WebElementLocators.xpathBytext(DatePicker_Switch);
+			WebElement yearToggleButton = driver.findElement(By.xpath("//*[@id='datePickerHeader']"));
 			highlightElement(yearToggleButton);
 			yearToggleButton.click();
 
-			String displayedYearText = getTextByDynamicXpath(DatePicker_Header);
+			String displayedYearText = driver.findElement(By.xpath("(//*[@id=\"datePickerHeader\"])[2]")).getText();
 			logger.info("Displayed Calendar Year: {}", displayedYearText);
 
 			int displayedYear = Integer.parseInt(displayedYearText);
@@ -1741,7 +1740,7 @@ public class ElementInteractionUtils {
 			int selectedYear = Integer.parseInt(dateParts[2]);
 			logger.info("Selected Year: {}", selectedYear);
 
-			navigateToYear(displayedYear, selectedYear, DatePicker_Header, DatePicker_prev, DatePicker_next);
+			navigateToYear(displayedYear, selectedYear);
 
 			WebElement monthElement = WebElementLocators.xpathByTagnameAndText("span", selectedMonth);
 			highlightElement(monthElement);
@@ -1775,17 +1774,16 @@ public class ElementInteractionUtils {
 	 * @author Abhijeet Maske Created August 17, 2024
 	 * @version 1.0 August 17, 2024
 	 ********************************************************************************************/
-	private static void navigateToYear(int displayedYear, int targetYear, String DatePicker_Header,
-			String DatePicker_prev, String DatePicker_next) {
+	private static void navigateToYear(int displayedYear, int targetYear) {
 		int yearDifference = displayedYear - targetYear;
 		if (yearDifference != 0) {
-			By navigationButtonLocator = By.xpath(yearDifference > 0 ? DatePicker_prev : DatePicker_next);
+			By navigationButtonLocator = By.xpath(yearDifference > 0 ? "(//*[@id=\"datePickerPrevious\"])[2]" : "(//*[@id=\"datePickerNext\"])[4]");
 			for (int i = 0; i < Math.abs(yearDifference); i++) {
 				highlightElement(navigationButtonLocator);
 				driver.findElement(navigationButtonLocator).click();
 				logger.debug("Navigated to year: {}", targetYear);
 			}
-			logger.info("Displayed Year after selection: {}", getTextByDynamicXpath(DatePicker_Header));
+			logger.info("Displayed Year after selection: {}", driver.findElement(By.xpath("(//*[@id=\"datePickerHeader\"])[2]")).getText());
 		}
 	}
 
