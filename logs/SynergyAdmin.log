@@ -14391,3 +14391,603 @@ Session ID: 43cc19f1e1b7339a6b7d7dcac8fcfe4f
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
+2024-08-23 16:23:19.142 INFO  5928 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_23_16_23_19
+2024-08-23 16:23:19.325 INFO  5928 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:23:19.326 INFO  5928 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:23:19.401 INFO  5928 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:23:19.402 INFO  5928 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:23:25.902 INFO  5928 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-23 16:23:25.911 INFO  5928 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-23 16:23:25.926 INFO  5928 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-23 16:23:26.362 INFO  5928 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-23 16:23:26.415 INFO  5928 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:23:26.417 INFO  5928 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:23:26.418 INFO  5928 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-23 16:23:26.418 INFO  5928 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-23 16:23:26.461 INFO  5928 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)
+2024-08-23 16:23:26.493 INFO  5928 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-23 16:23:26.494 INFO  5928 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-23 16:23:26.515 INFO  5928 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-23 16:23:26.517 INFO  5928 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:23:26.521 INFO  5928 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:23:26.522 INFO  5928 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-23 16:23:26.522 INFO  5928 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-23 16:23:26.523 INFO  5928 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)
+2024-08-23 16:23:28.255 INFO  5928 --- [main] LoginPage : Attempting to log in with username: jiten@synergyconnect.in
+2024-08-23 16:23:28.389 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> id: username]
+2024-08-23 16:23:29.313 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> id: password]
+2024-08-23 16:23:46.937 INFO  5928 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-23 16:23:46.937 INFO  5928 --- [main] LoginPage : Clicked on the Login button
+2024-08-23 16:23:46.938 INFO  5928 --- [main] LoginPage : Login action performed successfully.
+2024-08-23 16:23:46.947 INFO  5928 --- [main] LoginPage : Attempting to retrieve current homepage URL
+2024-08-23 16:23:46.948 INFO  5928 --- [main] ReadConfig : Base URL retrieved: https://test30.synergyapps.in/
+2024-08-23 16:23:46.966 INFO  5928 --- [main] LoginPage : Successfully retrieved homepage URL: https://test30.synergyapps.in/organization
+2024-08-23 16:23:46.966 INFO  5928 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-23 16:23:46.967 INFO  5928 --- [main] LoginPage : Navigating to Synergy Admin page
+2024-08-23 16:23:47.808 INFO  5928 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-23 16:23:49.601 INFO  5928 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="productAdmin"]]
+2024-08-23 16:23:49.602 INFO  5928 --- [main] LoginPage : Clicked on Synergy Admin
+2024-08-23 16:23:49.602 INFO  5928 --- [main] LoginPage : Successfully navigated to Synergy Admin page.
+2024-08-23 16:23:49.603 INFO  5928 --- [main] <== SynergyAdmin ==> : Redirected to Synergy Admin
+2024-08-23 16:23:49.615 INFO  5928 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-23 16:23:49.624 INFO  5928 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-23 16:23:49.631 INFO  5928 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:23:49.632 INFO  5928 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:23:49.664 INFO  5928 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)
+2024-08-23 16:23:49.667 INFO  5928 --- [main] WebElementLocators : WebDriver initialized in WebElementLocators: ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)
+2024-08-23 16:23:49.673 INFO  5928 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-23 16:23:49.673 INFO  5928 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-23 16:23:49.677 INFO  5928 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-23 16:23:50.404 INFO  5928 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-23 16:23:52.577 INFO  5928 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-23 16:23:52.579 INFO  5928 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-23 16:23:52.589 INFO  5928 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-23 16:23:52.594 INFO  5928 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: AddCsrCompanyDetails
+2024-08-23 16:23:52.594 INFO  5928 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: AddCsrCompanyDetails with browser: null
+2024-08-23 16:23:52.596 INFO  5928 --- [main] ExtentReportListener : Starting Test: AddCsrCompanyDetails
+2024-08-23 16:23:53.503 INFO  5928 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-23 16:23:54.341 INFO  5928 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="addBtnCSR"]]
+2024-08-23 16:23:54.406 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="csrCompanyName"]]
+2024-08-23 16:23:55.250 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="csrCinNo"]]
+2024-08-23 16:23:56.098 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //body/div[@id='app']/div[1]/div[2]/section[1]/div[1]/div[1]/form[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/input[1]]
+2024-08-23 16:23:56.924 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="csrHeadManagerName"]]
+2024-08-23 16:23:57.778 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="csrMobileNo"]]
+2024-08-23 16:23:58.571 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="csrCity"]]
+2024-08-23 16:23:59.399 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="csrState"]]
+2024-08-23 16:23:59.663 INFO  5928 --- [main] ElementInteractionUtils : Successfully selected the value 'New Jersey' from the dropdown list: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="csrState"]]
+2024-08-23 16:24:00.433 INFO  5928 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="csrCompanyButton"]]
+2024-08-23 16:24:00.692 INFO  5928 --- [main] AlertUtils : Toaster text retrieved: CIN Registration number already exists
+2024-08-23 16:24:01.579 INFO  5928 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="csrCompanyDetailCollapse"]/div[2]/button[2]]
+2024-08-23 16:24:01.582 INFO  5928 --- [main] ExtentReportListener : Test Passed: AddCsrCompanyDetails
+2024-08-23 16:24:01.590 INFO  5928 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: AddCsrCompanyDetails
+2024-08-23 16:24:01.594 INFO  5928 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: VerifyCsrCompanyDetails
+2024-08-23 16:24:01.595 INFO  5928 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: VerifyCsrCompanyDetails with browser: null
+2024-08-23 16:24:01.603 INFO  5928 --- [main] ExtentReportListener : Starting Test: VerifyCsrCompanyDetails
+2024-08-23 16:24:03.380 INFO  5928 --- [main] ElementInteractionUtils : Scrolled to element: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="addBtnCSR"]]
+2024-08-23 16:24:03.421 INFO  5928 --- [main] ElementInteractionUtils : Current number of table entries: 3
+2024-08-23 16:24:04.210 INFO  5928 --- [main] ElementInteractionUtils : Text 'SNEHA CSR' found in cell value: SNEHA CSR
+2024-08-23 16:24:04.212 INFO  5928 --- [main] ExtentReportListener : Test Passed: VerifyCsrCompanyDetails
+2024-08-23 16:24:04.216 INFO  5928 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: VerifyCsrCompanyDetails
+2024-08-23 16:24:04.220 INFO  5928 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: AddSuborganization
+2024-08-23 16:24:04.220 INFO  5928 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: AddSuborganization with browser: null
+2024-08-23 16:24:04.224 INFO  5928 --- [main] ExtentReportListener : Starting Test: AddSuborganization
+2024-08-23 16:24:05.049 INFO  5928 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrgBtn"]]
+2024-08-23 16:24:05.098 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrganizationName"]]
+2024-08-23 16:24:06.919 INFO  5928 --- [main] ElementInteractionUtils : Displayed Calendar Year: 2024
+2024-08-23 16:24:06.921 INFO  5928 --- [main] ElementInteractionUtils : Selected Year: 2024
+2024-08-23 16:24:06.945 INFO  5928 --- [main] WebElementLocators : Element found with tag name: span and text: Apr
+2024-08-23 16:24:07.720 INFO  5928 --- [main] WebElementLocators : Element found with class name: day and text: 12
+2024-08-23 16:24:08.375 INFO  5928 --- [main] ElementInteractionUtils : Date selected: 12/Apr/2024
+2024-08-23 16:24:08.440 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subShortName"]]
+2024-08-23 16:24:09.246 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="typeofSubOrg"]]
+2024-08-23 16:24:09.511 INFO  5928 --- [main] ElementInteractionUtils : Successfully selected the value 'NGO' from the dropdown list: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="typeofSubOrg"]]
+2024-08-23 16:24:09.570 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrgType"]]
+2024-08-23 16:24:09.841 INFO  5928 --- [main] ElementInteractionUtils : Successfully selected the value 'Registered Public Trust with 12A and 80G' from the dropdown list: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrgType"]]
+2024-08-23 16:24:09.918 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subCinNumber"]]
+2024-08-23 16:24:10.764 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subMcaNumber"]]
+2024-08-23 16:24:11.631 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subPanNumber"]]
+2024-08-23 16:24:12.528 INFO  5928 --- [main] ElementInteractionUtils : File uploaded successfully: C:\Users\Abhijeet\git\SynergyAdmin\src\test\resources\SnehaLogo.jpg
+2024-08-23 16:24:12.589 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="aboutSubOrganization"]]
+2024-08-23 16:24:14.822 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrgContactPerson"]]
+2024-08-23 16:24:15.700 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrgMobileNumber"]]
+2024-08-23 16:24:16.511 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrgEmail"]]
+2024-08-23 16:24:17.345 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrgAddressLine1"]]
+2024-08-23 16:24:18.259 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrgAddressLine2"]]
+2024-08-23 16:24:19.065 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrgCountry"]]
+2024-08-23 16:24:19.333 INFO  5928 --- [main] ElementInteractionUtils : Successfully selected the value 'United States Of America' from the dropdown list: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrgCountry"]]
+2024-08-23 16:24:19.386 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrgState"]]
+2024-08-23 16:24:19.625 INFO  5928 --- [main] ElementInteractionUtils : Successfully selected the value 'New Jersey' from the dropdown list: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrgState"]]
+2024-08-23 16:24:19.678 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrgCity"]]
+2024-08-23 16:24:20.596 INFO  5928 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrgPincode"]]
+2024-08-23 16:24:22.077 INFO  5928 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="addSuborgBtn"]]
+2024-08-23 16:24:22.289 INFO  5928 --- [main] AlertUtils : Toaster text retrieved: CIN Registration number already exists
+2024-08-23 16:24:25.108 ERROR 5928 --- [main] OrganizationInfoPage : Exception occurred during addition of CSR company details: 
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" class="btn btn-default closeBtnPopup" id="closeBtn" style="">...</button> is not clickable at point (1314, 556). Other element would receive the click: <div class="roundedFixedBtn">...</div>
+  (Session info: chrome=128.0.6613.85)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f8f6ed2863f2f51d904d452385c31e82, clickElement {id=f.446CAAB9C66365B0A525CDA8689B1BD2.d.F0745A181F723DA57B66185EFB77071F.e.14296}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Abhijeet\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51028}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51028/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="closeBtn"]]
+Session ID: f8f6ed2863f2f51d904d452385c31e82
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[?:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77) ~[selenium-remote-driver-4.13.0.jar:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51) ~[selenium-support-4.13.0.jar:?]
+	at jdk.proxy2/jdk.proxy2.$Proxy35.click(Unknown Source) ~[?:?]
+	at com.synergyconnect.utilities.ElementInteractionUtils.click(ElementInteractionUtils.java:75) ~[classes/:?]
+	at com.synergyconnect.pageobject.organization.OrganizationInfoPage.AddSubOrganization(OrganizationInfoPage.java:533) ~[classes/:?]
+	at com.synergyconnect.testcases.OrganizationDetails.AddSuborganization(OrganizationDetails.java:96) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:848) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestRunner.run(TestRunner.java:621) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1114) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.run(TestNG.java:1082) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
+2024-08-23 16:24:25.137 INFO  5928 --- [main] ExtentReportListener : Test Passed: AddSuborganization
+2024-08-23 16:24:25.159 INFO  5928 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: AddSuborganization
+2024-08-23 16:24:25.170 INFO  5928 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: VerifySuborganization
+2024-08-23 16:24:25.173 INFO  5928 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: VerifySuborganization with browser: null
+2024-08-23 16:24:25.186 INFO  5928 --- [main] ExtentReportListener : Starting Test: VerifySuborganization
+2024-08-23 16:24:26.870 INFO  5928 --- [main] ElementInteractionUtils : Scrolled to element: [[ChromeDriver: chrome on windows (f8f6ed2863f2f51d904d452385c31e82)] -> xpath: //*[@id="subOrgBtn"]]
+2024-08-23 16:24:26.899 INFO  5928 --- [main] ElementInteractionUtils : Current number of table entries: 3
+2024-08-23 16:24:37.043 ERROR 5928 --- [main] ElementInteractionUtils : Exception occurred while verifying text in table: 
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='subOrg-table']/tbody/tr[1]/td[2]"}
+  (Session info: chrome=128.0.6613.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f8f6ed2863f2f51d904d452385c31e82, findElement {using=xpath, value=//table[@id='subOrg-table']/tbody/tr[1]/td[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Abhijeet\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51028}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51028/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f8f6ed2863f2f51d904d452385c31e82
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[?:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353) ~[selenium-remote-driver-4.13.0.jar:?]
+	at com.synergyconnect.utilities.ElementInteractionUtils.verifyTextInTable(ElementInteractionUtils.java:1393) ~[classes/:?]
+	at com.synergyconnect.pageobject.organization.OrganizationInfoPage.VerifyAddedSubOrganization(OrganizationInfoPage.java:544) ~[classes/:?]
+	at com.synergyconnect.testcases.OrganizationDetails.VerifySuborganization(OrganizationDetails.java:109) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:848) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestRunner.run(TestRunner.java:621) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1114) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.run(TestNG.java:1082) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
+2024-08-23 16:24:37.062 ERROR 5928 --- [main] OrganizationInfoPage : Assertion failed while verifying added Sub Organization: 
+java.lang.AssertionError: Added Sub Organization details data NOT found in the table. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.Assert.assertTrue(Assert.java:57) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at com.synergyconnect.pageobject.organization.OrganizationInfoPage.VerifyAddedSubOrganization(OrganizationInfoPage.java:546) ~[classes/:?]
+	at com.synergyconnect.testcases.OrganizationDetails.VerifySuborganization(OrganizationDetails.java:109) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:848) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestRunner.run(TestRunner.java:621) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1114) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.run(TestNG.java:1082) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
+2024-08-23 16:24:37.065 ERROR 5928 --- [main] ExtentReportListener : Test Failed: VerifySuborganization
+2024-08-23 16:24:37.351 INFO  5928 --- [main] UtilMethods : Screenshot captured for test: VerifySuborganization at path: C:\Users\Abhijeet\git\SynergyAdmin\screenshots\VerifySuborganization.png
+2024-08-23 16:24:37.351 INFO  5928 --- [main] ExtentReportListener : Screenshot captured for failed test: VerifySuborganization
+2024-08-23 16:24:37.365 INFO  5928 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: VerifySuborganization
+2024-08-23 16:24:37.367 INFO  5928 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
+2024-08-23 16:24:39.400 INFO  5928 --- [main] ExtentReportListener : Test report opened in browser: C:\Users\Abhijeet\git\SynergyAdmin/extentReports/ExtentReport_2024_08_23_16_23_19.html
+2024-08-23 16:24:40.657 INFO  5928 --- [main] <== SynergyAdmin ==> : 🛑 WebDriver closed and session ended successfully.
+2024-08-23 16:48:16.743 INFO  8604 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_23_16_48_16
+2024-08-23 16:48:16.895 INFO  8604 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:48:16.896 INFO  8604 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:48:16.988 INFO  8604 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:48:16.988 INFO  8604 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:48:20.542 INFO  8604 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-23 16:48:20.545 INFO  8604 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-23 16:48:20.553 INFO  8604 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-23 16:48:20.862 INFO  8604 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-23 16:48:20.895 INFO  8604 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:48:20.896 INFO  8604 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:48:20.896 INFO  8604 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-23 16:48:20.896 INFO  8604 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-23 16:48:20.923 INFO  8604 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)
+2024-08-23 16:48:20.939 INFO  8604 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-23 16:48:20.940 INFO  8604 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-23 16:48:20.948 INFO  8604 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-23 16:48:20.950 INFO  8604 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:48:20.951 INFO  8604 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:48:20.952 INFO  8604 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-23 16:48:20.952 INFO  8604 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-23 16:48:20.953 INFO  8604 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)
+2024-08-23 16:48:21.794 INFO  8604 --- [main] LoginPage : Attempting to log in with username: jiten@synergyconnect.in
+2024-08-23 16:48:21.880 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> id: username]
+2024-08-23 16:48:22.703 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> id: password]
+2024-08-23 16:48:39.510 INFO  8604 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-23 16:48:39.511 INFO  8604 --- [main] LoginPage : Clicked on the Login button
+2024-08-23 16:48:39.512 INFO  8604 --- [main] LoginPage : Login action performed successfully.
+2024-08-23 16:48:39.518 INFO  8604 --- [main] LoginPage : Attempting to retrieve current homepage URL
+2024-08-23 16:48:39.518 INFO  8604 --- [main] ReadConfig : Base URL retrieved: https://test30.synergyapps.in/
+2024-08-23 16:48:39.530 INFO  8604 --- [main] LoginPage : Successfully retrieved homepage URL: https://test30.synergyapps.in/organization
+2024-08-23 16:48:39.530 INFO  8604 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-23 16:48:39.530 INFO  8604 --- [main] LoginPage : Navigating to Synergy Admin page
+2024-08-23 16:48:40.341 INFO  8604 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-23 16:48:42.038 INFO  8604 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="productAdmin"]]
+2024-08-23 16:48:42.038 INFO  8604 --- [main] LoginPage : Clicked on Synergy Admin
+2024-08-23 16:48:42.038 INFO  8604 --- [main] LoginPage : Successfully navigated to Synergy Admin page.
+2024-08-23 16:48:42.038 INFO  8604 --- [main] <== SynergyAdmin ==> : Redirected to Synergy Admin
+2024-08-23 16:48:42.041 INFO  8604 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-23 16:48:42.045 INFO  8604 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-23 16:48:42.052 INFO  8604 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:48:42.052 INFO  8604 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:48:42.073 INFO  8604 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)
+2024-08-23 16:48:42.074 INFO  8604 --- [main] WebElementLocators : WebDriver initialized in WebElementLocators: ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)
+2024-08-23 16:48:42.075 INFO  8604 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-23 16:48:42.076 INFO  8604 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-23 16:48:42.079 INFO  8604 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-23 16:48:42.769 INFO  8604 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-23 16:48:44.830 INFO  8604 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-23 16:48:44.831 INFO  8604 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-23 16:48:44.835 INFO  8604 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-23 16:48:44.836 INFO  8604 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: AddCsrCompanyDetails
+2024-08-23 16:48:44.836 INFO  8604 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: AddCsrCompanyDetails with browser: null
+2024-08-23 16:48:44.838 INFO  8604 --- [main] ExtentReportListener : Starting Test: AddCsrCompanyDetails
+2024-08-23 16:48:45.615 INFO  8604 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-23 16:48:46.369 INFO  8604 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="addBtnCSR"]]
+2024-08-23 16:48:46.406 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="csrCompanyName"]]
+2024-08-23 16:48:47.135 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="csrCinNo"]]
+2024-08-23 16:48:47.885 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //body/div[@id='app']/div[1]/div[2]/section[1]/div[1]/div[1]/form[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/input[1]]
+2024-08-23 16:48:48.608 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="csrHeadManagerName"]]
+2024-08-23 16:48:49.367 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="csrMobileNo"]]
+2024-08-23 16:48:50.111 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="csrCity"]]
+2024-08-23 16:48:50.839 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="csrState"]]
+2024-08-23 16:48:51.021 INFO  8604 --- [main] ElementInteractionUtils : Successfully selected the value 'New Jersey' from the dropdown list: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="csrState"]]
+2024-08-23 16:48:51.723 INFO  8604 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="csrCompanyButton"]]
+2024-08-23 16:48:52.022 INFO  8604 --- [main] AlertUtils : Toaster text retrieved: CIN Registration number already exists
+2024-08-23 16:48:52.762 INFO  8604 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="csrCompanyDetailCollapse"]/div[2]/button[2]]
+2024-08-23 16:48:52.768 INFO  8604 --- [main] ExtentReportListener : Test Passed: AddCsrCompanyDetails
+2024-08-23 16:48:52.774 INFO  8604 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: AddCsrCompanyDetails
+2024-08-23 16:48:52.779 INFO  8604 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: VerifyCsrCompanyDetails
+2024-08-23 16:48:52.780 INFO  8604 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: VerifyCsrCompanyDetails with browser: null
+2024-08-23 16:48:52.783 INFO  8604 --- [main] ExtentReportListener : Starting Test: VerifyCsrCompanyDetails
+2024-08-23 16:48:54.448 INFO  8604 --- [main] ElementInteractionUtils : Scrolled to element: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="addBtnCSR"]]
+2024-08-23 16:48:54.478 INFO  8604 --- [main] ElementInteractionUtils : Current number of table entries: 3
+2024-08-23 16:48:55.197 INFO  8604 --- [main] ElementInteractionUtils : Text 'SNEHA CSR' found in cell value: SNEHA CSR
+2024-08-23 16:48:55.199 INFO  8604 --- [main] ExtentReportListener : Test Passed: VerifyCsrCompanyDetails
+2024-08-23 16:48:55.202 INFO  8604 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: VerifyCsrCompanyDetails
+2024-08-23 16:48:55.205 INFO  8604 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: AddSuborganization
+2024-08-23 16:48:55.206 INFO  8604 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: AddSuborganization with browser: null
+2024-08-23 16:48:55.212 INFO  8604 --- [main] ExtentReportListener : Starting Test: AddSuborganization
+2024-08-23 16:48:55.884 INFO  8604 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrgBtn"]]
+2024-08-23 16:48:55.921 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrganizationName"]]
+2024-08-23 16:48:57.381 INFO  8604 --- [main] ElementInteractionUtils : Displayed Calendar Year: 2024
+2024-08-23 16:48:57.382 INFO  8604 --- [main] ElementInteractionUtils : Selected Year: 2024
+2024-08-23 16:48:57.407 INFO  8604 --- [main] WebElementLocators : Element found with tag name: span and text: Apr
+2024-08-23 16:48:58.073 INFO  8604 --- [main] WebElementLocators : Element found with class name: day and text: 12
+2024-08-23 16:48:58.653 INFO  8604 --- [main] ElementInteractionUtils : Date selected: 12/Apr/2024
+2024-08-23 16:48:58.690 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subShortName"]]
+2024-08-23 16:48:59.408 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="typeofSubOrg"]]
+2024-08-23 16:48:59.515 INFO  8604 --- [main] ElementInteractionUtils : Successfully selected the value 'NGO' from the dropdown list: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="typeofSubOrg"]]
+2024-08-23 16:48:59.549 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrgType"]]
+2024-08-23 16:48:59.743 INFO  8604 --- [main] ElementInteractionUtils : Successfully selected the value 'Registered Public Trust with 12A and 80G' from the dropdown list: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrgType"]]
+2024-08-23 16:48:59.792 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subCinNumber"]]
+2024-08-23 16:49:00.504 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subMcaNumber"]]
+2024-08-23 16:49:01.236 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subPanNumber"]]
+2024-08-23 16:49:01.985 INFO  8604 --- [main] ElementInteractionUtils : File uploaded successfully: C:\Users\Abhijeet\git\SynergyAdmin\src\test\resources\SnehaLogo.jpg
+2024-08-23 16:49:02.012 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="aboutSubOrganization"]]
+2024-08-23 16:49:03.852 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrgContactPerson"]]
+2024-08-23 16:49:04.550 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrgMobileNumber"]]
+2024-08-23 16:49:05.278 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrgEmail"]]
+2024-08-23 16:49:06.018 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrgAddressLine1"]]
+2024-08-23 16:49:06.731 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrgAddressLine2"]]
+2024-08-23 16:49:07.443 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrgCountry"]]
+2024-08-23 16:49:07.569 INFO  8604 --- [main] ElementInteractionUtils : Successfully selected the value 'United States Of America' from the dropdown list: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrgCountry"]]
+2024-08-23 16:49:07.598 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrgState"]]
+2024-08-23 16:49:07.777 INFO  8604 --- [main] ElementInteractionUtils : Successfully selected the value 'New Jersey' from the dropdown list: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrgState"]]
+2024-08-23 16:49:07.813 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrgCity"]]
+2024-08-23 16:49:08.535 INFO  8604 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrgPincode"]]
+2024-08-23 16:49:09.867 INFO  8604 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="addSuborgBtn"]]
+2024-08-23 16:49:10.022 INFO  8604 --- [main] AlertUtils : Toaster text retrieved: CIN Registration number already exists
+2024-08-23 16:49:12.445 INFO  8604 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="closeSidebar"]]
+2024-08-23 16:49:12.446 INFO  8604 --- [main] ExtentReportListener : Test Passed: AddSuborganization
+2024-08-23 16:49:12.452 INFO  8604 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: AddSuborganization
+2024-08-23 16:49:12.453 INFO  8604 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: VerifySuborganization
+2024-08-23 16:49:12.454 INFO  8604 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: VerifySuborganization with browser: null
+2024-08-23 16:49:12.455 INFO  8604 --- [main] ExtentReportListener : Starting Test: VerifySuborganization
+2024-08-23 16:49:14.101 INFO  8604 --- [main] ElementInteractionUtils : Scrolled to element: [[ChromeDriver: chrome on windows (0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85)] -> xpath: //*[@id="subOrgBtn"]]
+2024-08-23 16:49:14.124 INFO  8604 --- [main] ElementInteractionUtils : Current number of table entries: 3
+2024-08-23 16:49:24.183 ERROR 8604 --- [main] ElementInteractionUtils : Exception occurred while verifying text in table: 
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='subOrg-table']/tbody/tr[1]/td[2]"}
+  (Session info: chrome=128.0.6613.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85, findElement {using=xpath, value=//table[@id='subOrg-table']/tbody/tr[1]/td[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\Abhijeet\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51840}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51840/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0c6b7b2f87e4dfa9dbcf3dcc0dcf9a85
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[?:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359) ~[selenium-remote-driver-4.13.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353) ~[selenium-remote-driver-4.13.0.jar:?]
+	at com.synergyconnect.utilities.ElementInteractionUtils.verifyTextInTable(ElementInteractionUtils.java:1393) ~[classes/:?]
+	at com.synergyconnect.pageobject.organization.OrganizationInfoPage.VerifyAddedSubOrganization(OrganizationInfoPage.java:547) ~[classes/:?]
+	at com.synergyconnect.testcases.OrganizationDetails.VerifySuborganization(OrganizationDetails.java:109) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:848) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestRunner.run(TestRunner.java:621) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1114) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.run(TestNG.java:1082) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
+2024-08-23 16:49:24.219 ERROR 8604 --- [main] OrganizationInfoPage : Assertion failed while verifying added Sub Organization: 
+java.lang.AssertionError: Added Sub Organization details data NOT found in the table. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.Assert.assertTrue(Assert.java:57) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at com.synergyconnect.pageobject.organization.OrganizationInfoPage.VerifyAddedSubOrganization(OrganizationInfoPage.java:549) ~[classes/:?]
+	at com.synergyconnect.testcases.OrganizationDetails.VerifySuborganization(OrganizationDetails.java:109) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:848) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestRunner.run(TestRunner.java:621) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1114) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.TestNG.run(TestNG.java:1082) [org.testng_7.8.0.r202306071539.jar:7.8.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77) [testng-remote.jar:?]
+2024-08-23 16:49:24.220 ERROR 8604 --- [main] ExtentReportListener : Test Failed: VerifySuborganization
+2024-08-23 16:49:24.351 INFO  8604 --- [main] UtilMethods : Screenshot captured for test: VerifySuborganization at path: C:\Users\Abhijeet\git\SynergyAdmin\screenshots\VerifySuborganization.png
+2024-08-23 16:49:24.351 INFO  8604 --- [main] ExtentReportListener : Screenshot captured for failed test: VerifySuborganization
+2024-08-23 16:49:24.359 INFO  8604 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: VerifySuborganization
+2024-08-23 16:49:24.361 INFO  8604 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
+2024-08-23 16:49:26.034 INFO  8604 --- [main] ExtentReportListener : Test report opened in browser: C:\Users\Abhijeet\git\SynergyAdmin/extentReports/ExtentReport_2024_08_23_16_48_16.html
+2024-08-23 16:49:26.733 INFO  8604 --- [main] <== SynergyAdmin ==> : 🛑 WebDriver closed and session ended successfully.
+2024-08-23 16:50:51.512 INFO  10320 --- [main] DateTimeUtils : Current date and time retrieved: 2024_08_23_16_50_51
+2024-08-23 16:50:51.638 INFO  10320 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:50:51.639 INFO  10320 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:50:51.703 INFO  10320 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:50:51.703 INFO  10320 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:50:54.153 INFO  10320 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2024-08-23 16:50:54.155 INFO  10320 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2024-08-23 16:50:54.163 INFO  10320 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2024-08-23 16:50:54.386 INFO  10320 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2024-08-23 16:50:54.413 INFO  10320 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:50:54.414 INFO  10320 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:50:54.414 INFO  10320 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-23 16:50:54.416 INFO  10320 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-23 16:50:54.436 INFO  10320 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)
+2024-08-23 16:50:54.458 INFO  10320 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2024-08-23 16:50:54.459 INFO  10320 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2024-08-23 16:50:54.479 INFO  10320 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2024-08-23 16:50:54.481 INFO  10320 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:50:54.482 INFO  10320 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:50:54.483 INFO  10320 --- [main] ReadConfig : User ID retrieved: jiten@synergyconnect.in
+2024-08-23 16:50:54.483 INFO  10320 --- [main] ReadConfig : password retrieved: 55f7a6d1
+2024-08-23 16:50:54.485 INFO  10320 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)
+2024-08-23 16:50:55.257 INFO  10320 --- [main] LoginPage : Attempting to log in with username: jiten@synergyconnect.in
+2024-08-23 16:50:55.342 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> id: username]
+2024-08-23 16:50:56.158 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> id: password]
+2024-08-23 16:51:13.019 INFO  10320 --- [main] ElementInteractionUtils : Clicked on element: Proxy element for: DefaultElementLocator 'By.xpath: //button[text()='Login']'
+2024-08-23 16:51:13.020 INFO  10320 --- [main] LoginPage : Clicked on the Login button
+2024-08-23 16:51:13.020 INFO  10320 --- [main] LoginPage : Login action performed successfully.
+2024-08-23 16:51:13.025 INFO  10320 --- [main] LoginPage : Attempting to retrieve current homepage URL
+2024-08-23 16:51:13.026 INFO  10320 --- [main] ReadConfig : Base URL retrieved: https://test30.synergyapps.in/
+2024-08-23 16:51:13.036 INFO  10320 --- [main] LoginPage : Successfully retrieved homepage URL: https://test30.synergyapps.in/organization
+2024-08-23 16:51:13.037 INFO  10320 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2024-08-23 16:51:13.038 INFO  10320 --- [main] LoginPage : Navigating to Synergy Admin page
+2024-08-23 16:51:13.767 INFO  10320 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="socialIntegratedPlatform"]]
+2024-08-23 16:51:15.553 INFO  10320 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="productAdmin"]]
+2024-08-23 16:51:15.553 INFO  10320 --- [main] LoginPage : Clicked on Synergy Admin
+2024-08-23 16:51:15.553 INFO  10320 --- [main] LoginPage : Successfully navigated to Synergy Admin page.
+2024-08-23 16:51:15.553 INFO  10320 --- [main] <== SynergyAdmin ==> : Redirected to Synergy Admin
+2024-08-23 16:51:15.557 INFO  10320 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2024-08-23 16:51:15.562 INFO  10320 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2024-08-23 16:51:15.568 INFO  10320 --- [main] ReadConfig : Loading configuration from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:51:15.569 INFO  10320 --- [main] ReadConfig : Configuration loaded successfully from: C:\Users\Abhijeet\git\SynergyAdmin\Configuration\application.properties
+2024-08-23 16:51:15.587 INFO  10320 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)
+2024-08-23 16:51:15.587 INFO  10320 --- [main] WebElementLocators : WebDriver initialized in WebElementLocators: ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)
+2024-08-23 16:51:15.589 INFO  10320 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: pageRedirection
+2024-08-23 16:51:15.589 INFO  10320 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: pageRedirection with browser: null
+2024-08-23 16:51:15.594 INFO  10320 --- [main] ExtentReportListener : Starting Test: pageRedirection
+2024-08-23 16:51:16.289 INFO  10320 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //span[contains(text(),'Organization Details')]]
+2024-08-23 16:51:18.326 INFO  10320 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //span[contains(text(),'Add Organization Info')]]
+2024-08-23 16:51:18.327 INFO  10320 --- [main] ExtentReportListener : Test Passed: pageRedirection
+2024-08-23 16:51:18.332 INFO  10320 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: pageRedirection
+2024-08-23 16:51:18.336 INFO  10320 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: AddCsrCompanyDetails
+2024-08-23 16:51:18.336 INFO  10320 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: AddCsrCompanyDetails with browser: null
+2024-08-23 16:51:18.338 INFO  10320 --- [main] ExtentReportListener : Starting Test: AddCsrCompanyDetails
+2024-08-23 16:51:19.113 INFO  10320 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //i[@class='fa fa-edit']]
+2024-08-23 16:51:19.869 INFO  10320 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="addBtnCSR"]]
+2024-08-23 16:51:19.907 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="csrCompanyName"]]
+2024-08-23 16:51:20.630 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="csrCinNo"]]
+2024-08-23 16:51:21.391 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //body/div[@id='app']/div[1]/div[2]/section[1]/div[1]/div[1]/form[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/input[1]]
+2024-08-23 16:51:22.109 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="csrHeadManagerName"]]
+2024-08-23 16:51:22.831 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="csrMobileNo"]]
+2024-08-23 16:51:23.569 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="csrCity"]]
+2024-08-23 16:51:24.275 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="csrState"]]
+2024-08-23 16:51:24.438 INFO  10320 --- [main] ElementInteractionUtils : Successfully selected the value 'New Jersey' from the dropdown list: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="csrState"]]
+2024-08-23 16:51:25.125 INFO  10320 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="csrCompanyButton"]]
+2024-08-23 16:51:25.410 INFO  10320 --- [main] AlertUtils : Toaster text retrieved: CIN Registration number already exists
+2024-08-23 16:51:26.173 INFO  10320 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="csrCompanyDetailCollapse"]/div[2]/button[2]]
+2024-08-23 16:51:26.175 INFO  10320 --- [main] ExtentReportListener : Test Passed: AddCsrCompanyDetails
+2024-08-23 16:51:26.179 INFO  10320 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: AddCsrCompanyDetails
+2024-08-23 16:51:26.182 INFO  10320 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: VerifyCsrCompanyDetails
+2024-08-23 16:51:26.183 INFO  10320 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: VerifyCsrCompanyDetails with browser: null
+2024-08-23 16:51:26.186 INFO  10320 --- [main] ExtentReportListener : Starting Test: VerifyCsrCompanyDetails
+2024-08-23 16:51:27.865 INFO  10320 --- [main] ElementInteractionUtils : Scrolled to element: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="addBtnCSR"]]
+2024-08-23 16:51:27.891 INFO  10320 --- [main] ElementInteractionUtils : Current number of table entries: 3
+2024-08-23 16:51:28.595 INFO  10320 --- [main] ElementInteractionUtils : Text 'SNEHA CSR' found in cell value: SNEHA CSR
+2024-08-23 16:51:28.598 INFO  10320 --- [main] ExtentReportListener : Test Passed: VerifyCsrCompanyDetails
+2024-08-23 16:51:28.604 INFO  10320 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: VerifyCsrCompanyDetails
+2024-08-23 16:51:28.610 INFO  10320 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: AddSuborganization
+2024-08-23 16:51:28.611 INFO  10320 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: AddSuborganization with browser: null
+2024-08-23 16:51:28.624 INFO  10320 --- [main] ExtentReportListener : Starting Test: AddSuborganization
+2024-08-23 16:51:29.310 INFO  10320 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrgBtn"]]
+2024-08-23 16:51:29.346 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrganizationName"]]
+2024-08-23 16:51:30.819 INFO  10320 --- [main] ElementInteractionUtils : Displayed Calendar Year: 2024
+2024-08-23 16:51:30.819 INFO  10320 --- [main] ElementInteractionUtils : Selected Year: 2024
+2024-08-23 16:51:30.831 INFO  10320 --- [main] WebElementLocators : Element found with tag name: span and text: Apr
+2024-08-23 16:51:31.505 INFO  10320 --- [main] WebElementLocators : Element found with class name: day and text: 12
+2024-08-23 16:51:32.118 INFO  10320 --- [main] ElementInteractionUtils : Date selected: 12/Apr/2024
+2024-08-23 16:51:32.170 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subShortName"]]
+2024-08-23 16:51:32.954 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="typeofSubOrg"]]
+2024-08-23 16:51:33.119 INFO  10320 --- [main] ElementInteractionUtils : Successfully selected the value 'NGO' from the dropdown list: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="typeofSubOrg"]]
+2024-08-23 16:51:33.167 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrgType"]]
+2024-08-23 16:51:33.347 INFO  10320 --- [main] ElementInteractionUtils : Successfully selected the value 'Registered Public Trust with 12A and 80G' from the dropdown list: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrgType"]]
+2024-08-23 16:51:33.384 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subCinNumber"]]
+2024-08-23 16:51:34.078 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subMcaNumber"]]
+2024-08-23 16:51:34.801 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subPanNumber"]]
+2024-08-23 16:51:35.548 INFO  10320 --- [main] ElementInteractionUtils : File uploaded successfully: C:\Users\Abhijeet\git\SynergyAdmin\src\test\resources\SnehaLogo.jpg
+2024-08-23 16:51:35.592 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="aboutSubOrganization"]]
+2024-08-23 16:51:37.438 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrgContactPerson"]]
+2024-08-23 16:51:38.146 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrgMobileNumber"]]
+2024-08-23 16:51:38.852 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrgEmail"]]
+2024-08-23 16:51:39.587 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrgAddressLine1"]]
+2024-08-23 16:51:40.306 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrgAddressLine2"]]
+2024-08-23 16:51:41.021 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrgCountry"]]
+2024-08-23 16:51:41.122 INFO  10320 --- [main] ElementInteractionUtils : Successfully selected the value 'United States Of America' from the dropdown list: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrgCountry"]]
+2024-08-23 16:51:41.152 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrgState"]]
+2024-08-23 16:51:41.429 INFO  10320 --- [main] ElementInteractionUtils : Successfully selected the value 'New Jersey' from the dropdown list: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrgState"]]
+2024-08-23 16:51:41.464 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrgCity"]]
+2024-08-23 16:51:42.177 INFO  10320 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrgPincode"]]
+2024-08-23 16:51:43.521 INFO  10320 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="addSuborgBtn"]]
+2024-08-23 16:51:43.735 INFO  10320 --- [main] AlertUtils : Toaster text retrieved: CIN Registration number already exists
+2024-08-23 16:51:46.125 INFO  10320 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="closeSidebar"]]
+2024-08-23 16:51:46.127 INFO  10320 --- [main] ExtentReportListener : Test Passed: AddSuborganization
+2024-08-23 16:51:46.130 INFO  10320 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: AddSuborganization
+2024-08-23 16:51:46.131 INFO  10320 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: VerifySuborganization
+2024-08-23 16:51:46.132 INFO  10320 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: VerifySuborganization with browser: null
+2024-08-23 16:51:46.133 INFO  10320 --- [main] ExtentReportListener : Starting Test: VerifySuborganization
+2024-08-23 16:51:47.800 INFO  10320 --- [main] ElementInteractionUtils : Scrolled to element: [[ChromeDriver: chrome on windows (48cc56396997e844061a1514e6627aa1)] -> xpath: //*[@id="subOrgBtn"]]
+2024-08-23 16:51:47.822 INFO  10320 --- [main] ElementInteractionUtils : Current number of table entries: 3
+2024-08-23 16:51:48.505 INFO  10320 --- [main] ElementInteractionUtils : Text 'SNEHA SUB ORG' found in cell value: SNEHA SUB ORG
+2024-08-23 16:51:48.506 INFO  10320 --- [main] ExtentReportListener : Test Passed: VerifySuborganization
+2024-08-23 16:51:48.512 INFO  10320 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: VerifySuborganization
+2024-08-23 16:51:48.513 INFO  10320 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
+2024-08-23 16:51:49.624 INFO  10320 --- [main] ExtentReportListener : Test report opened in browser: C:\Users\Abhijeet\git\SynergyAdmin/extentReports/ExtentReport_2024_08_23_16_50_51.html
+2024-08-23 16:51:50.430 INFO  10320 --- [main] <== SynergyAdmin ==> : 🛑 WebDriver closed and session ended successfully.

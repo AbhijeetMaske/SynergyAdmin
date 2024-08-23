@@ -38,7 +38,7 @@ public class OrganizationDetails extends BaseClass {
 		}
 	}
 
-	//@Test(priority = 2, alwaysRun = true, dependsOnMethods = "pageRedirection")
+	// @Test(priority = 2, alwaysRun = true, dependsOnMethods = "pageRedirection")
 	public void addOrganizationInfoDetails() {
 		ExtentTest childTest = parentTest.createNode("Adding organization info details");
 		ExtentReportListener.author("Abhijeet Maske");
@@ -50,7 +50,7 @@ public class OrganizationDetails extends BaseClass {
 		}
 	}
 
-	//@Test(priority = 3, alwaysRun = true, dependsOnMethods = "pageRedirection")
+	// @Test(priority = 3, alwaysRun = true, dependsOnMethods = "pageRedirection")
 	public void VerifyOrganizationInfoDetails() {
 		ExtentTest childTest = parentTest.createNode("Verified organization profile details");
 		ExtentReportListener.author("Abhijeet Maske");
@@ -87,7 +87,7 @@ public class OrganizationDetails extends BaseClass {
 			childTest.log(Status.FAIL, "Failed to verify CSR company details: " + e.getMessage());
 		}
 	}
-	
+
 	@Test(priority = 6, alwaysRun = true, dependsOnMethods = "pageRedirection")
 	public void AddSuborganization() {
 		ExtentTest childTest = parentTest.createNode("Adding Sub-Organization details");
@@ -98,6 +98,19 @@ public class OrganizationDetails extends BaseClass {
 			childTest.log(Status.PASS, "Added Sub-Organization details successfully");
 		} catch (Exception e) {
 			childTest.log(Status.FAIL, "Failed to add Sub-Organization details to the form: " + e.getMessage());
+		}
+	}
+
+	@Test(priority = 7, alwaysRun = true, dependsOnMethods = "pageRedirection")
+	public void VerifySuborganization() {
+		ExtentTest childTest = parentTest.createNode("verifying Sub Organization details");
+		ExtentReportListener.author("Abhijeet Maske");
+		try {
+			organizationInfoPage.VerifyAddedSubOrganization();
+			;
+			childTest.log(Status.PASS, "verified Sub Organization details successfully");
+		} catch (Exception e) {
+			childTest.log(Status.FAIL, "Failed to verify Sub-Organization details: " + e.getMessage());
 		}
 	}
 }
