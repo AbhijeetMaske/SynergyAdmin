@@ -80,7 +80,7 @@ public class BaseClass {
 		case "chrome":
 			// WebDriverManager.chromedriver().setup();
 			ChromeOptions chromeOptions = new ChromeOptions();
-			chromeOptions.setBrowserVersion("127");
+			chromeOptions.setBrowserVersion("128");
 			driver = new ChromeDriver(chromeOptions);
 			break;
 		case "firefox":
