@@ -49,6 +49,9 @@ public class OrganizationInfoPage {
 	/* Organization Info */
 	@FindBy(xpath = "//i[@class='fa fa-edit']")
 	private WebElement btnOrganizationInfoEdit;
+	
+	@FindBy(xpath = "//i[@class='fa fa-eye']")
+	private WebElement btnOrganizationInfoView;
 
 	@FindBy(xpath = "//*[@id='organizationName']")
 	private WebElement txtOrganizationName;
@@ -547,9 +550,26 @@ public class OrganizationInfoPage {
 			boolean result = ElementInteractionUtils.verifyTextInTable("tbl_subOrgDetails", 2, "SNEHA SUB ORG",
 					btnSubOrgnizationDetailsNext);
 			Assert.assertTrue(result, "Added Sub Organization details data NOT found in the table.");
+			ElementInteractionUtils.pause(500);
+			ElementInteractionUtils.click(btnOrganizationInfoView);
 		} catch (AssertionError ae) {
 			logger.error("Assertion failed while verifying added Sub Organization: ", ae);
 			throw ae;
+		} catch (Exception e) {
+			logger.error("Exception occurred during verification of Sub Organization details: ", e);
+		}
+	}
+	
+	@Test
+	public void VerifyCSRCompanyAndSubOrganization() {
+		try {
+			ElementInteractionUtils.pause(500);
+			ElementInteractionUtils.scrollToElement(btnOrganizationInfoView);
+			String CsrCompanyLicenseCount = frmOrgnizationProfileCsrCompanyCount.getText();
+			logger.info("CSR Company count for current organization : {},CsrCompanyLicenseCount");
+			
+			ElementInteractionUtils.
+			
 		} catch (Exception e) {
 			logger.error("Exception occurred during verification of Sub Organization details: ", e);
 		}
