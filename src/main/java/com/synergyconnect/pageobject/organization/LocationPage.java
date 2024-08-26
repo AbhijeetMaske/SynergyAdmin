@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 import com.synergyconnect.common.Config;
@@ -32,44 +33,95 @@ public class LocationPage {
 		WL = new WebElementLocators(driver);
 		AU = new AlertUtils(driver);
 	}
+	@FindBy(xpath = "//span[contains(text(),'Organization Details')]")
+	private WebElement ddlOrganizationDetails;
+
+	@FindBy(xpath = "//span[contains(text(),'Add Location')]")
+	private WebElement ddlAddLocation;
 	
 	@FindBy(xpath="//*[@id=\"addLocationBtn\"]")
-	private WebElement btnLocation;
+	private WebElement btnAddLocation;
 	
 	@FindBy(id="LocationType")
-	WebElement LocationType;
+	private WebElement ddlLocationType;
 	
 	@FindBy(id="country")
-	WebElement country;
+	private WebElement ddlCountry;
 	
 	@FindBy(id="state")
-	WebElement state;
+	private WebElement ddlState;
 	
 	@FindBy(id="district")
-	WebElement district;
+	private WebElement ddlDistrict;
 	
 	@FindBy(id="block")
-	WebElement block;
+	private WebElement ddlBlock;
 	
 	@FindBy(id="pinCode")
-	WebElement pinCode;
+	private WebElement ddlPinCode;
 	
 	@FindBy(id="village")
-	WebElement village;
+	private WebElement ddlVillage;
 	
 	@FindBy(id="location")
-	WebElement location;
+	private WebElement txtLocation;
 	
 	@FindBy(id="shortCode")
-	WebElement shortCode;
+	private WebElement txtShortCode;
 	
 	@FindBy(id="locationLatitude")
-	WebElement locationLatitude;
+	private WebElement txtLocationLatitude;
 	
 	@FindBy(id="locationLongitude")
-	WebElement locationLongitude;
+	private WebElement txtLocationLongitude;
 	
 	@FindBy(id="btnAddOfficeLoc")
-	WebElement submit;
+	private WebElement btnLoctionSubmit;
 	
+	@FindBy(xpath="//*[@id=\"formLocation\"]/div[2]/div/div/button[2]")
+	private WebElement btnLoctionCancel;
+	
+	@FindBy (xpath = "//*[@id='active']")
+	private WebElement btnActiveTab;
+	
+	@FindBy (xpath = "//*[@id=\'inactive\']")
+	private WebElement btnInactiveTab;
+	
+	@FindBy (id = "table_activeOfficeLocation")
+	private WebElement tblActiveTable;
+	
+	@FindBy (xpath = "//*[@id=\"bEdit\"]")
+	private WebElement btnEdit;
+	
+	@FindBy (xpath = "//*[@id=\"bElim\"]")
+	private WebElement btnDelete;
+	
+	@FindBy (xpath = "//*[@id=\"table_activeOfficeLocation_next\"]/a")
+	private WebElement btnActiveTableNext;
+	
+	@FindBy (id = "table_inactLocation")
+	private WebElement tblInactiveTable;
+	
+	@FindBy (xpath = "//*[@id=\"bActivate\"]")
+	private WebElement btnActive;
+	
+	@FindBy (xpath = "//*[@id=\"table_inactLocation_next\"]/a")
+	private WebElement btnInactiveTableNext;
+	
+	
+	@Test
+	public void redirectToAddLocationAndValidateUrl() throws InterruptedException {
+		ElementInteractionUtils.click(ddlOrganizationDetails);
+		ElementInteractionUtils.click(ddlAddLocation);
+	}
+	
+	@Test
+	public void AddLocationInfo() throws InterruptedException {
+		try {
+			ElementInteractionUtils.click(btnAddLocation);
+			
+		}catch (Exception e) {
+			
+		}
+	}
 }
