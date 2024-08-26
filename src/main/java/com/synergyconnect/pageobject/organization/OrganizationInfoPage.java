@@ -1,24 +1,18 @@
 package com.synergyconnect.pageobject.organization;
 
-import java.io.File;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.synergyconnect.common.Config;
 import com.synergyconnect.utilities.AlertUtils;
 import com.synergyconnect.utilities.ElementInteractionUtils;
 import com.synergyconnect.utilities.ReadConfig;
 import com.synergyconnect.utilities.WebElementLocators;
-
-import groovyjarjarantlr4.v4.parse.ANTLRParser.element_return;
 
 public class OrganizationInfoPage {
 	WebDriver driver;
@@ -560,18 +554,4 @@ public class OrganizationInfoPage {
 		}
 	}
 	
-	@Test
-	public void VerifyCSRCompanyAndSubOrganization() {
-		try {
-			ElementInteractionUtils.pause(500);
-			ElementInteractionUtils.scrollToElement(btnOrganizationInfoView);
-			String CsrCompanyLicenseCount = frmOrgnizationProfileCsrCompanyCount.getText();
-			logger.info("CSR Company count for current organization : {},CsrCompanyLicenseCount");
-			
-			ElementInteractionUtils.
-			
-		} catch (Exception e) {
-			logger.error("Exception occurred during verification of Sub Organization details: ", e);
-		}
-	}
 }

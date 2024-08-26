@@ -38,7 +38,7 @@ public class OrganizationDetails extends BaseClass {
 		}
 	}
 
-	// @Test(priority = 2, alwaysRun = true, dependsOnMethods = "pageRedirection")
+	@Test(priority = 2, alwaysRun = true, dependsOnMethods = "pageRedirection")
 	public void addOrganizationInfoDetails() {
 		ExtentTest childTest = parentTest.createNode("Adding organization info details");
 		ExtentReportListener.author("Abhijeet Maske");
@@ -50,7 +50,7 @@ public class OrganizationDetails extends BaseClass {
 		}
 	}
 
-	// @Test(priority = 3, alwaysRun = true, dependsOnMethods = "pageRedirection")
+	@Test(priority = 3, alwaysRun = true, dependsOnMethods = "pageRedirection")
 	public void VerifyOrganizationInfoDetails() {
 		ExtentTest childTest = parentTest.createNode("Verified organization profile details");
 		ExtentReportListener.author("Abhijeet Maske");
