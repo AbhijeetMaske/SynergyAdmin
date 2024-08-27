@@ -544,7 +544,7 @@ public class ElementInteractionUtils {
 			if (webElement == null) {
 				logger.error("Cannot scroll to null WebElement.");
 				throw new IllegalArgumentException("WebElement is null.");
-			}			
+			}
 			highlightElement(webElement);
 			pause(500);
 			JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
@@ -552,8 +552,8 @@ public class ElementInteractionUtils {
 			logger.info("Scrolled to element: {}", webElement);
 			status = true;
 		} catch (Exception e) {
-			String errorMsg = String.format("An error occurred while scrolling to the element: %s. Error: %s", webElement,
-					e.getMessage());
+			String errorMsg = String.format("An error occurred while scrolling to the element: %s. Error: %s",
+					webElement, e.getMessage());
 			logger.error(errorMsg, e);
 			throw new RuntimeException(errorMsg, e);
 		}
@@ -1501,6 +1501,7 @@ public class ElementInteractionUtils {
 			WebElement nextButton, Map<Integer, String> additionalLookupValues) {
 		try {
 			WebElement table = driver.findElement(By.id(tableId));
+			scrollToElement(table);
 			List<WebElement> tableEntries = table.findElements(By.tagName("tr"));
 			String rowXpathPrefix = "//table[@id='" + tableId + "']/tbody/tr[";
 			String colXpathSuffix = "]/td[" + tableColumnIndex + "]";
@@ -1508,10 +1509,9 @@ public class ElementInteractionUtils {
 			int rowCount = 0;
 
 			while (true) {
-				int tableSize = tableEntries.size();
-				logger.info("Current number of table entries: {}", tableSize);
-
+				int tableSize = tableEntries.size() - 1;
 				for (int i = 1; i <= tableSize; i++) {
+					highlightElement(driver.findElement(By.xpath(rowXpathPrefix + i + colXpathSuffix)));
 					String cellValue = driver.findElement(By.xpath(rowXpathPrefix + i + colXpathSuffix)).getText();
 					if (cellValue.contains(searchText)) {
 						highlightElement(driver.findElement(By.xpath(rowXpathPrefix + i + colXpathSuffix)));
@@ -1524,7 +1524,6 @@ public class ElementInteractionUtils {
 									.findElement(By.xpath(rowXpathPrefix + i + "]/td[" + lookupColumnIndex + "]"))
 									.getText();
 							highlightElement(actualValue);
-
 							if (!actualValue.equals(expectedValue)) {
 								allValuesMatch = false;
 								logger.info("Mismatch found in column {}: expected '{}', but got '{}'",
@@ -1532,7 +1531,6 @@ public class ElementInteractionUtils {
 								break;
 							}
 						}
-
 						if (allValuesMatch) {
 							logger.info("All lookup values match for text '{}'", searchText);
 							return true;
@@ -1541,8 +1539,10 @@ public class ElementInteractionUtils {
 				}
 
 				if (nextButton != null && nextButton.isEnabled()) {
+					highlightElement(nextButton);
+					WebElement Copyright = driver.findElement(By.xpath("//*[@id='app']/div[2]/footer/div/a"));
+					scrollToElement(Copyright);
 					nextButton.click();
-					logger.info("Next button clicked, checking the next set of entries");
 					rowCount += tableSize;
 					// Re-fetch the table entries after clicking next
 					tableEntries = driver.findElement(By.id(tableId)).findElements(By.tagName("tr"));
@@ -1777,13 +1777,15 @@ public class ElementInteractionUtils {
 	private static void navigateToYear(int displayedYear, int targetYear) {
 		int yearDifference = displayedYear - targetYear;
 		if (yearDifference != 0) {
-			By navigationButtonLocator = By.xpath(yearDifference > 0 ? "(//*[@id=\"datePickerPrevious\"])[2]" : "(//*[@id=\"datePickerNext\"])[4]");
+			By navigationButtonLocator = By.xpath(
+					yearDifference > 0 ? "(//*[@id=\"datePickerPrevious\"])[2]" : "(//*[@id=\"datePickerNext\"])[4]");
 			for (int i = 0; i < Math.abs(yearDifference); i++) {
 				highlightElement(navigationButtonLocator);
 				driver.findElement(navigationButtonLocator).click();
 				logger.debug("Navigated to year: {}", targetYear);
 			}
-			logger.info("Displayed Year after selection: {}", driver.findElement(By.xpath("(//*[@id=\"datePickerHeader\"])[2]")).getText());
+			logger.info("Displayed Year after selection: {}",
+					driver.findElement(By.xpath("(//*[@id=\"datePickerHeader\"])[2]")).getText());
 		}
 	}
 
