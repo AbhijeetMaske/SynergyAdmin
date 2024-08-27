@@ -254,7 +254,8 @@ public class ElementInteractionUtils {
 		try {
 			waitForElementToBeVisible(webElement);
 			Select listBox = new Select(webElement);
-			listBox.selectByVisibleText(value);
+			highlightElement(webElement);
+			listBox.selectByVisibleText(value);			
 			status = true;
 			logger.info(
 					"Successfully selected the value '" + value + "' from the dropdown list: " + webElement.toString());
@@ -716,12 +717,27 @@ public class ElementInteractionUtils {
 		try {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			String originalStyle = webElement.getAttribute("style");
-			js.executeScript("arguments[0].setAttribute('style', arguments[1]);", webElement,
-					"border: 2px solid red; border-style: dashed;");
-			// logger.info("Element highlighted: {}", element.toString());
+			// Check if the element is a dropdown (select element)
+	        String tagName = webElement.getTagName();
+	        String highlightStyle;
+	        if ("select".equalsIgnoreCase(tagName)) {
+	            // Style for dropdowns (select element)
+	            highlightStyle = "border: 2px solid red !important; border-style: dashed !important;";
+	        } else if ("option".equalsIgnoreCase(tagName)) {
+	            // Style for dropdown options (option element)
+	            highlightStyle = "border: 2px solid red !important; border-style: dashed !important;";
+	        } else if ("button".equalsIgnoreCase(tagName) || "input".equalsIgnoreCase(tagName) && "button".equalsIgnoreCase(webElement.getAttribute("type"))) {
+	            // Style for buttons (button or input type="button")
+	            highlightStyle = "border: 2px solid red !important; border-style: dashed !important;";
+	        } else {
+	            // Standard highlight style for other elements
+	            highlightStyle = "border: 2px solid red !important; border-style: dashed !important;";
+	        }
+	        js.executeScript("arguments[0].setAttribute('style', arguments[1]);", webElement, highlightStyle);
+			//logger.info("Element highlighted: {}", webElement.toString());
 			Thread.sleep(500); // Highlight duration in milliseconds
 			js.executeScript("arguments[0].setAttribute('style', arguments[1]);", webElement, originalStyle);
-			// logger.info("Element highlight removed: {}", element.toString());
+			// logger.info("Element highlight removed: {}", webElement.toString());
 		} catch (InterruptedException e) {
 			logger.error("Interrupted Exception during element highlighting: ", e);
 			Thread.currentThread().interrupt();
