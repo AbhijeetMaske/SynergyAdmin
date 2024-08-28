@@ -1396,16 +1396,17 @@ public class ElementInteractionUtils {
 			WebElement nextButton) {
 		try {
 			WebElement table = driver.findElement(By.id(tableId));
+			scrollToElement(table);
 			List<WebElement> tableEntries = table.findElements(By.tagName("tr"));
 			String rowXpathPrefix = "//table[@id='" + tableId + "']/tbody/tr[";
 			String colXpathSuffix = "]/td[" + tableColumnIndex + "]";
 			@SuppressWarnings("unused")
 			int rowCount = 0;
 			while (true) {
-				int tableSize = tableEntries.size();
+				int tableSize = tableEntries.size()-1;
 				logger.info("Current number of table entries: {}", tableSize);
-
 				for (int i = 1; i <= tableSize; i++) {
+					highlightElement(driver.findElement(By.xpath(rowXpathPrefix + i + colXpathSuffix)));
 					String cellValue = driver.findElement(By.xpath(rowXpathPrefix + i + colXpathSuffix)).getText();
 					if (cellValue.contains(searchText)) {
 						highlightElement(searchText);
@@ -1414,8 +1415,11 @@ public class ElementInteractionUtils {
 						return true;
 					}
 				}
-
-				if (nextButton != null && nextButton.isEnabled()) {
+				WebElement nextButtonLi = nextButton.findElement(By.xpath("./ancestor::li"));
+				if (nextButton != null && nextButton.isEnabled() && !nextButtonLi.getAttribute("class").contains("disabled")) {
+					highlightElement(nextButton);
+					WebElement Copyright = driver.findElement(By.xpath("//*[@id='app']/div[2]/footer/div/a"));
+					scrollToElement(Copyright);
 					nextButton.click();
 					logger.info("Next button clicked, checking the next set of entries");
 					rowCount += tableSize;

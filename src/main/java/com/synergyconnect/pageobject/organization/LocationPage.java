@@ -46,7 +46,19 @@ public class LocationPage {
 
 	@FindBy(xpath = "//*[@id=\"addLocationBtn\"]")
 	private WebElement btnAddLocation;
-
+		
+	@FindBy(xpath = "//i[@class='fa fa-filter']")
+	private WebElement btnFilter;
+	
+	@FindBy (xpath ="//*[@id=\"Office\"]")
+	private WebElement chkOfficeFilter;
+	
+	@FindBy (xpath ="//*[@id=\"Factory\"]")
+	private WebElement chkFactoryFilter;
+	
+	@FindBy (xpath ="//*[@id=\"project\"]")
+	private WebElement chkProjectFilter;
+	
 	@FindBy(id = "LocationType")
 	private WebElement ddlLocationType;
 
@@ -137,6 +149,7 @@ public class LocationPage {
 			ElementInteractionUtils.click(btnLoctionSubmit);
 			String SubmitToasterMessage = AU.getToasterText();
 			Assert.assertEquals(SubmitToasterMessage, "Record already exists");
+			ElementInteractionUtils.click(btnLoctionCancel);
 		} catch (Exception e) {
 			logger.error("failed to add location details in form: " + e);
 		}
@@ -161,6 +174,27 @@ public class LocationPage {
 		} catch (AssertionError ae) {
 			logger.error("Assertion failed while verifying added location: ", ae);
 			throw ae;
+		} catch (Exception e) {
+			logger.error("Error while verifying added location: ", e);
+			Assert.fail("Error while verifying added location: " + e.getMessage());
+		}
+	}
+	
+	@Test
+	public void verifyLocationFilters() {
+		try {
+			ElementInteractionUtils.click(btnFilter);
+			ElementInteractionUtils.click(chkOfficeFilter);
+			boolean officeFilterResult =ElementInteractionUtils.verifyTextInTable("table_activeOfficeLocation", 2, "Project", btnActiveTableNext);
+			Assert.assertFalse(officeFilterResult, "Location type = project data found in the table for office filter.");
+			ElementInteractionUtils.pause(500);
+			ElementInteractionUtils.scrollToElement(btnFilter);
+			ElementInteractionUtils.click(chkOfficeFilter);
+			
+			ElementInteractionUtils.click(chkProjectFilter);
+			boolean projectFilterResult =ElementInteractionUtils.verifyTextInTable("table_activeOfficeLocation", 2, "office", btnActiveTableNext);
+			Assert.assertFalse(projectFilterResult, "Location type = office data found in the table for project filter.");
+			
 		} catch (Exception e) {
 			logger.error("Error while verifying added location: ", e);
 			Assert.fail("Error while verifying added location: " + e.getMessage());
