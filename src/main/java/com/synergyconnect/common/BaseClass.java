@@ -2,8 +2,10 @@ package com.synergyconnect.common;
 
 import java.lang.reflect.Method;
 import java.time.Duration;
-import org.apache.logging.log4j.Logger;
+import java.util.HashMap;
+
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -11,7 +13,11 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.synergyconnect.utilities.BrowserUtils;
 import com.synergyconnect.utilities.ReadConfig;
@@ -40,8 +46,7 @@ public class BaseClass {
 	public void setupSuite(String baseUrl, String browser) {
 		logger = LogManager.getLogger(BaseClass.class);
 		this.url = baseUrl != null ? baseUrl : readConfig.getBaseUrl();
-		this.browser = browser != null ? browser : readConfig.getBrowser();
-
+		this.browser = browser != null ? browser : readConfig.getBrowser();        
 		if (this.url == null || this.browser == null) {
 			String errorMessage = "Base URL or browser not provided in XML or config file.";
 			logger.error(errorMessage);
@@ -81,6 +86,9 @@ public class BaseClass {
 			// WebDriverManager.chromedriver().setup();
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.setBrowserVersion("128");
+			chromeOptions.setCapability("goog:chromeOptions", new HashMap<String, Object>() {{
+	            put("w3c", false); // Disables W3C mode
+	        }});
 			driver = new ChromeDriver(chromeOptions);
 			break;
 		case "firefox":
