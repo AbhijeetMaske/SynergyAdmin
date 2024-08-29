@@ -46,19 +46,19 @@ public class LocationPage {
 
 	@FindBy(xpath = "//*[@id=\"addLocationBtn\"]")
 	private WebElement btnAddLocation;
-		
+
 	@FindBy(xpath = "//i[@class='fa fa-filter']")
 	private WebElement btnFilter;
-	
-	@FindBy (xpath ="//*[@id=\"Office\"]")
+
+	@FindBy(xpath = "//*[@id=\"Office\"]")
 	private WebElement chkOfficeFilter;
-	
-	@FindBy (xpath ="//*[@id=\"Factory\"]")
+
+	@FindBy(xpath = "//*[@id=\"Factory\"]")
 	private WebElement chkFactoryFilter;
-	
-	@FindBy (xpath ="//*[@id=\"project\"]")
+
+	@FindBy(xpath = "//*[@id=\"project\"]")
 	private WebElement chkProjectFilter;
-	
+
 	@FindBy(id = "LocationType")
 	private WebElement ddlLocationType;
 
@@ -179,25 +179,54 @@ public class LocationPage {
 			Assert.fail("Error while verifying added location: " + e.getMessage());
 		}
 	}
-	
+
 	@Test
-	public void verifyLocationFilters() {
+	public void verifyOfficeLocationFilters() {
 		try {
 			ElementInteractionUtils.click(btnFilter);
 			ElementInteractionUtils.click(chkOfficeFilter);
-			boolean officeFilterResult =ElementInteractionUtils.verifyTextInTable("table_activeOfficeLocation", 2, "Project", btnActiveTableNext);
-			Assert.assertFalse(officeFilterResult, "Location type = project data found in the table for office filter.");
+			boolean officeFilterResult = ElementInteractionUtils.countTextInFilteredTable("table_activeOfficeLocation",
+					2, "Office", btnActiveTableNext);
+			Assert.assertTrue(officeFilterResult, "Location type = office data found in the table for office filter.");
 			ElementInteractionUtils.pause(500);
 			ElementInteractionUtils.scrollToElement(btnFilter);
 			ElementInteractionUtils.click(chkOfficeFilter);
-			
-			ElementInteractionUtils.click(chkProjectFilter);
-			boolean projectFilterResult =ElementInteractionUtils.verifyTextInTable("table_activeOfficeLocation", 2, "office", btnActiveTableNext);
-			Assert.assertFalse(projectFilterResult, "Location type = office data found in the table for project filter.");
-			
 		} catch (Exception e) {
-			logger.error("Error while verifying added location: ", e);
+			logger.error("Error while verifying office filter: ", e);
 			Assert.fail("Error while verifying added location: " + e.getMessage());
+		}
+	}
+
+	@Test
+	public void verifyProjectLocationFilters() {
+		try {
+			ElementInteractionUtils.click(chkProjectFilter);
+			ElementInteractionUtils.pause(500);
+			boolean projectFilterResult = ElementInteractionUtils.countTextInFilteredTable("table_activeOfficeLocation",
+					2, "Project", btnActiveTableNext);
+			Assert.assertTrue(projectFilterResult,
+					"Location type = project data found in the table for project filter.");
+			ElementInteractionUtils.pause(500);
+			ElementInteractionUtils.scrollToElement(btnFilter);
+			ElementInteractionUtils.click(chkProjectFilter);
+		} catch (Exception e) {
+			logger.error("Error while verifying project filter: ", e);
+		}
+	}
+	@Test
+	public void verifyFactoryLocationFilters() {
+		try {
+			ElementInteractionUtils.click(chkFactoryFilter);
+			ElementInteractionUtils.pause(500);
+			boolean factoryFilterResult = ElementInteractionUtils.countTextInFilteredTable("table_activeOfficeLocation", 2,
+					"Factory", btnActiveTableNext);
+			Assert.assertTrue(factoryFilterResult,
+					"Location type = factory data found in the table for factory filter.");
+			ElementInteractionUtils.pause(500);
+			ElementInteractionUtils.scrollToElement(btnFilter);
+			ElementInteractionUtils.click(chkFactoryFilter);
+		} catch (Exception e) {
+			logger.error("Error while verifying factory filter: ", e);
 		}
 	}
 }
