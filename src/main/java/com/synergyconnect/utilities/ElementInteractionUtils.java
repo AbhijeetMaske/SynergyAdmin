@@ -255,7 +255,7 @@ public class ElementInteractionUtils {
 			waitForElementToBeVisible(webElement);
 			Select listBox = new Select(webElement);
 			highlightElement(webElement);
-			listBox.selectByVisibleText(value);			
+			listBox.selectByVisibleText(value);
 			status = true;
 			logger.info(
 					"Successfully selected the value '" + value + "' from the dropdown list: " + webElement.toString());
@@ -718,23 +718,24 @@ public class ElementInteractionUtils {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			String originalStyle = webElement.getAttribute("style");
 			// Check if the element is a dropdown (select element)
-	        String tagName = webElement.getTagName();
-	        String highlightStyle;
-	        if ("select".equalsIgnoreCase(tagName)) {
-	            // Style for dropdowns (select element)
-	            highlightStyle = "border: 2px solid red !important; border-style: dashed !important;";
-	        } else if ("option".equalsIgnoreCase(tagName)) {
-	            // Style for dropdown options (option element)
-	            highlightStyle = "border: 2px solid red !important; border-style: dashed !important;";
-	        } else if ("button".equalsIgnoreCase(tagName) || "input".equalsIgnoreCase(tagName) && "button".equalsIgnoreCase(webElement.getAttribute("type"))) {
-	            // Style for buttons (button or input type="button")
-	            highlightStyle = "border: 2px solid red !important; border-style: dashed !important;";
-	        } else {
-	            // Standard highlight style for other elements
-	            highlightStyle = "border: 2px solid red !important; border-style: dashed !important;";
-	        }
-	        js.executeScript("arguments[0].setAttribute('style', arguments[1]);", webElement, highlightStyle);
-			//logger.info("Element highlighted: {}", webElement.toString());
+			String tagName = webElement.getTagName();
+			String highlightStyle;
+			if ("select".equalsIgnoreCase(tagName)) {
+				// Style for dropdowns (select element)
+				highlightStyle = "border: 2px solid red !important; border-style: dashed !important;";
+			} else if ("option".equalsIgnoreCase(tagName)) {
+				// Style for dropdown options (option element)
+				highlightStyle = "border: 2px solid red !important; border-style: dashed !important;";
+			} else if ("button".equalsIgnoreCase(tagName) || "input".equalsIgnoreCase(tagName)
+					&& "button".equalsIgnoreCase(webElement.getAttribute("type"))) {
+				// Style for buttons (button or input type="button")
+				highlightStyle = "border: 2px solid red !important; border-style: dashed !important;";
+			} else {
+				// Standard highlight style for other elements
+				highlightStyle = "border: 2px solid red !important; border-style: dashed !important;";
+			}
+			js.executeScript("arguments[0].setAttribute('style', arguments[1]);", webElement, highlightStyle);
+			// logger.info("Element highlighted: {}", webElement.toString());
 			Thread.sleep(500); // Highlight duration in milliseconds
 			js.executeScript("arguments[0].setAttribute('style', arguments[1]);", webElement, originalStyle);
 			// logger.info("Element highlight removed: {}", webElement.toString());
@@ -1403,7 +1404,7 @@ public class ElementInteractionUtils {
 			@SuppressWarnings("unused")
 			int rowCount = 0;
 			while (true) {
-				int tableSize = tableEntries.size()-1;
+				int tableSize = tableEntries.size() - 1;
 				logger.info("Current number of table entries: {}", tableSize);
 				for (int i = 1; i <= tableSize; i++) {
 					highlightElement(driver.findElement(By.xpath(rowXpathPrefix + i + colXpathSuffix)));
@@ -1416,7 +1417,8 @@ public class ElementInteractionUtils {
 					}
 				}
 				WebElement nextButtonLi = nextButton.findElement(By.xpath("./ancestor::li"));
-				if (nextButton != null && nextButton.isEnabled() && !nextButtonLi.getAttribute("class").contains("disabled")) {
+				if (nextButton != null && nextButton.isEnabled()
+						&& !nextButtonLi.getAttribute("class").contains("disabled")) {
 					highlightElement(nextButton);
 					WebElement Copyright = driver.findElement(By.xpath("//*[@id='app']/div[2]/footer/div/a"));
 					scrollToElement(Copyright);
@@ -1530,6 +1532,7 @@ public class ElementInteractionUtils {
 
 			while (true) {
 				int tableSize = tableEntries.size() - 1;
+				scrollToElement(table);
 				for (int i = 1; i <= tableSize; i++) {
 					highlightElement(driver.findElement(By.xpath(rowXpathPrefix + i + colXpathSuffix)));
 					String cellValue = driver.findElement(By.xpath(rowXpathPrefix + i + colXpathSuffix)).getText();
@@ -1543,6 +1546,7 @@ public class ElementInteractionUtils {
 							String actualValue = driver
 									.findElement(By.xpath(rowXpathPrefix + i + "]/td[" + lookupColumnIndex + "]"))
 									.getText();
+							ElementInteractionUtils.pause(200);
 							highlightElement(actualValue);
 							if (!actualValue.equals(expectedValue)) {
 								allValuesMatch = false;
@@ -1664,6 +1668,59 @@ public class ElementInteractionUtils {
 			logger.error("Exception occurred while verifying text in table and performing action: ", e);
 			return false;
 		}
+	}
+
+	public static boolean countTextInFilteredTable(String tableId, int tableColumnIndex, String searchText,
+			WebElement nextButton) {
+		int count = 0;
+		try {
+			WebElement table = driver.findElement(By.id(tableId));
+			scrollToElement(table);
+			List<WebElement> tableEntries = table.findElements(By.tagName("tr"));
+			if (tableEntries.size() > 2) {
+				String rowXpathPrefix = "//table[@id='" + tableId + "']/tbody/tr[";
+				String colXpathSuffix = "]/td[" + tableColumnIndex + "]";
+				while (true) {
+					int tableSize = tableEntries.size() - 1;
+					logger.info("Current number of table entries: {}", tableSize);
+
+					for (int i = 1; i <= tableSize; i++) {
+						WebElement cellElement = driver.findElement(By.xpath(rowXpathPrefix + i + colXpathSuffix));
+						String cellValue = cellElement.getText();
+						if (cellValue.equalsIgnoreCase(searchText)) {
+							highlightElement(cellElement);
+							pause(100);
+							logger.info("Text '{}' found in cell value: {}", searchText, cellValue);
+							count++;
+						} else {
+							logger.error("Unexpected text '{}' found in cell, expected '{}'", cellValue, searchText);
+						}
+					}
+
+					WebElement nextButtonLi = nextButton.findElement(By.xpath("./ancestor::li"));
+					if (nextButton != null && nextButton.isEnabled()
+							&& !nextButtonLi.getAttribute("class").contains("disabled")) {
+						highlightElement(nextButton);
+						WebElement copyright = driver.findElement(By.xpath("//*[@id='app']/div[2]/footer/div/a"));
+						scrollToElement(copyright);
+						nextButton.click();
+						logger.info("Next button clicked, checking the next set of entries");
+						tableEntries = driver.findElement(By.id(tableId)).findElements(By.tagName("tr"));
+					} else {
+						logger.info("Reached the end of the table, final count of '{}' is: {}", searchText, count);
+						break;
+					}
+				}
+			} else {
+				logger.warn("No data available in the table for search text: {}", searchText);
+			}
+		} catch (Exception e) {
+			logger.error("Exception occurred while counting text in filtered table: ", e);
+			throw e;
+		}
+
+		logger.info("Search completed. Total count of '{}' in the table: {}", searchText, count);
+		return true;
 	}
 
 	/********************************************************************************************
