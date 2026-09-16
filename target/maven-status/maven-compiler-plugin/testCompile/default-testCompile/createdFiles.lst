@@ -1,0 +1,9 @@
+com\synergyconnect\testcases\Documents.class
+com\synergyconnect\testcases\AddDonar.class
+com\synergyconnect\testcases\Stakeholder.class
+com\synergyconnect\testcases\AppSetup.class
+com\synergyconnect\testcases\AddBoardMembers.class
+com\synergyconnect\testcases\OrganizationDetails.class
+com\synergyconnect\testcases\Organization.class
+com\synergyconnect\testcases\Login.class
+com\synergyconnect\testcases\Report.class

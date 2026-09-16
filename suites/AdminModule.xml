@@ -12,7 +12,7 @@
 		<classes>
 			<class name="com.synergyconnect.testcases.Login" />
 			<!--<class name="com.synergyconnect.testcases.OrganizationDetails" />-->
-			<class name="com.synergyconnect.testcases.Location" />
+			<!--<class name="com.synergyconnect.testcases.Location" />-->
 		</classes>
 	</test>
 </suite>

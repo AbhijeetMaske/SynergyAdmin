@@ -22929,3 +22929,313 @@ Session ID: 9bfa95a5f1ab76a1c4859b33883fe972
 2024-08-28 17:42:39.699 INFO  14620 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
 2024-08-28 17:42:41.771 INFO  14620 --- [main] ExtentReportListener : Test report opened in browser: C:\Users\Abhijeet\git\SynergyAdmin/extentReports/ExtentReport_2024_08_28_17_40_28.html
 2024-08-28 17:42:42.644 INFO  14620 --- [main] <== SynergyAdmin ==> : 🛑 WebDriver closed and session ended successfully.
+2026-09-16 16:44:27.404 INFO  1412 --- [main] DateTimeUtils : Current date and time retrieved: 2026_09_16_16_44_27
+2026-09-16 16:44:27.596 INFO  1412 --- [main] ReadConfig : Loading configuration from: D:\GitHub\SynergyAdmin\Configuration\application.properties
+2026-09-16 16:44:27.596 ERROR 1412 --- [main] ReadConfig : Error loading config properties from D:\GitHub\SynergyAdmin\Configuration\application.properties: D:\GitHub\SynergyAdmin\Configuration\application.properties (The system cannot find the file specified)
+java.io.FileNotFoundException: D:\GitHub\SynergyAdmin\Configuration\application.properties (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219) ~[?:?]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158) ~[?:?]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112) ~[?:?]
+	at com.synergyconnect.utilities.ReadConfig.<init>(ReadConfig.java:31) ~[classes/:?]
+	at com.synergyconnect.common.BaseClass.<init>(BaseClass.java:29) ~[classes/:?]
+	at com.synergyconnect.testcases.Login.<init>(Login.java:11) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[?:?]
+	at org.testng.internal.objects.InstanceCreator.newInstance(InstanceCreator.java:40) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.ITestObjectFactory.newInstance(ITestObjectFactory.java:18) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.objects.SimpleObjectDispenser.instantiateUsingDefaultConstructor(SimpleObjectDispenser.java:179) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.objects.SimpleObjectDispenser.createInstance(SimpleObjectDispenser.java:88) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.objects.SimpleObjectDispenser.dispense(SimpleObjectDispenser.java:41) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispenseObject(GuiceBasedObjectDispenser.java:41) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.objects.GuiceBasedObjectDispenser.dispense(GuiceBasedObjectDispenser.java:31) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.ClassImpl.getDefaultInstance(ClassImpl.java:107) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.ClassImpl.getObjects(ClassImpl.java:140) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.IObject.lambda$objects$0(IObject.java:59) ~[testng-7.10.2.jar:7.10.2]
+	at java.base/java.util.Optional.map(Optional.java:260) [?:?]
+	at org.testng.internal.IObject.objects(IObject.java:59) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestClass.getObjects(TestClass.java:150) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestClass.initTestClassesAndInstances(TestClass.java:126) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestClass.init(TestClass.java:118) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestClass.<init>(TestClass.java:83) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.initMethods(TestRunner.java:473) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.init(TestRunner.java:347) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.init(TestRunner.java:302) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.<init>(TestRunner.java:176) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner$DefaultTestRunnerFactory.newTestRunner(SuiteRunner.java:636) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.<init>(SuiteRunner.java:197) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.createSuiteRunner(TestNG.java:1365) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.createSuiteRunners(TestNG.java:1339) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1199) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308) [surefire-testng-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71) [surefire-testng-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113) [surefire-testng-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.2.5.jar:3.2.5]
+2026-09-16 16:45:20.223 INFO  1412 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2026-09-16 16:45:20.255 INFO  1412 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2026-09-16 16:45:20.264 INFO  1412 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2026-09-16 16:45:21.131 INFO  1412 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2026-09-16 16:45:21.297 INFO  1412 --- [main] ReadConfig : Loading configuration from: D:\GitHub\SynergyAdmin\Configuration\application.properties
+2026-09-16 16:45:21.297 ERROR 1412 --- [main] ReadConfig : Error loading config properties from D:\GitHub\SynergyAdmin\Configuration\application.properties: D:\GitHub\SynergyAdmin\Configuration\application.properties (The system cannot find the file specified)
+java.io.FileNotFoundException: D:\GitHub\SynergyAdmin\Configuration\application.properties (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method) ~[?:?]
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219) ~[?:?]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158) ~[?:?]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112) ~[?:?]
+	at com.synergyconnect.utilities.ReadConfig.<init>(ReadConfig.java:31) ~[classes/:?]
+	at com.synergyconnect.pageobject.LoginPage.<init>(LoginPage.java:27) ~[classes/:?]
+	at com.synergyconnect.testcases.Login.setUp(Login.java:19) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.10.2.jar:7.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308) [surefire-testng-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71) [surefire-testng-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113) [surefire-testng-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.2.5.jar:3.2.5]
+2026-09-16 16:45:21.501 INFO  1412 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2026-09-16 16:45:21.502 WARN  1412 --- [main] ExtentReportListener : Test Skipped: verifyLoginIsWorking
+2026-09-16 16:45:21.541 INFO  1412 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
+2026-09-16 16:45:24.481 INFO  1412 --- [main] ExtentReportListener : Test report opened in browser: D:\GitHub\SynergyAdmin/extentReports/ExtentReport_2026_09_16_16_44_27.html
+2026-09-16 16:45:36.483 INFO  12068 --- [main] DateTimeUtils : Current date and time retrieved: 2026_09_16_16_45_36
+2026-09-16 16:45:36.636 INFO  12068 --- [main] ReadConfig : Loading configuration from: D:\GitHub\SynergyAdmin\Configuration\application.properties
+2026-09-16 16:45:36.639 INFO  12068 --- [main] ReadConfig : Configuration loaded successfully from: D:\GitHub\SynergyAdmin\Configuration\application.properties
+2026-09-16 16:45:41.810 INFO  12068 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2026-09-16 16:45:41.814 INFO  12068 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2026-09-16 16:45:41.826 INFO  12068 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2026-09-16 16:45:42.165 INFO  12068 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2026-09-16 16:45:42.212 INFO  12068 --- [main] ReadConfig : Loading configuration from: D:\GitHub\SynergyAdmin\Configuration\application.properties
+2026-09-16 16:45:42.212 INFO  12068 --- [main] ReadConfig : Configuration loaded successfully from: D:\GitHub\SynergyAdmin\Configuration\application.properties
+2026-09-16 16:45:42.213 INFO  12068 --- [main] ReadConfig : User ID retrieved: null
+2026-09-16 16:45:42.213 INFO  12068 --- [main] ReadConfig : password retrieved: null
+2026-09-16 16:45:42.319 INFO  12068 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (fb7c70cdb284212848001278a53cc63b)
+2026-09-16 16:45:42.345 INFO  12068 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2026-09-16 16:45:42.348 INFO  12068 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2026-09-16 16:45:42.352 INFO  12068 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2026-09-16 16:45:42.353 INFO  12068 --- [main] ReadConfig : Loading configuration from: D:\GitHub\SynergyAdmin\Configuration\application.properties
+2026-09-16 16:45:42.354 INFO  12068 --- [main] ReadConfig : Configuration loaded successfully from: D:\GitHub\SynergyAdmin\Configuration\application.properties
+2026-09-16 16:45:42.354 INFO  12068 --- [main] ReadConfig : User ID retrieved: null
+2026-09-16 16:45:42.358 INFO  12068 --- [main] ReadConfig : password retrieved: null
+2026-09-16 16:45:42.359 INFO  12068 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (fb7c70cdb284212848001278a53cc63b)
+2026-09-16 16:45:44.639 INFO  12068 --- [main] LoginPage : Attempting to log in with username: null
+2026-09-16 16:45:44.794 INFO  12068 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (fb7c70cdb284212848001278a53cc63b)] -> id: username]
+2026-09-16 16:45:47.082 ERROR 12068 --- [main] ElementInteractionUtils : Unable to set text in webElement: [[ChromeDriver: chrome on windows (fb7c70cdb284212848001278a53cc63b)] -> id: username]
+2026-09-16 16:45:47.597 INFO  12068 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (fb7c70cdb284212848001278a53cc63b)] -> id: password]
+2026-09-16 16:45:48.408 ERROR 12068 --- [main] ElementInteractionUtils : Unable to set text in webElement: [[ChromeDriver: chrome on windows (fb7c70cdb284212848001278a53cc63b)] -> id: password]
+2026-09-16 16:45:49.970 INFO  12068 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (fb7c70cdb284212848001278a53cc63b)] -> xpath: //button[text()='Login']]
+2026-09-16 16:45:49.970 INFO  12068 --- [main] LoginPage : Clicked on the Login button
+2026-09-16 16:45:49.970 INFO  12068 --- [main] LoginPage : Login action performed successfully.
+2026-09-16 16:45:49.976 INFO  12068 --- [main] LoginPage : Attempting to retrieve current homepage URL
+2026-09-16 16:45:49.976 INFO  12068 --- [main] ReadConfig : Base URL retrieved: https://test30.synergyapps.in/
+2026-09-16 16:45:50.027 INFO  12068 --- [main] LoginPage : Successfully retrieved homepage URL: https://test30.synergyapps.in/login-error
+2026-09-16 16:45:50.027 INFO  12068 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2026-09-16 16:45:50.027 INFO  12068 --- [main] LoginPage : Navigating to Synergy Admin page
+2026-09-16 16:46:20.331 ERROR 12068 --- [main] LoginPage : Error while redirecting to Synergy Admin: 
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="socialIntegratedPlatform"]"}
+  (Session info: chrome=128.0.6613.137)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fb7c70cdb284212848001278a53cc63b, findElement {using=xpath, value=//*[@id="socialIntegratedPlatform"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.137, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\Abhijeet\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55899}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55899/devtoo..., se:cdpVersion: 128.0.6613.137, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fb7c70cdb284212848001278a53cc63b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68) ~[selenium-support-4.29.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38) ~[selenium-support-4.29.0.jar:?]
+	at jdk.proxy2/jdk.proxy2.$Proxy29.getTagName(Unknown Source) ~[?:?]
+	at com.synergyconnect.utilities.ElementInteractionUtils.describeElement(ElementInteractionUtils.java:187) ~[classes/:?]
+	at com.synergyconnect.utilities.ElementInteractionUtils.click(ElementInteractionUtils.java:79) ~[classes/:?]
+	at com.synergyconnect.pageobject.LoginPage.synergyAdmin(LoginPage.java:89) ~[classes/:?]
+	at com.synergyconnect.testcases.Login.verifyLoginIsWorking(Login.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308) [surefire-testng-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71) [surefire-testng-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113) [surefire-testng-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.2.5.jar:3.2.5]
+2026-09-16 16:46:20.358 ERROR 12068 --- [main] <== SynergyAdmin ==> : Test case verifyLoginIsWorking failed: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="socialIntegratedPlatform"]"}
+  (Session info: chrome=128.0.6613.137)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fb7c70cdb284212848001278a53cc63b, findElement {using=xpath, value=//*[@id="socialIntegratedPlatform"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.137, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\Abhijeet\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55899}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55899/devtoo..., se:cdpVersion: 128.0.6613.137, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fb7c70cdb284212848001278a53cc63b
+2026-09-16 16:46:20.358 INFO  12068 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2026-09-16 16:46:20.368 INFO  12068 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2026-09-16 16:46:20.373 INFO  12068 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
+2026-09-16 16:46:23.524 INFO  12068 --- [main] ExtentReportListener : Test report opened in browser: D:\GitHub\SynergyAdmin/extentReports/ExtentReport_2026_09_16_16_45_36.html
+2026-09-16 16:46:24.734 INFO  12068 --- [main] <== SynergyAdmin ==> : 🛑 WebDriver closed and session ended successfully.
+2026-09-16 16:47:03.628 INFO  15248 --- [main] DateTimeUtils : Current date and time retrieved: 2026_09_16_16_47_03
+2026-09-16 16:47:03.877 INFO  15248 --- [main] ReadConfig : Loading configuration from: D:\GitHub\SynergyAdmin\Configuration\application.properties
+2026-09-16 16:47:03.878 INFO  15248 --- [main] ReadConfig : Configuration loaded successfully from: D:\GitHub\SynergyAdmin\Configuration\application.properties
+2026-09-16 16:47:08.096 INFO  15248 --- [main] <== SynergyAdmin ==> : WebDriver initialized successfully for chrome
+2026-09-16 16:47:08.159 INFO  15248 --- [main] <== SynergyAdmin ==> : WebDriver initialized before suite with browser: chrome
+2026-09-16 16:47:08.159 INFO  15248 --- [main] ExtentReportListener : Starting Test Suite: Login Tests
+2026-09-16 16:47:08.643 INFO  15248 --- [main] ExtentReportListener : ExtentReport initialized with SparkReporter
+2026-09-16 16:47:08.691 INFO  15248 --- [main] ReadConfig : Loading configuration from: D:\GitHub\SynergyAdmin\Configuration\application.properties
+2026-09-16 16:47:08.692 INFO  15248 --- [main] ReadConfig : Configuration loaded successfully from: D:\GitHub\SynergyAdmin\Configuration\application.properties
+2026-09-16 16:47:08.692 INFO  15248 --- [main] ReadConfig : User ID retrieved: null
+2026-09-16 16:47:08.692 INFO  15248 --- [main] ReadConfig : password retrieved: null
+2026-09-16 16:47:08.776 INFO  15248 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (2b4b4aa5f58048285d88ab53d9332e3f)
+2026-09-16 16:47:08.816 INFO  15248 --- [main] <== SynergyAdmin ==> : 🔃 Executing test method: verifyLoginIsWorking
+2026-09-16 16:47:08.818 INFO  15248 --- [main] <== SynergyAdmin ==> : WebDriver initialized for method: verifyLoginIsWorking with browser: chrome
+2026-09-16 16:47:08.823 INFO  15248 --- [main] ExtentReportListener : Starting Test: verifyLoginIsWorking
+2026-09-16 16:47:08.824 INFO  15248 --- [main] ReadConfig : Loading configuration from: D:\GitHub\SynergyAdmin\Configuration\application.properties
+2026-09-16 16:47:08.824 INFO  15248 --- [main] ReadConfig : Configuration loaded successfully from: D:\GitHub\SynergyAdmin\Configuration\application.properties
+2026-09-16 16:47:08.824 INFO  15248 --- [main] ReadConfig : User ID retrieved: null
+2026-09-16 16:47:08.830 INFO  15248 --- [main] ReadConfig : password retrieved: null
+2026-09-16 16:47:08.830 INFO  15248 --- [main] ElementInteractionUtils : WebDriver initialized in ElementInteractionUtils: ChromeDriver: chrome on windows (2b4b4aa5f58048285d88ab53d9332e3f)
+2026-09-16 16:47:10.510 INFO  15248 --- [main] LoginPage : Attempting to log in with username: null
+2026-09-16 16:47:10.805 INFO  15248 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (2b4b4aa5f58048285d88ab53d9332e3f)] -> id: username]
+2026-09-16 16:47:13.473 ERROR 15248 --- [main] ElementInteractionUtils : Unable to set text in webElement: [[ChromeDriver: chrome on windows (2b4b4aa5f58048285d88ab53d9332e3f)] -> id: username]
+2026-09-16 16:47:13.919 INFO  15248 --- [main] ElementInteractionUtils : Element is visible: [[ChromeDriver: chrome on windows (2b4b4aa5f58048285d88ab53d9332e3f)] -> id: password]
+2026-09-16 16:47:15.207 ERROR 15248 --- [main] ElementInteractionUtils : Unable to set text in webElement: [[ChromeDriver: chrome on windows (2b4b4aa5f58048285d88ab53d9332e3f)] -> id: password]
+2026-09-16 16:47:16.841 INFO  15248 --- [main] ElementInteractionUtils : Clicked on element: [[ChromeDriver: chrome on windows (2b4b4aa5f58048285d88ab53d9332e3f)] -> xpath: //button[text()='Login']]
+2026-09-16 16:47:16.841 INFO  15248 --- [main] LoginPage : Clicked on the Login button
+2026-09-16 16:47:16.841 INFO  15248 --- [main] LoginPage : Login action performed successfully.
+2026-09-16 16:47:16.848 INFO  15248 --- [main] LoginPage : Attempting to retrieve current homepage URL
+2026-09-16 16:47:16.849 INFO  15248 --- [main] ReadConfig : Base URL retrieved: https://test30.synergyapps.in/
+2026-09-16 16:47:16.883 INFO  15248 --- [main] LoginPage : Successfully retrieved homepage URL: https://test30.synergyapps.in/login-error
+2026-09-16 16:47:16.883 INFO  15248 --- [main] <== SynergyAdmin ==> : Validated homepage URL
+2026-09-16 16:47:16.884 INFO  15248 --- [main] LoginPage : Navigating to Synergy Admin page
+2026-09-16 16:47:47.037 ERROR 15248 --- [main] LoginPage : Error while redirecting to Synergy Admin: 
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="socialIntegratedPlatform"]"}
+  (Session info: chrome=128.0.6613.137)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2b4b4aa5f58048285d88ab53d9332e3f, findElement {value=//*[@id="socialIntegratedPlatform"], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.137, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\Abhijeet\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51296}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51296/devtoo..., se:cdpVersion: 128.0.6613.137, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2b4b4aa5f58048285d88ab53d9332e3f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362) ~[selenium-remote-driver-4.29.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68) ~[selenium-support-4.29.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38) ~[selenium-support-4.29.0.jar:?]
+	at jdk.proxy2/jdk.proxy2.$Proxy29.getTagName(Unknown Source) ~[?:?]
+	at com.synergyconnect.utilities.ElementInteractionUtils.describeElement(ElementInteractionUtils.java:187) ~[classes/:?]
+	at com.synergyconnect.utilities.ElementInteractionUtils.click(ElementInteractionUtils.java:79) ~[classes/:?]
+	at com.synergyconnect.pageobject.LoginPage.synergyAdmin(LoginPage.java:89) ~[classes/:?]
+	at com.synergyconnect.testcases.Login.verifyLoginIsWorking(Login.java:38) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308) [surefire-testng-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71) [surefire-testng-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113) [surefire-testng-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.2.5.jar:3.2.5]
+2026-09-16 16:47:47.085 ERROR 15248 --- [main] <== SynergyAdmin ==> : Test case verifyLoginIsWorking failed: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="socialIntegratedPlatform"]"}
+  (Session info: chrome=128.0.6613.137)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2b4b4aa5f58048285d88ab53d9332e3f, findElement {value=//*[@id="socialIntegratedPlatform"], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.137, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\Abhijeet\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51296}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51296/devtoo..., se:cdpVersion: 128.0.6613.137, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2b4b4aa5f58048285d88ab53d9332e3f
+2026-09-16 16:47:47.094 INFO  15248 --- [main] ExtentReportListener : Test Passed: verifyLoginIsWorking
+2026-09-16 16:47:47.104 INFO  15248 --- [main] <== SynergyAdmin ==> : ✅ Completed test method: verifyLoginIsWorking
+2026-09-16 16:47:47.116 INFO  15248 --- [main] ExtentReportListener : Finishing Test Suite: Login Tests
+2026-09-16 16:47:49.157 INFO  15248 --- [main] ExtentReportListener : Test report opened in browser: D:\GitHub\SynergyAdmin/extentReports/ExtentReport_2026_09_16_16_47_03.html
+2026-09-16 16:47:50.460 INFO  15248 --- [main] <== SynergyAdmin ==> : 🛑 WebDriver closed and session ended successfully.
